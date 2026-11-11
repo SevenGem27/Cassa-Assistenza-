@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chiavi per le notifiche - Nuova Cassa</title>
+<style>
+  body { margin: 0; padding: 20px 16px 60px; font: 17px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: #131C33; background: #F1F3F6; }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 28px; line-height: 1.15; margin: 0 0 8px; }
+  h2 { font-size: 19px; margin: 28px 0 4px; }
+  p { margin: 8px 0; }
+  .piccolo { font-size: 15px; color: #4A556E; }
+  button { font: inherit; font-weight: 700; min-height: 48px; padding: 10px 18px; border: 2px solid #131C33; border-radius: 6px; background: #131C33; color: #F1F3F6; cursor: pointer; }
+  button.chiaro { background: none; color: #131C33; min-height: 40px; padding: 6px 12px; border-width: 1px; font-size: 15px; }
+  output { display: block; margin: 6px 0; padding: 12px; background: #fff; border: 1px solid #D3D9E3; border-radius: 6px; font: 15px/1.4 ui-monospace, Menlo, Consolas, monospace; overflow-wrap: anywhere; user-select: all; }
+  .nota { padding: 12px 14px; background: #fff; border: 1px solid #D3D9E3; border-left: 4px solid #B3261E; border-radius: 6px; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Chiavi per le notifiche</h1>
+  <p>Questa pagina crea, qui nel tuo browser, i tre valori che servono per accendere le notifiche. Non vengono spediti da nessuna parte: copiali subito, perché ricaricando la pagina se ne creano di nuovi.</p>
+  <p><button id="crea">Crea le chiavi</button></p>
+  <p id="errore" class="nota" hidden>Questo browser non riesce a creare le chiavi. Riprova con una versione aggiornata di Safari, Chrome o Firefox.</p>
+
+  <section id="esito" hidden>
+    <h2>1. Chiave pubblica</h2>
+    <p class="piccolo">Va nel file <b>config.js</b>, nel campo <b>chiavePubblica</b>. Non è un segreto.</p>
+    <output id="pubblica"></output>
+    <button class="chiaro" data-copia="pubblica">Copia</button>
+
+    <h2>2. Chiave privata</h2>
+    <p class="piccolo">Va su GitHub: Settings, Secrets and variables, Actions, New repository secret, con il nome <b>VAPID_PRIVATE_KEY</b>.</p>
+    <output id="privata"></output>
+    <button class="chiaro" data-copia="privata">Copia</button>
+
+    <h2>3. Gettone del servizio</h2>
+    <p class="piccolo">Va in due posti con lo stesso valore: su GitHub come secret <b>PUSH_TOKEN</b> e su Cloudflare, nelle impostazioni del Worker, come segreto <b>GETTONE</b>.</p>
+    <output id="gettone"></output>
+    <button class="chiaro" data-copia="gettone">Copia</button>
+
+    <p class="nota">La chiave privata e il gettone sono segreti: non metterli in config.js, in una chat o in un file del repository. Se li perdi basta crearne di nuovi e sostituirli; chi aveva attivato le notifiche dovrà riattivarle.</p>
+  </section>
+</main>
+<script>
+(function () {
+  function b64url(bytes) {
+    var s = '';
+    new Uint8Array(bytes).forEach(function (b) { s += String.fromCharCode(b); });
+    return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+  document.getElementById('crea').addEventListener('click', function () {
+    var errore = document.getElementById('errore');
+    errore.hidden = true;
+    crypto.subtle.generateKey({ name: 'ECDSA', namedCurve: 'P-256' }, true, ['sign', 'verify']).then(function (coppia) {
+      return Promise.all([crypto.subtle.exportKey('raw', coppia.publicKey), crypto.subtle.exportKey('jwk', coppia.privateKey)]);
+    }).then(function (r) {
+      document.getElementById('pubblica').textContent = b64url(r[0]);
+      document.getElementById('privata').textContent = r[1].d;
+      document.getElementById('gettone').textContent = b64url(crypto.getRandomValues(new Uint8Array(32)));
+      document.getElementById('esito').hidden = false;
+    }).catch(function () { errore.hidden = false; });
+  });
+  document.addEventListener('click', function (e) {
+    var id = e.target.getAttribute && e.target.getAttribute('data-copia');
+    if (!id) return;
+    var testo = document.getElementById(id).textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(testo) : Promise.reject()).then(function () {
+      e.target.textContent = 'Copiato';
+      setTimeout(function () { e.target.textContent = 'Copia'; }, 1500);
+    }).catch(function () { e.target.textContent = 'Tieni premuto sul testo per copiarlo'; });
+  });
+})();
+</script>
+</body>
+</html>

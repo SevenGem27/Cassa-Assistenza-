@@ -1,0 +1,25 @@
+{
+  "name": "Nuova Cassa, guida all'accordo Banco BPM",
+  "short_name": "Nuova Cassa",
+  "description": "Guida non ufficiale all'accordo che istituisce la Cassa Assistenza del Gruppo Banco BPM: testo, tappe, contributi, statuti e novità.",
+  "lang": "it",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F1F3F6",
+  "theme_color": "#F1F3F6",
+  "categories": ["news", "productivity", "finance"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Tappe", "url": "./#tappe" },
+    { "name": "Novità", "url": "./#novita" },
+    { "name": "Calcola i contributi", "url": "./#simulatore" }
+  ]
+}

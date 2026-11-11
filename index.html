@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nuova Cassa, guida all'accordo del Gruppo Banco BPM</title>
+<meta name="description" content="Guida non ufficiale all'accordo del 10 novembre 2026 che istituisce la Cassa Assistenza del Gruppo Banco BPM: testo, tappe, contributi, statuti e novità.">
+<meta name="theme-color" content="#F1F3F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1424" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Nuova Cassa">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<a class="salta" href="#vista">Vai al contenuto</a>
+
+<header class="testata">
+  <a class="indietro" id="indietro" href="#oggi" hidden aria-label="Indietro">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <p class="testata-titolo" id="titolo">Nuova Cassa</p>
+  <p class="testata-nota" id="sottotitolo">Guida non ufficiale</p>
+</header>
+
+<main id="vista" tabindex="-1"></main>
+
+<nav class="schede" aria-label="Sezioni dell'app">
+  <a href="#oggi" data-scheda="oggi">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+    <span>Oggi</span>
+  </a>
+  <a href="#tappe" data-scheda="tappe">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><path d="M6 8v8M11 6h9M11 18h9M11 12h6"/></svg>
+    <span>Tappe</span>
+  </a>
+  <a href="#accordo" data-scheda="accordo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v4h4M10 12h6M10 16h6"/></svg>
+    <span>Accordo</span>
+  </a>
+  <a href="#novita" data-scheda="novita">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l2 2H4zM10 21h4"/></svg>
+    <span>Novità</span>
+    <b class="pallino" id="pallino" hidden></b>
+  </a>
+  <a href="#altro" data-scheda="altro">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+    <span>Altro</span>
+  </a>
+</nav>
+
+<div id="avviso" class="avviso" role="status" aria-live="polite" hidden></div>
+
+<noscript><p style="padding:24px">Questa guida ha bisogno di JavaScript per funzionare.</p></noscript>
+
+<script src="config.js"></script>
+<script src="assets/contenuti.js"></script>
+<script src="assets/calcolo.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

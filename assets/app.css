@@ -1,0 +1,256 @@
+/* Nuova Cassa. Un libretto del socio: carta da registro, inchiostro blu, timbri viola. */
+@font-face { font-family: "Atkinson Next"; src: url("fonts/atkinson-next.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/literata.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+
+:root {
+  --carta: #F1F3F6;
+  --foglio: #FFFFFF;
+  --inchiostro: #131C33;
+  --inchiostro-2: #4A556E;
+  --riga: #D3D9E3;
+  --timbro: #5A3E9E;
+  --timbro-tenue: #ECE7F7;
+  --segnale: #B3261E;
+  --segnale-tenue: #FBEBE9;
+  --sans: "Atkinson Next", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Literata", Georgia, "Times New Roman", serif;
+  --raggio: 6px;
+  --barra: 62px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --carta: #0E1424; --foglio: #161E33; --inchiostro: #E9EDF5; --inchiostro-2: #A8B2C7;
+    --riga: #2A3550; --timbro: #B7A4F2; --timbro-tenue: #251F45; --segnale: #FF8A80; --segnale-tenue: #3A1B1A;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 17px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, ul, ol, dl, dd, figure, table { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--timbro); outline-offset: 2px; border-radius: 3px; }
+[hidden] { display: none !important; }
+.salta { position: absolute; left: -999px; top: 8px; background: var(--foglio); padding: 8px 12px; z-index: 30; }
+.salta:focus { left: 8px; }
+.solo-lettori { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Testata */
+.testata { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; column-gap: 8px;
+  padding: calc(10px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 10px max(16px, env(safe-area-inset-left));
+  min-height: calc(49px + env(safe-area-inset-top)); background: var(--carta); border-bottom: 1px solid var(--riga); }
+.testata-titolo { grid-column: 2; font-weight: 700; font-size: 18px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.testata-nota { grid-column: 3; font-size: 13px; color: var(--inchiostro-2); }
+.indietro { grid-column: 1; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px 0 -8px -12px; border-radius: 50%; }
+
+/* Vista */
+main { max-width: 46rem; margin: 0 auto; padding: 20px max(16px, env(safe-area-inset-right)) calc(var(--barra) + 40px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); outline: none; }
+main > * + * { margin-top: 28px; }
+.t1 { font: 700 30px/1.15 var(--sans); letter-spacing: -0.01em; }
+.t2 { font: 700 20px/1.25 var(--sans); }
+.t3 { font: 700 17px/1.3 var(--sans); }
+.sotto { color: var(--inchiostro-2); margin-top: 6px; }
+.piccolo { font-size: 15px; color: var(--inchiostro-2); }
+.blocco > * + * { margin-top: 12px; }
+
+/* Testi giustificati. La sillabazione italiana evita gli spazi troppo larghi sugli schermi stretti. */
+main p, main li, main dd, main .det, main .txt, main .cifre span, main td.note {
+  text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 6 3 3;
+}
+/* Titoli, etichette e pulsanti restano allineati a sinistra: su più righe la giustificazione li slabbra. */
+main h1, main h2, main h3, main .tit, main .cosa, main .quando, main .sigla, main .rifs, main .azioni, main .docs, main .lato, main .fonte, main label, main .spunta,
+main .btn, main .filtro, main .passi a, main .testata-titolo { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+main .lato, main .passi a:last-child { text-align: right; }
+main .testo .centro, main .testo .firma, main .firma { text-align: center; }
+
+/* Barra in basso */
+.schede { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: grid; grid-template-columns: repeat(5, 1fr);
+  padding: 0 max(4px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(4px, env(safe-area-inset-left));
+  background: var(--foglio); border-top: 1px solid var(--riga); }
+.schede a { position: relative; display: grid; justify-items: center; gap: 2px; padding: 9px 2px 7px; min-height: var(--barra); text-decoration: none; font-size: 12.5px; color: var(--inchiostro-2); }
+.schede svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.schede a[aria-current="page"] { color: var(--timbro); font-weight: 700; }
+.schede a[aria-current="page"]::before { content: ""; position: absolute; top: -1px; left: 22%; right: 22%; height: 3px; background: var(--timbro); border-radius: 0 0 3px 3px; }
+.pallino { position: absolute; top: 5px; left: calc(50% + 6px); min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px; background: var(--segnale); color: #fff; font-size: 12px; line-height: 19px; text-align: center; font-weight: 700; }
+@media (prefers-color-scheme: dark) { .pallino { color: #1A0B0A; } }
+
+/* Timbro datario: l'unico elemento vistoso dell'app */
+.timbro { flex: none; display: grid; justify-items: center; align-content: center; width: 76px; min-height: 76px; padding: 6px 4px; border: 2px solid currentColor; border-radius: var(--raggio);
+  font-weight: 700; line-height: 1.05; text-align: center; color: var(--inchiostro-2); background: var(--foglio); }
+.timbro .pre { font-size: 12px; font-weight: 400; }
+.timbro .g { font-size: 26px; letter-spacing: -0.02em; }
+.timbro .m { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+.timbro .a { font-size: 13px; font-weight: 400; margin-top: 2px; }
+.timbro.grande { width: 104px; min-height: 104px; }
+.timbro.grande .g { font-size: 40px; }
+.timbro.grande .m { font-size: 17px; }
+.timbro.grande .a { font-size: 15px; }
+.timbro.prossimo { color: var(--inchiostro); box-shadow: inset 0 0 0 3px var(--foglio), inset 0 0 0 4px currentColor; }
+.timbro.fatto { color: var(--timbro); background: var(--timbro-tenue); transform: rotate(-3deg); box-shadow: inset 0 0 0 3px var(--timbro-tenue), inset 0 0 0 4px currentColor; }
+.timbro.passato { border-style: dashed; }
+.timbro.corso { color: var(--timbro); }
+@media (prefers-reduced-motion: no-preference) {
+  .premi { animation: premi 420ms cubic-bezier(.2, .9, .3, 1.2) both; }
+  @keyframes premi { from { transform: scale(1.35) rotate(-6deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+}
+
+/* Prossima scadenza */
+.prossima { display: flex; gap: 16px; align-items: center; padding: 18px; background: var(--foglio); border: 1px solid var(--riga); border-radius: var(--raggio); text-decoration: none; }
+.prossima > span { display: block; min-width: 0; }
+.prossima .quando { display: block; font-size: 15px; color: var(--segnale); font-weight: 700; }
+.prossima .cosa { display: block; font: 700 21px/1.2 var(--sans); margin: 2px 0 4px; }
+.prossima .piccolo { display: block; line-height: 1.35; }
+
+/* Elenchi rigati */
+.righe { border-top: 1px solid var(--riga); }
+.righe > li { border-bottom: 1px solid var(--riga); }
+.riga { display: flex; gap: 12px; align-items: flex-start; padding: 13px 2px; text-decoration: none; min-height: 48px; }
+a.riga:active, button.riga:active { background: var(--timbro-tenue); }
+.riga .corpo { flex: 1; min-width: 0; display: block; }
+.riga .tit { display: block; font-weight: 700; line-height: 1.3; }
+.riga .det { display: block; font-size: 15px; line-height: 1.45; color: var(--inchiostro-2); margin-top: 2px; }
+.riga .docs { display: flex; }
+.riga .lato { flex: none; font-size: 14px; color: var(--inchiostro-2); text-align: right; white-space: nowrap; padding-top: 2px; }
+.riga .freccia { flex: none; align-self: center; width: 20px; height: 20px; color: var(--inchiostro-2); }
+.riga .num { flex: none; width: 2.4em; font: 700 17px/1.3 var(--sans); color: var(--timbro); font-variant-numeric: tabular-nums; }
+button.riga { width: 100%; background: none; border: 0; text-align: left; cursor: pointer; }
+
+/* Cifre chiave */
+.cifre { display: grid; grid-template-columns: 1fr; gap: 0 24px; border-top: 1px solid var(--riga); }
+.cifre a { display: block; padding: 12px 0; border-bottom: 1px solid var(--riga); text-decoration: none; }
+.cifre b { display: block; font: 700 24px/1.15 var(--sans); font-variant-numeric: tabular-nums; }
+.cifre span { display: block; font-size: 14.5px; line-height: 1.35; color: var(--inchiostro-2); margin-top: 3px; }
+
+/* Etichette, filtri, pulsanti */
+.filtri { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 6px; margin-right: -16px; scrollbar-width: none; }
+.filtri::-webkit-scrollbar { display: none; }
+.filtro { flex: none; min-height: 40px; padding: 7px 14px; border: 1px solid var(--riga); border-radius: 20px; background: var(--foglio); cursor: pointer; font-size: 15px; white-space: nowrap; }
+.filtro[aria-pressed="true"] { background: var(--inchiostro); color: var(--carta); border-color: var(--inchiostro); font-weight: 700; }
+.rif { display: inline-block; padding: 1px 8px; border: 1px solid var(--riga); border-radius: 4px; background: var(--foglio); font-size: 13.5px; text-decoration: none; white-space: nowrap; color: var(--inchiostro-2); }
+a.rif { color: var(--timbro); border-color: currentColor; }
+.rifs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.segno { display: inline-block; padding: 1px 7px; border-radius: 4px; font-size: 13px; font-weight: 700; background: var(--timbro-tenue); color: var(--timbro); }
+.segno.rosso { background: var(--segnale-tenue); color: var(--segnale); }
+.segno.neutro { background: none; border: 1px solid var(--riga); color: var(--inchiostro-2); font-weight: 400; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 18px; border: 2px solid var(--inchiostro); border-radius: var(--raggio); background: var(--inchiostro); color: var(--carta); font-weight: 700; text-decoration: none; cursor: pointer; }
+.btn.chiaro { background: none; color: var(--inchiostro); }
+.btn.stretto { min-height: 40px; padding: 6px 12px; font-size: 15px; border-width: 1px; }
+.btn[disabled] { opacity: .5; cursor: default; }
+.azioni { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Note e riquadri */
+.nota { padding: 14px 16px; background: var(--foglio); border: 1px solid var(--riga); border-left: 4px solid var(--timbro); border-radius: var(--raggio); }
+.nota.attenzione { border-left-color: var(--segnale); }
+.nota > * + * { margin-top: 8px; }
+.nota .t3 + p { margin-top: 4px; }
+
+/* Tappe */
+.anno { font: 700 24px/1 var(--sans); padding: 18px 0 8px; position: sticky; top: calc(48px + env(safe-area-inset-top)); background: var(--carta); z-index: 5; border-bottom: 1px solid var(--riga); }
+.tappa { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--riga); }
+.tappa .corpo { flex: 1; min-width: 0; }
+.tappa .quando { font-size: 14.5px; color: var(--inchiostro-2); }
+.tappa .tit { font: 700 18px/1.25 var(--sans); margin: 1px 0 4px; }
+.tappa .txt { font-size: 16px; color: var(--inchiostro-2); }
+.tappa.e-fatta .tit { color: var(--inchiostro-2); }
+
+/* Accordo: indice, ricerca, articolo */
+.cerca { display: flex; gap: 8px; }
+.cerca input { flex: 1; min-width: 0; min-height: 48px; padding: 10px 14px; border: 1px solid var(--inchiostro-2); border-radius: var(--raggio); background: var(--foglio); }
+.sez-tit { font: 700 15px/1.3 var(--sans); color: var(--inchiostro-2); padding: 20px 0 6px; }
+.breve > li { position: relative; padding: 5px 0 5px 20px; }
+.breve > li::before { content: ""; position: absolute; left: 3px; top: 15px; width: 7px; height: 7px; border-radius: 50%; background: var(--timbro); }
+.testo { font: 400 17px/1.68 var(--serif); padding: 18px; background: var(--foglio); border: 1px solid var(--riga); border-radius: var(--raggio); overflow-wrap: break-word; }
+.testo > * + * { margin-top: 12px; }
+.testo .sub { font: 700 17px/1.35 var(--sans); margin-top: 22px; }
+.testo .n, .testo .m { font-family: var(--sans); font-weight: 700; color: var(--timbro); margin-right: 4px; }
+.testo .voce { padding-left: 1.5em; text-indent: -1.5em; }
+.testo .voce.l2 { margin-left: 1.5em; }
+.testo .rientro { margin-left: 1.5em; }
+.testo .centro { text-align: center; font-weight: 700; }
+.testo a { color: var(--timbro); text-underline-offset: 3px; }
+.testo .firma { text-align: center; font-family: var(--sans); font-size: 15px; color: var(--inchiostro-2); }
+mark { background: #FFE58A; color: #131C33; padding: 0 2px; border-radius: 2px; }
+.passi { display: flex; justify-content: space-between; gap: 12px; }
+.passi a { flex: 1; padding: 12px; border: 1px solid var(--riga); border-radius: var(--raggio); background: var(--foglio); text-decoration: none; font-size: 15px; min-width: 0; }
+.passi a b { display: block; font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.passi a:last-child { text-align: right; }
+
+/* Tabelle */
+.tab-scroll { overflow-x: auto; border: 1px solid var(--riga); border-radius: var(--raggio); background: var(--foglio); }
+.tab { width: 100%; border-collapse: collapse; font-size: 15.5px; font-variant-numeric: tabular-nums; }
+.tab th, .tab td { padding: 9px 10px; text-align: right; border-bottom: 1px solid var(--riga); white-space: nowrap; }
+.tab th:first-child, .tab td:first-child { text-align: left; }
+.tab thead th { font-size: 13.5px; font-weight: 700; color: var(--inchiostro-2); vertical-align: bottom; white-space: normal; background: var(--carta); }
+.tab tbody tr:last-child td, .tab tbody tr:last-child th { border-bottom: 0; }
+.tab tbody th { font-weight: 700; }
+.tab .gruppo td, .tab .gruppo th { border-top: 2px solid var(--inchiostro-2); }
+.tab tfoot td, .tab tfoot th { font-weight: 700; border-top: 2px solid var(--inchiostro); border-bottom: 0; }
+.tab td.note { white-space: normal; text-align: left; font-size: 14px; color: var(--inchiostro-2); min-width: 12em; }
+
+/* Moduli */
+.campo { display: grid; gap: 5px; }
+.campo label, .campo legend { font-weight: 700; font-size: 15.5px; }
+.campo .aiuto { font-size: 14px; color: var(--inchiostro-2); }
+.campo input[type="number"], .campo input[type="text"], .campo select { min-height: 48px; width: 100%; padding: 8px 12px; border: 1px solid var(--inchiostro-2); border-radius: var(--raggio); background: var(--foglio); }
+.griglia2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.griglia2.larga { grid-template-columns: 1fr; }
+.spunta { display: flex; gap: 10px; align-items: center; min-height: 44px; }
+.spunta input { width: 22px; height: 22px; accent-color: var(--timbro); flex: none; }
+.familiare { padding: 14px; border: 1px solid var(--riga); border-radius: var(--raggio); background: var(--foglio); }
+.familiare > * + * { margin-top: 10px; }
+.familiare .capo { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.totale { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-top: 2px solid var(--inchiostro); border-bottom: 1px solid var(--riga); }
+.totale b { font: 700 26px/1.1 var(--sans); font-variant-numeric: tabular-nums; }
+
+/* Novità */
+.fonte { flex: none; width: 5.6em; font-size: 12.5px; font-weight: 700; line-height: 1.25; color: var(--inchiostro-2); padding-top: 3px; overflow-wrap: break-word; hyphens: auto; }
+.nuova .tit::after { content: "nuova"; margin-left: 8px; padding: 0 6px; border-radius: 4px; background: var(--segnale); color: #fff; font-size: 12px; font-weight: 700; vertical-align: 2px; }
+@media (prefers-color-scheme: dark) { .nuova .tit::after { color: #1A0B0A; } }
+.stato-fonti li { display: grid; gap: 1px; padding: 9px 0; border-bottom: 1px solid var(--riga); font-size: 15px; }
+.stato-fonti a { font-weight: 700; }
+.stato-fonti .ok, .stato-fonti .ko { font-size: 14px; }
+.stato-fonti .ok { color: var(--inchiostro-2); }
+.stato-fonti .ko { color: var(--segnale); font-weight: 700; }
+
+/* Schede delle casse */
+.cassa { padding: 18px; background: var(--foglio); border: 1px solid var(--riga); border-radius: var(--raggio); }
+.cassa > * + * { margin-top: 10px; }
+.cassa .sigla { font: 700 26px/1 var(--sans); }
+.cassa .dati { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--riga); border-bottom: 1px solid var(--riga); }
+.cassa .dati b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+.cassa .dati span { font-size: 14px; color: var(--inchiostro-2); }
+.docs { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Documenti firmati, sfogliati dentro l'app */
+.pdf { min-height: 40vh; }
+.pdf .pagina { display: block; width: 100%; height: auto; margin-bottom: 10px; background: #fff; border: 1px solid var(--riga); border-radius: 3px; }
+
+/* Glossario */
+.voci dt { font-weight: 700; padding-top: 14px; }
+.voci dd { color: var(--inchiostro-2); padding-bottom: 14px; border-bottom: 1px solid var(--riga); }
+.voci dd .rifs { margin-top: 6px; }
+
+/* Avviso a comparsa */
+.avviso { position: fixed; left: 50%; bottom: calc(var(--barra) + 14px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 40; max-width: min(92vw, 30rem); padding: 12px 16px; border-radius: var(--raggio); background: var(--inchiostro); color: var(--carta); font-size: 15.5px; display: flex; gap: 14px; align-items: center; }
+.avviso button { background: none; border: 0; color: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; white-space: nowrap; }
+
+@media (min-width: 720px) {
+  body { font-size: 18px; }
+  .griglia2.larga { grid-template-columns: 1fr 1fr; }
+  .t1 { font-size: 36px; }
+  .cifre { grid-template-columns: repeat(3, 1fr); }
+  .schede { left: 50%; right: auto; width: 46rem; transform: translateX(-50%); border: 1px solid var(--riga); border-bottom: 0; border-radius: 12px 12px 0 0; }
+}
+@media (max-width: 359px) {
+  .griglia2 { grid-template-columns: 1fr; }
+  .timbro { width: 66px; min-height: 66px; }
+  .timbro.grande { width: 88px; min-height: 88px; }
+}
+@media print {
+  .testata, .schede, .avviso, .filtri, .cerca, .passi, .azioni { display: none !important; }
+  main { padding: 0; max-width: none; }
+  body { background: #fff; color: #000; }
+}

@@ -1,0 +1,96 @@
+{
+  "_": "Fonti controllate dal monitor. Per aggiungerne una basta una nuova voce in 'fonti'. Dopo ogni modifica: npm test --prefix monitor",
+  "parole": {
+    "bpm": ["banco bpm", "bancobpm", "gruppo bpm", "=bpm"],
+    "cassa": [
+      "cassa assistenza", "cassa sanitaria", "cassa unica", "cassa mutua", "nuova cassa",
+      "assistenza sanitaria", "sanita integrativa", "fondo sanitario", "fondi sanitari",
+      "fondo assistenza", "fondo malattia", "nomenclatore", "assistenza sanitaria aggiuntiva",
+      "polizza sanitaria", "coperture assicurative", "excess of loss", "armonizzazion",
+      "=fas", "=cma", "=fiam", "=caspop", "=asa", "=ltc", "kasko", "check-up"
+    ],
+    "norme": [
+      "fondi sanitari", "fondo sanitario integrativ", "sanita integrativa", "assistenza sanitaria integrativa",
+      "casse di assistenza", "cassa di assistenza sanitaria", "casse sanitarie", "anagrafe dei fondi",
+      "societa di mutuo soccorso", "secondo pilastro sanitario", "welfare sanitario"
+    ]
+  },
+  "fonti": [
+    {
+      "id": "fisac", "nome": "FISAC CGIL", "descrizione": "Pagina Banco BPM", "categoria": "sindacati",
+      "pagina": "https://www.fisac-cgil.it/category/banche/banco-bpm",
+      "ambito": "tutto", "tema": "cassa",
+      "leggi": [{ "tipo": "rss", "url": "https://www.fisac-cgil.it/category/banche/banco-bpm/feed" }]
+    },
+    {
+      "id": "first", "nome": "FIRST CISL", "descrizione": "Sito del Gruppo Banco BPM", "categoria": "sindacati",
+      "pagina": "https://www.firstcisl.it/bancobpm/",
+      "ambito": "tutto", "tema": "cassa",
+      "leggi": [{ "tipo": "rss", "url": "https://www.firstcisl.it/bancobpm/feed/" }]
+    },
+    {
+      "id": "fabi", "nome": "FABI", "descrizione": "Notizie nazionali che citano Banco BPM", "categoria": "sindacati",
+      "pagina": "https://www.fabi.it/category/news/",
+      "ambito": "bpm", "tema": "cassa",
+      "leggi": [
+        { "tipo": "rss", "url": "https://www.fabi.it/feed/" },
+        { "tipo": "wp", "url": "https://www.fabi.it/wp-json/wp/v2/posts?search=banco%20bpm&per_page=20&_fields=id,date_gmt,link,title,excerpt" }
+      ]
+    },
+    {
+      "id": "uilca", "nome": "UILCA", "descrizione": "Notizie nazionali che citano Banco BPM", "categoria": "sindacati",
+      "pagina": "https://www.uilca.it/credito/",
+      "ambito": "bpm", "tema": "cassa",
+      "leggi": [
+        { "tipo": "rss", "url": "https://www.uilca.it/feed/" },
+        { "tipo": "wp", "url": "https://www.uilca.it/wp-json/wp/v2/posts?search=banco%20bpm&per_page=20&_fields=id,date_gmt,link,title,excerpt" },
+        { "tipo": "html", "url": "https://www.uilca.it/credito/", "link": "^https://(www\\.)?uilca\\.it/[a-z0-9-]{12,}/?$" }
+      ]
+    },
+    {
+      "id": "cma", "nome": "CMA", "descrizione": "Notizie e convocazioni della Cassa Mutua di Assistenza", "categoria": "casse",
+      "pagina": "https://www.cassamutuadiassistenza.it/",
+      "ambito": "tutto", "tema": "sempre",
+      "leggi": [{ "tipo": "html", "url": "https://www.cassamutuadiassistenza.it/", "link": "news\\.php\\?id=\\d+" }]
+    },
+    {
+      "id": "fiam", "nome": "FIAM", "descrizione": "Circolari, documenti e assemblee del Fondo Malattia Creberg", "categoria": "casse",
+      "pagina": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/fondo-malattia-creberg/circolari-e-documenti/",
+      "ambito": "tutto", "tema": "sempre",
+      "leggi": [
+        { "tipo": "html", "url": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/fondo-malattia-creberg/circolari-e-documenti/", "link": "/download/[a-z0-9-]+/?$" },
+        { "tipo": "html", "url": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/fondo-malattia-creberg/assemblee/", "link": "/download/[a-z0-9-]+/?$" }
+      ]
+    },
+    {
+      "id": "mefop", "nome": "Mefop", "descrizione": "Novità normative su fondi pensione e fondi sanitari", "categoria": "norme",
+      "pagina": "https://www.mefop.it/news/normativa",
+      "ambito": "tema", "tema": "norme",
+      "leggi": [{ "tipo": "html", "url": "https://www.mefop.it/news/normativa", "link": "/news/normativa/[a-z0-9-]{8,}$" }]
+    },
+    {
+      "id": "gazzetta", "nome": "Gazzetta Ufficiale", "descrizione": "Sommario dell'ultima Serie Generale", "categoria": "norme",
+      "pagina": "https://www.gazzettaufficiale.it/",
+      "ambito": "tema", "tema": "norme",
+      "leggi": [{ "tipo": "rss", "url": "https://www.gazzettaufficiale.it/rss/SG" }]
+    },
+    {
+      "id": "qs", "nome": "Quotidiano Sanità", "descrizione": "Notizie su sanità integrativa e fondi sanitari", "categoria": "norme",
+      "pagina": "https://www.quotidianosanita.it/",
+      "ambito": "tema", "tema": "norme",
+      "leggi": [{ "tipo": "rss", "url": "https://www.quotidianosanita.it/feed/" }]
+    },
+    {
+      "id": "secondowelfare", "nome": "Secondo Welfare", "descrizione": "Approfondimenti su welfare aziendale e sanità integrativa", "categoria": "norme",
+      "pagina": "https://www.secondowelfare.it/",
+      "ambito": "tema", "tema": "norme",
+      "leggi": [{ "tipo": "rss", "url": "https://www.secondowelfare.it/feed/" }]
+    },
+    {
+      "id": "intermedia", "nome": "Intermedia Channel", "descrizione": "Notizie assicurative su fondi sanitari", "categoria": "norme",
+      "pagina": "https://www.intermediachannel.it/",
+      "ambito": "tema", "tema": "norme",
+      "leggi": [{ "tipo": "rss", "url": "https://www.intermediachannel.it/feed/" }]
+    }
+  ]
+}

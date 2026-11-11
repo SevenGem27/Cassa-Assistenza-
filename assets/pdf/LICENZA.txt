@@ -1,0 +1,3 @@
+PDF.js - Copyright Mozilla Foundation
+Distribuito con licenza Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0
+File presi dal pacchetto pdfjs-dist 6.2.108 (cartella legacy/build): pdf.min.mjs e pdf.worker.min.mjs, non modificati.

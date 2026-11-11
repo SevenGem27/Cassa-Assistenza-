@@ -1,0 +1,4 @@
+Atkinson Hyperlegible Next - Copyright Braille Institute of America, Inc.
+Literata - Copyright The Literata Project Authors
+Entrambi distribuiti con licenza SIL Open Font License 1.1: https://openfontlicense.org
+File presi dai pacchetti @fontsource-variable/atkinson-hyperlegible-next e @fontsource-variable/literata.

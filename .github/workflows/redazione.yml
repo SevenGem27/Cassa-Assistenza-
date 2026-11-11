@@ -1,0 +1,60 @@
+name: Prove e ricostruzione
+
+# Quando cambiano i contenuti o il codice: esegue le prove e rigenera i file dell'app.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'redazione/**'
+      - 'assets/app.js'
+      - 'assets/app.css'
+      - 'assets/calcolo.js'
+      - 'index.html'
+      - 'config.js'
+      - 'monitor/**'
+      - 'push-worker/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  ricostruisci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: monitor/package-lock.json
+
+      - name: Installa il necessario
+        run: npm ci --prefix monitor
+
+      - name: Prove
+        run: npm test --prefix monitor
+
+      - name: Rigenera contenuti, calendario e versione
+        run: node redazione/costruisci.mjs
+
+      - name: Salva i file rigenerati
+        env:
+          PROPRIETARIO: ${{ github.repository_owner }}
+          PROPRIETARIO_ID: ${{ github.repository_owner_id }}
+        run: |
+          git config user.name "$PROPRIETARIO"
+          git config user.email "${PROPRIETARIO_ID}+${PROPRIETARIO}@users.noreply.github.com"
+          git add assets/contenuti.js data/scadenze.ics sw.js
+          if git diff --cached --quiet; then
+            echo "Niente da rigenerare"
+          else
+            git commit -m "Rigenera i contenuti"
+            git push || (git pull --rebase && git push)
+          fi

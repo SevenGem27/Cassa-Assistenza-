@@ -1,0 +1,63 @@
+name: Controllo novità
+
+on:
+  schedule:
+    # Sei controlli al giorno. Gli orari sono UTC: in Italia le 6, 9, 12, 15, 18 e 21 d'inverno, un'ora dopo d'estate.
+    - cron: '7 5,8,11,14,17,20 * * *'
+  workflow_dispatch:
+    inputs:
+      avviso_titolo:
+        description: 'Avviso da mandare a tutti (facoltativo). Vuoto = solo controllo delle fonti'
+        required: false
+        type: string
+      avviso_url:
+        description: 'Collegamento dell''avviso (facoltativo)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: monitor/package-lock.json
+
+      - name: Installa il necessario
+        run: npm ci --prefix monitor --omit=dev
+
+      - name: Controlla le fonti e invia le notifiche
+        run: node monitor/monitor.mjs
+        env:
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          AVVISO_TITOLO: ${{ inputs.avviso_titolo }}
+          AVVISO_URL: ${{ inputs.avviso_url }}
+
+      - name: Salva le novità nel repository
+        env:
+          PROPRIETARIO: ${{ github.repository_owner }}
+          PROPRIETARIO_ID: ${{ github.repository_owner_id }}
+        run: |
+          git config user.name "$PROPRIETARIO"
+          git config user.email "${PROPRIETARIO_ID}+${PROPRIETARIO}@users.noreply.github.com"
+          git add data/news.json data/status.json data/feed.xml
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica da salvare"
+          else
+            git commit -m "Controllo novità $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push || (git pull --rebase && git push)
+          fi
