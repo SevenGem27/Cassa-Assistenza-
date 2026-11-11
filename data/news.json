@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-11T22:44:04.955Z",
+ "aggiornato": "2026-11-11T22:51:09.250Z",
  "voci": [
   {
    "id": "e6b24451849a",
@@ -576,6 +576,18 @@
    "temi": []
   },
   {
+   "id": "0a8398c648d9",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2026",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=19",
+   "data": "2026-04-28T12:00:00.000Z",
+   "trovato": "2026-04-28T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
    "id": "dbb770a00522",
    "fonte": "fabi",
    "nomeFonte": "FABI",
@@ -672,5 +684,49 @@
    "temi": []
   }
  ],
- "giaViste": []
+ "giaViste": [
+  "059e1380ed89",
+  "09a26739163a",
+  "0abad6490e70",
+  "2ad591b6084b",
+  "31e94e3fa350",
+  "355f5146f74f",
+  "494da057b9b3",
+  "495f7e1ba258",
+  "4de0a1d4c7ff",
+  "4f8adb64e866",
+  "531c3d13a558",
+  "5c0bb8cdb7b4",
+  "6079af99237a",
+  "64ff62bce69b",
+  "650a95bc9b7f",
+  "67bad2678846",
+  "6937432d52d0",
+  "7d3026289c21",
+  "84c72aeabf60",
+  "894fceecb70b",
+  "8a0e3b2c9604",
+  "8cc9541fa8ed",
+  "8ec394508705",
+  "8f5be67992ec",
+  "9d94cd569cba",
+  "9f49de3b5c39",
+  "a1fa9a22bc82",
+  "b211dc88a85d",
+  "bb2f82f563da",
+  "be3ec13b1096",
+  "c66216d96569",
+  "cabde05094dc",
+  "d4cf3b657d62",
+  "d872e0a87829",
+  "d9a9e0f5be4d",
+  "ddeb4d0f3615",
+  "dee9fb620ef9",
+  "df7f386737d6",
+  "e4c9196ee52f",
+  "ef6bcba1628a",
+  "f904d9ef9db0",
+  "fc4df4629636",
+  "fc81408cb29a"
+ ]
 }
