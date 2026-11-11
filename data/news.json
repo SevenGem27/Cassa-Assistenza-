@@ -1,6 +1,330 @@
 {
- "aggiornato": "2026-11-11T12:00:00Z",
+ "aggiornato": "2026-11-11T22:44:04.955Z",
  "voci": [
+  {
+   "id": "fc4df4629636",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Assemblea Ordinaria e Straordinaria 2020",
+   "url": "https://www.welfare.bancopopolare.it/download/assemblea-ordinaria-e-straordinaria-2020/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "2ad591b6084b",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Assemblea Ordinaria 2021",
+   "url": "https://www.welfare.bancopopolare.it/download/assemblea-ordinaria-2021/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "494da057b9b3",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Assemblea Ordinaria 2022",
+   "url": "https://www.welfare.bancopopolare.it/download/assemblea-ordinaria-2022/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "ef6bcba1628a",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Relazione del Collegio Revisori",
+   "url": "https://www.welfare.bancopopolare.it/download/relazione-del-collegio-revisori/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "0abad6490e70",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/convocazione-assemblea-ordinaria/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "495f7e1ba258",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Relazione del Collegio Revisori",
+   "url": "https://www.welfare.bancopopolare.it/download/relazione-del-collegio-revisori-2/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "d4cf3b657d62",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Bilancio 2023 - Relazione di Gestione - Previsionale 2024",
+   "url": "https://www.welfare.bancopopolare.it/download/bilancio-2023-relazione-di-gestione-previsionale-2024/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "f904d9ef9db0",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/convocazione-assemblea-ordinaria-2/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "e4c9196ee52f",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Relazione dei Revisori",
+   "url": "https://www.welfare.bancopopolare.it/download/relazione-dei-revisori/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "b211dc88a85d",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Bilancio 2024 – Relazione di gestione – Previsionale 2025",
+   "url": "https://www.welfare.bancopopolare.it/download/bilancio-2024-relazione-di-gestione-previsionale-2025/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "ddeb4d0f3615",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/convocazione-assemblea-ordinaria-3/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "4f8adb64e866",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Relazione Collegio dei Revisori",
+   "url": "https://www.welfare.bancopopolare.it/download/relazione-collegio-dei-revisori-bilancio-2025/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "4de0a1d4c7ff",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Bilancio 2025 - Relazione di Gestione - Previsionale 2026",
+   "url": "https://www.welfare.bancopopolare.it/download/bilancio-2025-relazione-di-gestione-previsionale-2026/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "9f49de3b5c39",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/convocazione-assemblea-ordinaria-4/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "9d94cd569cba",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Anno 2020",
+   "url": "https://www.welfare.bancopopolare.it/download/anno-2020/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "cabde05094dc",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Anno 2021",
+   "url": "https://www.welfare.bancopopolare.it/download/anno-2021/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "355f5146f74f",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Anno 2022",
+   "url": "https://www.welfare.bancopopolare.it/download/anno-2022-2/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "be3ec13b1096",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Anno 2023",
+   "url": "https://www.welfare.bancopopolare.it/download/anno-2023/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "df7f386737d6",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "Anno 2024",
+   "url": "https://www.welfare.bancopopolare.it/download/anno-2024/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "dee9fb620ef9",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "3 Contributi volontari ASA anno 2026",
+   "url": "https://www.welfare.bancopopolare.it/download/3-contributi-volontari-asa-anno-2026/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "64ff62bce69b",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "2 Esito votazioni Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/2-esito-votazioni-assemblea-ordinaria/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "c66216d96569",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "1 Convocazione Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/1-convocazione-assemblea-ordinaria/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "6079af99237a",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "5 Cruscotto delle prestazioni sanitare",
+   "url": "https://www.welfare.bancopopolare.it/download/5-cruscotto-delle-prestazioni-sanitare/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "fc81408cb29a",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "4 Sanzioni per errate comunicazioni degli Associati",
+   "url": "https://www.welfare.bancopopolare.it/download/4-sanzioni-per-errate-comunicazioni-degli-associati/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "bb2f82f563da",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "3 Esito votazioni Assemblea Ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/3-esito-votazioni-assemblea-ordinaria/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "31e94e3fa350",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "2 Convocazione Assemblea ordinaria",
+   "url": "https://www.welfare.bancopopolare.it/download/2-convocazione-assemblea-ordinaria-2/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "d9a9e0f5be4d",
+   "fonte": "fiam",
+   "nomeFonte": "FIAM",
+   "categoria": "casse",
+   "titolo": "1 Modifiche Statuto art 17",
+   "url": "https://www.welfare.bancopopolare.it/download/1-modifiche-statuto-art-17/",
+   "data": null,
+   "trovato": "2026-11-11T22:44:04.955Z",
+   "pertinente": true,
+   "temi": []
+  },
   {
    "id": "e6b24451849a",
    "fonte": "fisac",
@@ -14,28 +338,17 @@
    "trovato": "2026-11-11T08:50:38Z"
   },
   {
-   "id": "5a1980f7909a",
-   "fonte": "fisac",
-   "titolo": "Banco BPM: Nuove coperture assicurative",
-   "url": "https://www.fisac-cgil.it/163296/banco-bpm-nuove-coperture-assicurative",
-   "data": "2026-11-10T15:02:48Z",
-   "pertinente": true,
-   "temi": [
-    "coperture assicurative"
-   ],
-   "trovato": "2026-11-10T15:02:48Z"
-  },
-  {
-   "id": "6829fef09e12",
-   "fonte": "fisac",
-   "titolo": "Banco BPM: Cassa Sanitaria Unica di Gruppo",
-   "url": "https://www.fisac-cgil.it/163292/banco-bpm-cassa-sanitaria-unica-di-gruppo",
-   "data": "2026-11-10T14:38:35Z",
+   "id": "df6c3aef4daf",
+   "fonte": "stampa",
+   "nomeFonte": "Il Sole 24 Ore",
+   "titolo": "Banco Bpm, cassa sanitaria unica per i 19mila bancari",
+   "url": "https://www.ilsole24ore.com/art/banco-bpm-cassa-sanitaria-unica-i-19mila-bancari-AJGmQnBC",
+   "data": "2026-11-10T17:32:14Z",
    "pertinente": true,
    "temi": [
     "cassa sanitaria"
    ],
-   "trovato": "2026-11-10T14:38:35Z"
+   "trovato": "2026-11-10T17:32:14Z"
   },
   {
    "id": "c10474fd9a98",
@@ -50,6 +363,18 @@
    "trovato": "2026-11-10T16:03:27Z"
   },
   {
+   "id": "5a1980f7909a",
+   "fonte": "fisac",
+   "titolo": "Banco BPM: Nuove coperture assicurative",
+   "url": "https://www.fisac-cgil.it/163296/banco-bpm-nuove-coperture-assicurative",
+   "data": "2026-11-10T15:02:48Z",
+   "pertinente": true,
+   "temi": [
+    "coperture assicurative"
+   ],
+   "trovato": "2026-11-10T15:02:48Z"
+  },
+  {
    "id": "6036b63d8a2f",
    "fonte": "uilca",
    "titolo": "Uilca su Banco Bpm: bene gli accordi su assistenza sanitaria e coperture assicurative.",
@@ -62,6 +387,18 @@
    "trovato": "2026-11-10T14:55:00Z"
   },
   {
+   "id": "6829fef09e12",
+   "fonte": "fisac",
+   "titolo": "Banco BPM: Cassa Sanitaria Unica di Gruppo",
+   "url": "https://www.fisac-cgil.it/163292/banco-bpm-cassa-sanitaria-unica-di-gruppo",
+   "data": "2026-11-10T14:38:35Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria"
+   ],
+   "trovato": "2026-11-10T14:38:35Z"
+  },
+  {
    "id": "617af0fa0a6d",
    "fonte": "fabi",
    "titolo": "In Banco BPM accordo su cassa sanitaria unica per 19mila dipendenti",
@@ -72,19 +409,6 @@
     "cassa sanitaria"
    ],
    "trovato": "2026-11-10T14:38:01Z"
-  },
-  {
-   "id": "df6c3aef4daf",
-   "fonte": "stampa",
-   "nomeFonte": "Il Sole 24 Ore",
-   "titolo": "Banco Bpm, cassa sanitaria unica per i 19mila bancari",
-   "url": "https://www.ilsole24ore.com/art/banco-bpm-cassa-sanitaria-unica-i-19mila-bancari-AJGmQnBC",
-   "data": "2026-11-10T17:32:14Z",
-   "pertinente": true,
-   "temi": [
-    "cassa sanitaria"
-   ],
-   "trovato": "2026-11-10T17:32:14Z"
   },
   {
    "id": "1939e036767e",
@@ -101,6 +425,81 @@
    "trovato": "2026-11-10T08:00:00Z"
   },
   {
+   "id": "074408b3904c",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "BANCO BPM, DAL 1 GENNAIO 2027 IL RIENTRO DEGLI ULTIMI LAVORATORI DA GARDANT",
+   "url": "https://www.fabi.it/2026/11/09/banco-bpm-dal-1-gennaio-2027-il-rientro-degli-ultimi-lavoratori-da-gardant/",
+   "data": "2026-11-09T16:16:57.000Z",
+   "trovato": "2026-11-09T16:16:57.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "12cee6f41bd8",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM-Crédit Agricole: proposta di fusione",
+   "url": "https://www.fisac-cgil.it/163194/banco-bpm-credit-agricole-proposta-di-fusione",
+   "data": "2026-11-09T06:49:25.000Z",
+   "trovato": "2026-11-09T06:49:25.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "db1ac5db0849",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: lavorare in sicurezza",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-lavorare-in-sicurezza/",
+   "data": "2026-11-04T18:03:06.000Z",
+   "trovato": "2026-11-04T18:03:06.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "f6ae28ee21e7",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Lavorare in sicurezza",
+   "url": "https://www.firstcisl.it/bancobpm/2026/11/04/lavorare-in-sicurezza/",
+   "data": "2026-11-04T15:12:53.000Z",
+   "trovato": "2026-11-04T15:12:53.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "d017c1775303",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Continua la trattativa – 3 novembre 2026",
+   "url": "https://www.firstcisl.it/bancobpm/2026/11/04/continua-la-trattativa-3-novembre-2026/",
+   "data": "2026-11-04T15:05:21.000Z",
+   "trovato": "2026-11-04T15:05:21.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "nuova cassa"
+   ]
+  },
+  {
+   "id": "c9253ce92a21",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM: pressioni commerciali, i divieti e le tutele",
+   "url": "https://www.fisac-cgil.it/163066/banco-bpm-pressioni-commerciali-divieti-tutele",
+   "data": "2026-11-04T14:57:12.000Z",
+   "trovato": "2026-11-04T14:57:12.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
    "id": "047dbe3cdc7e",
    "fonte": "fisac",
    "titolo": "Banco BPM: trattativa, Gardant e riorganizzazione filiali",
@@ -111,6 +510,694 @@
     "cassa sanitaria"
    ],
    "trovato": "2026-11-04T07:55:43Z"
+  },
+  {
+   "id": "dd5ea49bd632",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: cassa sanitaria unica, accordo Gardant, riorganizzazione filiali, welfare Natale Bimbi",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-cassa-sanitaria-accordo-gardant-riorganizzazione-filiali-welfare-natale-bimbi/",
+   "data": "2026-11-03T20:30:00.000Z",
+   "trovato": "2026-11-03T20:30:00.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "nuova cassa"
+   ]
+  },
+  {
+   "id": "64f32bc68891",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: incontro di trattativa 28 e 29 ottobre 2026",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-incontro-trattativa-28-29-ottobre-2026/",
+   "data": "2026-10-30T17:07:59.000Z",
+   "trovato": "2026-10-30T17:07:59.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "a5a1ff6160ae",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM: casse sanitarie, esame ESMA e Fondo di Solidarietà",
+   "url": "https://www.fisac-cgil.it/162867/banco-bpm-casse-sanitarie-esma-fondo-solidarieta",
+   "data": "2026-10-30T08:00:39.000Z",
+   "trovato": "2026-10-30T08:00:39.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "08f40a443f8d",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Incontro di trattativa 28 e 29 ottobre 2026",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/30/incontro-di-trattativa-28-e-29-ottobre-2026/",
+   "data": "2026-10-30T07:58:46.000Z",
+   "trovato": "2026-10-30T07:58:46.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "468f16600df0",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Monte dei Paschi: dopo l’assemblea, al centro il lavoro e le garanzie",
+   "url": "https://www.uilca.it/mps-dichiarazioni-uilca-assemblea-azionisti/",
+   "data": "2026-10-29T18:21:54.000Z",
+   "trovato": "2026-10-29T18:21:54.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "f0379457015e",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "L’InformAzione: Bonus Mamme 2026",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/27/linformazione-bonus-mamme-2026/",
+   "data": "2026-10-27T08:25:31.000Z",
+   "trovato": "2026-10-27T08:25:31.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a7ff06c53578",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM: scadenze ferie e permessi 2026",
+   "url": "https://www.fisac-cgil.it/162683/banco-bpm-scadenze-ferie-permessi-2026",
+   "data": "2026-10-26T06:59:08.000Z",
+   "trovato": "2026-10-26T06:59:08.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "553ff5a8b429",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Continua la trattativa",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/23/continua-la-trattativa-2/",
+   "data": "2026-10-23T07:59:10.000Z",
+   "trovato": "2026-10-23T07:59:10.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "nuova cassa"
+   ]
+  },
+  {
+   "id": "1c3379a96866",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM: continua la trattativa, cassa sanitaria e chiusura di 10 filiali",
+   "url": "https://www.fisac-cgil.it/162574/banco-bpm-trattativa-sindacale-ottobre-2026",
+   "data": "2026-10-22T06:30:28.000Z",
+   "trovato": "2026-10-22T06:30:28.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "nuova cassa",
+    "coperture assicurative"
+   ]
+  },
+  {
+   "id": "a8b544b17db6",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: continua la trattativa – 21 ottobre",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-continua-la-trattativa-21-ottobre/",
+   "data": "2026-10-21T08:03:04.000Z",
+   "trovato": "2026-10-21T08:03:04.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "nuova cassa"
+   ]
+  },
+  {
+   "id": "08f31cd44c7e",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: le chiusure di filiali previste per dicembre",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-le-chiusure-di-filiali-previste-per-dicembre/",
+   "data": "2026-10-15T15:55:53.000Z",
+   "trovato": "2026-10-15T15:55:53.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a2a5a2103643",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Chiusure di filiali previste per dicembre: First Cisl, Fisac Cgil e Uilca Uil pronte al confronto a tutela di lavoratrici e lavoratori",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/15/chiusure-di-filiali-previste-per-dicembre-first-cisl-fisac-cgil-e-uilca-uil-pronte-al-confronto-a-tutela-di-lavoratrici-e-lavoratori/",
+   "data": "2026-10-15T08:30:48.000Z",
+   "trovato": "2026-10-15T08:30:48.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "2b791a0faa18",
+   "fonte": "fisac",
+   "nomeFonte": "FISAC CGIL",
+   "categoria": "sindacati",
+   "titolo": "Banco BPM: chiusura di 10 filiali a dicembre 2026",
+   "url": "https://www.fisac-cgil.it/162400/banco-bpm-chiusura-di-10-filiali-a-dicembre-2026",
+   "data": "2026-10-15T08:29:37.000Z",
+   "trovato": "2026-10-15T08:29:37.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "4de73e9ae7cd",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Incontro con azienda del 7 ottobre 2026",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/08/incontro-con-azienda-del-6-ottobre-2026/",
+   "data": "2026-10-08T13:31:56.000Z",
+   "trovato": "2026-10-08T13:31:56.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "b7453c790d1d",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: incontro di trattativa del 7 ottobre 2026",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-incontro-di-trattativa-del-7-ottobre-2026/",
+   "data": "2026-10-07T15:48:17.000Z",
+   "trovato": "2026-10-07T15:48:17.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "71a60cb26deb",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: incontro con l’azienda dell’1 ottobre",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-incontro-con-lazienda-dell1-ottobre/",
+   "data": "2026-10-02T16:23:43.000Z",
+   "trovato": "2026-10-02T16:23:43.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a66bf62e96a7",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Incontro con azienda del 1 ottobre 2026",
+   "url": "https://www.firstcisl.it/bancobpm/2026/10/01/incontro-con-azienda-del-1-ottobre-2026/",
+   "data": "2026-10-01T16:30:14.000Z",
+   "trovato": "2026-10-01T16:30:14.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "3a0290847a47",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: l’assemblea congressuale",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-lassemblea-congressuale/",
+   "data": "2026-09-29T16:03:00.000Z",
+   "trovato": "2026-09-29T16:03:00.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "3576ea1bfb12",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "L’InformAzione: Registro delle Operazioni Personali (Soggetti Rilevanti e persone rilevanti)",
+   "url": "https://www.firstcisl.it/bancobpm/2026/09/25/linformazione-registro-delle-operazioni-personali-soggetti-rilevanti-e-persone-rilevanti/",
+   "data": "2026-09-25T09:50:39.000Z",
+   "trovato": "2026-09-25T09:50:39.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "8cda3ca184c1",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: incontro con l’azienda del 23 settembre",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-incontro-con-lazienda-del-23-settembre/",
+   "data": "2026-09-23T16:37:26.000Z",
+   "trovato": "2026-09-23T16:37:26.000Z",
+   "pertinente": true,
+   "temi": [
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "c17283a4549b",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: una banca vicino al territorio, lavoratrici e lavoratori da difendere",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-una-banca-vicino-al-territorio-lavoratrici-e-lavoratori-da-difendere/",
+   "data": "2026-09-21T13:25:36.000Z",
+   "trovato": "2026-09-21T13:25:36.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "5c69cdeb8df6",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: incontro con l’azienda del 9 settembre",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-incontro-con-lazienda-del-9-settembre/",
+   "data": "2026-09-09T18:28:00.000Z",
+   "trovato": "2026-09-09T18:28:00.000Z",
+   "pertinente": true,
+   "temi": [
+    "cassa sanitaria",
+    "armonizzazion"
+   ]
+  },
+  {
+   "id": "d9e5da6ddbc6",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Banco Bpm, pressioni commerciali: il limite è stato superato ancora una volta",
+   "url": "https://www.uilca.it/banco-bpm-pressioni-commerciali-limite-superato-ancora-una-volta/",
+   "data": "2026-09-02T14:24:29.000Z",
+   "trovato": "2026-09-02T14:24:29.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "183cd0bee728",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: c’era una volta",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-cera-una-volta/",
+   "data": "2026-08-31T08:39:50.000Z",
+   "trovato": "2026-08-31T08:39:50.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "9d21afb47310",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: sostituzioni di cassa. Quando uno lavora per due",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-sostituzioni-di-cassa-quando-uno-lavora-per-due/",
+   "data": "2026-08-25T08:40:33.000Z",
+   "trovato": "2026-08-25T08:40:33.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a9a1887cb2d3",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Banco Bpm – Il risiko bancario sulla pelle di lavoratori e territori: ora serve rispetto e valorizzazione!",
+   "url": "https://www.uilca.it/risiko-bancario-banco-bpm-rispetto-lavoratori/",
+   "data": "2026-08-21T09:40:27.000Z",
+   "trovato": "2026-08-21T09:40:27.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "c079c0f081a7",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Banco Bpm: pressioni commerciali, così non si può continuare!",
+   "url": "https://www.uilca.it/banco-bpm-pressioni-commerciali-cosi-non-si-puo-continuare/",
+   "data": "2026-07-28T15:12:03.000Z",
+   "trovato": "2026-07-28T15:12:03.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "8269b40a2b45",
+   "fonte": "uilca",
+   "nomeFonte": "UILCA",
+   "categoria": "sindacati",
+   "titolo": "Gruppo Banco Bpm: formazione, firmato accordo FBA",
+   "url": "https://www.uilca.it/gruppo-banco-bpm-formazione-firmato-accordo-fba/",
+   "data": "2026-07-27T16:49:27.000Z",
+   "trovato": "2026-07-27T16:49:27.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a4f1b1947ede",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "SMART WORKING E FORMAZIONE IN BANCO BPM, FONTANA: «ACCORDO CHE GARANTISCE STABILITÀ E NUOVE OPPORTUNITÀ»",
+   "url": "https://www.fabi.it/2026/05/11/smart-working-e-formazione-in-banco-bpm-fontana-accordo-che-garantisce-stabilita-e-nuove-opportunita/",
+   "data": "2026-05-11T09:06:51.000Z",
+   "trovato": "2026-05-11T09:06:51.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "6441e864a78a",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "BANCO BPM, PIÙ SMART WORKING E PIÙ FORMAZIONE NELL’ACCORDO CON I SINDACATI",
+   "url": "https://www.fabi.it/2026/05/08/banco-bpm-piu-smart-working-e-piu-formazione-nellaccordo-con-i-sindacati/",
+   "data": "2026-05-08T15:58:25.000Z",
+   "trovato": "2026-05-08T15:58:25.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "8cc9541fa8ed",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2025",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=17",
+   "data": "2026-04-28T12:00:00.000Z",
+   "trovato": "2026-04-28T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "84c72aeabf60",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Straordinaria 2025",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=18",
+   "data": "2026-04-28T12:00:00.000Z",
+   "trovato": "2026-04-28T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "0a8398c648d9",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2026",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=19",
+   "data": "2026-04-28T12:00:00.000Z",
+   "trovato": "2026-04-28T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "dbb770a00522",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "FONDI PENSIONE, CHI HA DAVVERO IL CONSENSO TRA I BANCARI? IL CASO BANCO BPM",
+   "url": "https://www.fabi.it/2026/04/27/fondi-pensione-chi-ha-davvero-il-consenso-tra-i-bancari-il-caso-banco-bpm/",
+   "data": "2026-04-27T14:41:18.000Z",
+   "trovato": "2026-04-27T14:41:18.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a7e70f4215aa",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "RINNOVO CCNL E RISIKO BANCARIO, SILEONI A CLASS CNBC",
+   "url": "https://www.fabi.it/2026/04/21/i-rinnovo-ccnl-e-risiko-bancario-sileoni-a-class-cnbc/",
+   "data": "2026-04-21T16:53:08.000Z",
+   "trovato": "2026-04-21T16:53:08.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "ce69941a824a",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "FABI VERCELLI, COSTITUITA LA RAPPRESENTANZA SINDACALE TERRITORIALE IN BANCO BPM",
+   "url": "https://www.fabi.it/2026/04/16/fabi-vercelli-costituita-la-rappresentanza-sindacale-territoriale-in-banco-bpm/",
+   "data": "2026-04-16T08:10:51.000Z",
+   "trovato": "2026-04-16T08:10:51.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "562437bdf2f6",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "BANCOBPM, RICAMBIO GENERAZIONALE CON NUOVE ASSUNZIONI PER LA RETE",
+   "url": "https://www.fabi.it/2026/02/24/bancobpm-ricambio-generazionale-con-nuove-assunzioni-per-la-rete/",
+   "data": "2026-02-24T12:21:42.000Z",
+   "trovato": "2026-02-24T12:21:42.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "a348a742bb48",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "FONTANA SU MF: «RAFFORZARE LE TUTELE AI LAVORATORI È SCELTA DI CAMPO»",
+   "url": "https://www.fabi.it/2026/02/19/fontana-su-mf-rafforzare-le-tutele-ai-lavoratori-e-scelta-di-campo/",
+   "data": "2026-02-19T10:22:05.000Z",
+   "trovato": "2026-02-19T10:22:05.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "eab7a421e6db",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "BANCOBPM, PREMIO AZIENDALE DA 2.400 EURO",
+   "url": "https://www.fabi.it/2026/02/17/bancobpm-premio-aziendale-da-2-400-euro/",
+   "data": "2026-02-17T20:39:31.000Z",
+   "trovato": "2026-02-17T20:39:31.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "50da98ab6e04",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "XAUSA A MF: «IL CONTRIBUTO DEI LAVORATORI VA RICONOSCIUTO»",
+   "url": "https://www.fabi.it/2026/01/20/xausa-a-mf-il-contributo-dei-lavoratori-va-riconosciuto/",
+   "data": "2026-01-20T09:13:22.000Z",
+   "trovato": "2026-01-20T09:13:22.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "8e7dba53f62c",
+   "fonte": "fabi",
+   "nomeFonte": "FABI",
+   "categoria": "sindacati",
+   "titolo": "RISIKO, PIANI INDUSTRIALI E CONSIGLIO NAZIONALE, SILEONI IN DIRETTA A CLASS CNBC",
+   "url": "https://www.fabi.it/2026/01/14/risiko-piani-industriali-e-consiglio-nazionale-sileoni-in-diretta-a-class-cnbc/",
+   "data": "2026-01-14T18:42:56.000Z",
+   "trovato": "2026-01-14T18:42:56.000Z",
+   "pertinente": false,
+   "temi": []
+  },
+  {
+   "id": "894fceecb70b",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Scadenza fatture emesse nel 2024",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=16",
+   "data": "2025-10-30T12:00:00.000Z",
+   "trovato": "2025-10-30T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "6937432d52d0",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2024",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=15",
+   "data": "2025-04-08T12:00:00.000Z",
+   "trovato": "2025-04-08T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "67bad2678846",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2023",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=13",
+   "data": "2024-12-01T12:00:00.000Z",
+   "trovato": "2024-12-01T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "7d3026289c21",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Straordinaria 2023",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=14",
+   "data": "2024-03-26T12:00:00.000Z",
+   "trovato": "2024-03-26T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "8f5be67992ec",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2021",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=12",
+   "data": "2023-06-07T12:00:00.000Z",
+   "trovato": "2023-06-07T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "650a95bc9b7f",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "ISTRUZIONI",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=11",
+   "data": "2023-04-06T12:00:00.000Z",
+   "trovato": "2023-04-06T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "059e1380ed89",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Convocazione Assemblea Ordinaria 2020",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=10",
+   "data": "2021-06-04T12:00:00.000Z",
+   "trovato": "2021-06-04T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "a1fa9a22bc82",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Istruzioni download CU 2019",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=9",
+   "data": "2021-01-01T12:00:00.000Z",
+   "trovato": "2021-01-01T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "5c0bb8cdb7b4",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Lavorazione pratiche 2020",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=8",
+   "data": "2020-06-08T12:00:00.000Z",
+   "trovato": "2020-06-08T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "8ec394508705",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Lavorazione pratiche 2019",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=7",
+   "data": "2020-04-29T12:00:00.000Z",
+   "trovato": "2020-04-29T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "d872e0a87829",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Spese odontoiatriche",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=6",
+   "data": "2020-02-04T12:00:00.000Z",
+   "trovato": "2020-02-04T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "09a26739163a",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Avviso importante",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=5",
+   "data": "2020-01-10T12:00:00.000Z",
+   "trovato": "2020-01-10T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "531c3d13a558",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Completamento Liquidazione Pratiche 2018",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=3",
+   "data": "2019-07-23T12:00:00.000Z",
+   "trovato": "2019-07-23T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
+  },
+  {
+   "id": "8a0e3b2c9604",
+   "fonte": "cma",
+   "nomeFonte": "CMA",
+   "categoria": "casse",
+   "titolo": "Pubblicazione nuovo nomenclatore",
+   "url": "https://www.cassamutuadiassistenza.it/news.php?id=4",
+   "data": "2019-07-23T12:00:00.000Z",
+   "trovato": "2019-07-23T12:00:00.000Z",
+   "pertinente": true,
+   "temi": []
   }
  ]
 }

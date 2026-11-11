@@ -1,60 +1,126 @@
 {
- "ultimoControllo": null,
+ "ultimoControllo": "2026-11-11T22:44:04.955Z",
  "fonti": [
   {
    "id": "fisac",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 10,
+   "tenute": 10,
+   "aggiunte": 6,
+   "avviata": true
   },
   {
    "id": "first",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 10,
+   "tenute": 10,
+   "aggiunte": 9,
+   "avviata": true
   },
   {
    "id": "fabi",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 37,
+   "tenute": 12,
+   "aggiunte": 11,
+   "avviata": true
   },
   {
    "id": "uilca",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 40,
+   "tenute": 19,
+   "aggiunte": 18,
+   "avviata": true
   },
   {
    "id": "cma",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 17,
+   "tenute": 17,
+   "aggiunte": 17,
+   "avviata": true
   },
   {
    "id": "fiam",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 27,
+   "tenute": 27,
+   "aggiunte": 27,
+   "avviata": true
   },
   {
    "id": "mefop",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 9,
+   "tenute": 0,
+   "aggiunte": 0,
+   "avviata": true
   },
   {
    "id": "gazzetta",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 25,
+   "tenute": 0,
+   "aggiunte": 0,
+   "avviata": true
   },
   {
    "id": "qs",
-   "ok": null,
-   "controllato": null
+   "ok": false,
+   "errore": "lettura non consentita dal sito",
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": null,
+   "lette": 0,
+   "tenute": 0,
+   "aggiunte": 0,
+   "avviata": false
   },
   {
    "id": "secondowelfare",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 10,
+   "tenute": 0,
+   "aggiunte": 0,
+   "avviata": true
   },
   {
    "id": "intermedia",
-   "ok": null,
-   "controllato": null
+   "ok": true,
+   "errore": null,
+   "controllato": "2026-11-11T22:44:04.955Z",
+   "ultimoOk": "2026-11-11T22:44:04.955Z",
+   "lette": 10,
+   "tenute": 0,
+   "aggiunte": 0,
+   "avviata": true
   }
  ]
 }
