@@ -1,5 +1,5 @@
 /* Service worker di Nuova Cassa: uso senza rete, aggiornamenti e notifiche push. */
-const VERSIONE = '20261111-51ae8b15';
+const VERSIONE = '20261111-8f103f3a';
 const CACHE = 'cassa-' + VERSIONE;
 const GUSCIO = [
   './', 'index.html', 'config.js', 'manifest.webmanifest',

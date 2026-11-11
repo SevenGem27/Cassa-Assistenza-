@@ -75,12 +75,6 @@
       "leggi": [{ "tipo": "rss", "url": "https://www.gazzettaufficiale.it/rss/SG" }]
     },
     {
-      "id": "qs", "nome": "Quotidiano Sanità", "descrizione": "Notizie su sanità integrativa e fondi sanitari", "categoria": "norme",
-      "pagina": "https://www.quotidianosanita.it/",
-      "ambito": "tema", "tema": "norme",
-      "leggi": [{ "tipo": "rss", "url": "https://www.quotidianosanita.it/feed/" }]
-    },
-    {
       "id": "secondowelfare", "nome": "Secondo Welfare", "descrizione": "Approfondimenti su welfare aziendale e sanità integrativa", "categoria": "norme",
       "pagina": "https://www.secondowelfare.it/",
       "ambito": "tema", "tema": "norme",

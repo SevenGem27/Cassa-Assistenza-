@@ -14,6 +14,7 @@ const RADICE = process.env.MONITOR_RADICE || join(QUI, '..');
 const AGENTE = 'NuovaCassa-Monitor';
 const MAX_VOCI = 400;
 const GIORNI_NOTIFICA = 10; // una voce più vecchia di così entra nell'elenco ma non genera notifiche
+const GIORNI_ARCHIVIO = 365; // al primo passaggio su una fonte, ciò che è più vecchio di così (o non ha data) è archivio del sito, non una novità
 
 /* ---------- testo ---------- */
 const ENTITA = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', ndash: '–', mdash: '—', hellip: '…', laquo: '«', raquo: '»', euro: '€', deg: '°',
@@ -81,8 +82,8 @@ export function leggiWp(json) {
   }));
 }
 export function leggiHtml(html, base, modello) {
-  const re = new RegExp(modello, 'i'), visti = new Set(), voci = [];
-  for (const m of String(html).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+  const pagina = String(html), re = new RegExp(modello, 'i'), visti = new Set(), trovati = [];
+  for (const m of pagina.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
     const h = m[1].match(/\bhref=["']([^"'#]+)["']/i);
     if (!h) continue;
     let url;
@@ -92,11 +93,20 @@ export function leggiHtml(html, base, modello) {
     const titolo = pulisci(m[2]) || (attr ? pulisci(attr[1]) : '');
     if (titolo.length < 6) continue;
     visti.add(url);
-    const intorno = String(html).slice(Math.max(0, m.index - 220), m.index + m[0].length + 220).replace(/<[^>]+>/g, ' ');
-    const d = intorno.match(/\b(\d{1,2})[\/.](\d{1,2})[\/.](20\d{2})\b/);
-    voci.push({ titolo, url, data: d ? new Date(Date.UTC(+d[3], +d[2] - 1, +d[1], 12)).toISOString() : null, testo: '', categorie: [] });
+    trovati.push({ titolo, url, da: m.index, a: m.index + m[0].length });
   }
-  return voci;
+  /* La data di una voce sta nello spazio tra il suo titolo e quello accanto: prima o dopo, secondo il sito.
+     Lo dicono gli estremi dell'elenco: se c'è una data subito prima del primo titolo le date precedono i titoli,
+     altrimenti li seguono. Così a nessuna voce tocca la data della vicina. */
+  const VICINO = 220;
+  const date = (da, a) => [...pagina.slice(Math.max(0, da), Math.max(0, a)).replace(/<[^>]*>/g, ' ').matchAll(/\b(\d{1,2})[\/.](\d{1,2})[\/.](20\d{2})\b/g)];
+  const precede = trovati.length > 0 && date(trovati[0].da - VICINO, trovati[0].da).length > 0;
+  return trovati.map((t, i) => {
+    let d = [...t.titolo.matchAll(/\b(\d{1,2})[\/.](\d{1,2})[\/.](20\d{2})\b/g)][0];
+    if (!d && precede) d = date(Math.max(i ? trovati[i - 1].a : 0, t.da - VICINO), t.da).pop();
+    if (!d && !precede) d = date(t.a, Math.min(i + 1 < trovati.length ? trovati[i + 1].da : pagina.length, t.a + VICINO))[0];
+    return { titolo: t.titolo, url: t.url, data: d ? new Date(Date.UTC(+d[3], +d[2] - 1, +d[1], 12)).toISOString() : null, testo: '', categorie: [] };
+  });
 }
 
 /* ---------- robots.txt ---------- */
@@ -250,7 +260,7 @@ async function inviaNotifiche(nuove, sito, log) {
 }
 
 /* ---------- uscita ---------- */
-function feedXml(voci, sito) {
+export function feedXml(voci, sito) {
   const x = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const corpo = voci.filter((v) => v.pertinente).slice(0, 50).map((v) =>
     `<item><title>${x(v.nomeFonte + ': ' + v.titolo)}</title><link>${x(v.url)}</link><guid isPermaLink="false">${v.id}</guid><pubDate>${new Date(v.data || v.trovato).toUTCString()}</pubDate></item>`).join('\n');
@@ -268,20 +278,25 @@ export async function esegui({ prova = false, adesso = new Date(), log = console
   const archivio = await leggiJson('data/news.json', { voci: [] });
   const statoPrima = await leggiJson('data/status.json', { fonti: [] });
   const note = new Map(archivio.voci.map((v) => [v.id, v]));
+  // Indirizzi già incontrati che non stanno nell'elenco: servono solo a non scambiarli per novità.
+  const viste = new Set(archivio.giaViste || []);
   const nuove = [], statoFonti = [];
 
   for (const fonte of cfg.fonti) {
     const prima = (statoPrima.fonti || []).find((f) => f.id === fonte.id) || {};
     const esito = await leggiFonte(fonte, sito);
     let tenute = 0, aggiunte = 0;
-    // Al primo passaggio riuscito su una fonte si prende nota di ciò che c'è già, senza notificarlo.
+    // Al primo passaggio riuscito su una fonte si prende nota di ciò che c'è già, senza notificarlo:
+    // le pubblicazioni dell'ultimo anno entrano nell'elenco con la loro data, il resto (documenti senza data,
+    // avvisi di anni fa) viene solo annotato tra gli indirizzi già visti.
     const primaVolta = !prima.avviata;
     for (const v of esito.voci) {
       const c = classifica(v, fonte, cfg.parole);
       if (!c) continue;
       tenute++;
       const id = idDi(v.url);
-      if (note.has(id)) continue;
+      if (note.has(id) || viste.has(id)) continue;
+      if (primaVolta && (!v.data || adesso - new Date(v.data) > GIORNI_ARCHIVIO * 864e5)) { viste.add(id); continue; }
       const voce = { id, fonte: fonte.id, nomeFonte: fonte.nome, categoria: fonte.categoria, titolo: v.titolo.slice(0, 220), url: v.url, data: v.data,
         trovato: primaVolta && v.data ? v.data : adesso.toISOString(), pertinente: c.pertinente, temi: c.temi };
       note.set(id, voce); aggiunte++;
@@ -300,11 +315,14 @@ export async function esegui({ prova = false, adesso = new Date(), log = console
     note.set(voce.id, voce); nuove.push(voce);
   }
 
-  const voci = [...note.values()].sort((a, b) => ((b.data || b.trovato) > (a.data || a.trovato) ? 1 : -1)).slice(0, MAX_VOCI);
+  const ordinate = [...note.values()].sort((a, b) => ((b.data || b.trovato) > (a.data || a.trovato) ? 1 : -1));
+  const voci = ordinate.slice(0, MAX_VOCI);
+  for (const v of ordinate.slice(MAX_VOCI)) viste.add(v.id); // ciò che esce dall'elenco non deve tornare come novità
+  const giaViste = [...viste].filter((id) => !voci.some((v) => v.id === id)).sort();
   const stato = { ultimoControllo: adesso.toISOString(), fonti: statoFonti };
   let notifiche = { inviate: 0 };
   if (!prova) {
-    await writeFile(join(RADICE, 'data/news.json'), JSON.stringify({ aggiornato: adesso.toISOString(), voci }, null, 1) + '\n');
+    await writeFile(join(RADICE, 'data/news.json'), JSON.stringify({ aggiornato: adesso.toISOString(), voci, giaViste }, null, 1) + '\n');
     await writeFile(join(RADICE, 'data/status.json'), JSON.stringify(stato, null, 1) + '\n');
     await writeFile(join(RADICE, 'data/feed.xml'), feedXml(voci, sito));
     if (nuove.length) {
@@ -312,7 +330,7 @@ export async function esegui({ prova = false, adesso = new Date(), log = console
     }
   }
   log(`totale: ${voci.length} voci in archivio, ${nuove.length} da notificare, ${statoFonti.filter((f) => f.ok).length}/${statoFonti.length} fonti lette`);
-  return { voci, nuove, stato, notifiche };
+  return { voci, nuove, stato, notifiche, giaViste };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

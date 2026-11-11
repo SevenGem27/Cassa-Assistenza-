@@ -35,9 +35,9 @@ Il monitor legge le fonti di `monitor/fonti.json`, tiene ciò che riguarda Banco
 
 I salvataggi automatici vengono registrati a nome del proprietario del repository, così nella cronologia non compaiono altri autori.
 
-Al primo passaggio su una fonte il monitor prende nota di quello che c'è già, senza notificarlo. Rispetta `robots.txt`: se un sito non vuole essere letto in automatico lo salta e lo scrive nello stato. È il caso del sito del FAS, che va aperto a mano.
+Al primo passaggio su una fonte il monitor prende nota di quello che c'è già, senza notificarlo: le pubblicazioni dell'ultimo anno entrano nell'elenco con la loro data, i documenti senza data e gli avvisi più vecchi vengono solo annotati (`giaViste` in `data/news.json`) per non scambiarli per novità in seguito. Rispetta `robots.txt`: se un sito non vuole essere letto in automatico lo salta e lo scrive nello stato. È il caso dei siti del FAS e di Quotidiano Sanità, che per questo non sono tra le fonti e vanno aperti a mano.
 
-Dopo il primo controllo guarda in *Novità > Le fonti controllate*: se una fonte risulta "non letta" per più giorni, il suo indirizzo in `monitor/fonti.json` va corretto. Gli indirizzi di FISAC, FIRST CISL e FABI sono stati verificati l'11 novembre 2026; quelli di UILCA, Gazzetta Ufficiale, Quotidiano Sanità, Secondo Welfare, Intermedia Channel e Mefop sono i più probabili ma vanno confermati dal primo giro.
+In *Novità > Le fonti controllate* si vede quando è stata letta ogni fonte: se una risulta "non letta" per più giorni, il suo indirizzo in `monitor/fonti.json` va corretto. Al primo controllo, l'11 novembre 2026, sono state lette tutte e dieci.
 
 Per mandare un avviso scritto da te a tutti: **Actions > Controllo novità > Run workflow**, compila *avviso_titolo*.
 

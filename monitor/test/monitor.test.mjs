@@ -11,11 +11,12 @@ const QUI = dirname(fileURLToPath(import.meta.url));
 const PROVE = join(QUI, 'prove');
 const radice = await mkdtemp(join(tmpdir(), 'cassa-'));
 await mkdir(join(radice, 'data'));
-await copyFile(join(QUI, '../../data/news.json'), join(radice, 'data/news.json'));
-await copyFile(join(QUI, '../../data/status.json'), join(radice, 'data/status.json'));
+// Le prove partono da dati propri: quelli pubblicati cambiano a ogni giro del monitor.
+await copyFile(join(PROVE, 'news-iniziali.json'), join(radice, 'data/news.json'));
+await copyFile(join(PROVE, 'stato-iniziale.json'), join(radice, 'data/status.json'));
 await copyFile(join(QUI, '../../config.js'), join(radice, 'config.js'));
 const copiaProve = await mkdtemp(join(tmpdir(), 'cassa-prove-'));
-for (const f of ['mappa.json', 'fisac.xml', 'fabi.xml', 'cma.html', 'robots-vieta.txt', 'robots-libero.txt']) await copyFile(join(PROVE, f), join(copiaProve, f));
+for (const f of ['mappa.json', 'fisac.xml', 'fabi.xml', 'cma.html', 'fiam.html', 'robots-vieta.txt', 'robots-libero.txt']) await copyFile(join(PROVE, f), join(copiaProve, f));
 process.env.MONITOR_RADICE = radice;
 process.env.MONITOR_PROVE = copiaProve;
 process.env.SITE_URL = 'https://esempio.github.io/cassa/';
@@ -50,7 +51,16 @@ test('pagina HTML: solo i collegamenti del modello, senza doppioni, con la data 
   const v = M.leggiHtml(await readFile(join(PROVE, 'cma.html'), 'utf8'), 'https://www.cassamutuadiassistenza.it/', 'news\\.php\\?id=\\d+');
   assert.deepEqual(v.map((x) => x.url), ['https://www.cassamutuadiassistenza.it/news.php?id=31', 'https://www.cassamutuadiassistenza.it/news.php?id=30']);
   assert.equal(v[0].titolo, 'Convocazione Assemblea Ordinaria 2026');
-  assert.equal(v[0].data.slice(0, 10), '2026-04-28');
+  assert.deepEqual(v.map((x) => x.data.slice(0, 10)), ['2026-04-28', '2025-10-30']);
+});
+
+test('pagina HTML: a ogni voce la sua data, che stia prima o dopo il titolo', () => {
+  const giorni = (h) => M.leggiHtml(h, 'https://esempio.it/', '/n/').map((x) => x.data && x.data.slice(0, 10));
+  const voce = (n, prima, dopo) => `<li>${prima} <a href="/n/avviso-${n}">Avviso numero ${n} agli iscritti</a> ${dopo}</li>`;
+  assert.deepEqual(giorni('<ul>' + voce(1, '<b>12.03.2026</b>', '') + voce(2, '<b>05.01.2026</b>', '') + voce(3, '', '') + '</ul>'), ['2026-03-12', '2026-01-05', null]);
+  assert.deepEqual(giorni('<ul>' + voce(1, '', '<i>12/03/2026</i>') + voce(2, '', '') + voce(3, '', '<i>5/1/2026</i>') + '</ul>'), ['2026-03-12', null, '2026-01-05']);
+  assert.deepEqual(giorni('<ul>' + voce(1, '', '') + voce(2, '', '') + '</ul>'), [null, null]);
+  assert.deepEqual(giorni('<p>Aggiornato</p><a href="/n/avviso-9">Circolare del 3/2/2026 sui rimborsi</a> <i>10/02/2026</i>'), ['2026-02-03']);
 });
 
 test('parole chiave: frasi, parole intere, accenti', () => {
@@ -110,6 +120,17 @@ test('primo giro: prende nota di ciò che c’è senza notificare, e non duplica
   assert.equal(st.first.avviata, false);
   const salvato = JSON.parse(await readFile(join(radice, 'data/news.json'), 'utf8'));
   assert.equal(salvato.voci.length, r.voci.length);
+  // L'archivio dei siti non diventa una novità: restano fuori i documenti senza data e gli avvisi di oltre un anno fa.
+  const url = r.voci.map((v) => v.url);
+  assert.ok(url.includes('https://www.cassamutuadiassistenza.it/news.php?id=31'));      // 28 aprile 2026
+  assert.ok(!url.includes('https://www.cassamutuadiassistenza.it/news.php?id=30'));     // 30 ottobre 2025
+  assert.ok(!url.some((u) => u.includes('welfare.bancopopolare.it/download/')));        // senza data
+  assert.equal(st.fiam.ok, true);
+  assert.equal(st.fiam.tenute, 2);
+  assert.equal(st.fiam.aggiunte, 0);
+  assert.deepEqual(salvato.giaViste, [M.idDi('https://www.cassamutuadiassistenza.it/news.php?id=30'), M.idDi('https://www.welfare.bancopopolare.it/download/anno-2024/'),
+    M.idDi('https://www.welfare.bancopopolare.it/download/modifiche-statuto-art-17/')].sort());
+  assert.ok(r.voci.every((v) => v.data));
   assert.match(await readFile(join(radice, 'data/feed.xml'), 'utf8'), /<rss version="2.0">/);
 });
 
@@ -128,6 +149,21 @@ test('secondo giro: una pubblicazione nuova viene trovata e segnalata una volta 
   assert.equal(r.voci[0].trovato, '2026-11-12T11:07:00.000Z');
   const r2 = await M.esegui({ adesso: new Date('2026-11-12T14:07:00Z'), log: () => {} });
   assert.equal(r2.nuove.length, 0);
+});
+
+test('dopo il primo giro: un documento nuovo senza data è una novità, l’archivio annotato no', async () => {
+  const pagina = (await readFile(join(copiaProve, 'fiam.html'), 'utf8')).replace('<ul>', '<ul>\n<li><a href="/download/contributi-nuova-cassa-2027/">4 Contributi alla nuova Cassa dal 2027</a></li>');
+  await writeFile(join(copiaProve, 'fiam.html'), pagina);
+  const r = await M.esegui({ adesso: new Date('2026-11-12T17:07:00Z'), log: () => {} });
+  assert.deepEqual(r.nuove.map((v) => v.titolo), ['4 Contributi alla nuova Cassa dal 2027']);
+  assert.equal(r.nuove[0].pertinente, true);
+  assert.equal(r.voci[0].url, 'https://www.welfare.bancopopolare.it/download/contributi-nuova-cassa-2027/');
+  assert.equal(r.voci[0].trovato, '2026-11-12T17:07:00.000Z');
+  assert.equal(r.voci.filter((v) => v.fonte === 'fiam').length, 1);
+  assert.equal(r.giaViste.length, 3);
+  const r2 = await M.esegui({ adesso: new Date('2026-11-12T20:07:00Z'), log: () => {} });
+  assert.equal(r2.nuove.length, 0);
+  assert.equal(r2.giaViste.length, 3);
 });
 
 test('avviso scritto a mano', async () => {

@@ -53,8 +53,8 @@
    "ultimoOk": "2026-11-11T22:44:04.955Z",
    "lette": 17,
    "tenute": 17,
-   "aggiunte": 17,
-   "avviata": true
+   "aggiunte": 0,
+   "avviata": false
   },
   {
    "id": "fiam",
@@ -64,8 +64,8 @@
    "ultimoOk": "2026-11-11T22:44:04.955Z",
    "lette": 27,
    "tenute": 27,
-   "aggiunte": 27,
-   "avviata": true
+   "aggiunte": 0,
+   "avviata": false
   },
   {
    "id": "mefop",
@@ -88,17 +88,6 @@
    "tenute": 0,
    "aggiunte": 0,
    "avviata": true
-  },
-  {
-   "id": "qs",
-   "ok": false,
-   "errore": "lettura non consentita dal sito",
-   "controllato": "2026-11-11T22:44:04.955Z",
-   "ultimoOk": null,
-   "lette": 0,
-   "tenute": 0,
-   "aggiunte": 0,
-   "avviata": false
   },
   {
    "id": "secondowelfare",
