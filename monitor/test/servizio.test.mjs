@@ -71,9 +71,28 @@ test('disiscrizione, pulizia delle iscrizioni scadute e rinnovo', async () => {
   assert.equal(e.ISCRIZIONI.m.size, 1);                     // la vecchia è stata sostituita dalla nuova
 });
 
-test('senza gettone configurato nessuno legge l’elenco', async () => {
+test('senza gettone configurato nessuno legge l’elenco, e lo stato lo dice', async () => {
   const e = { ...env(), GETTONE: '' };
-  assert.equal((await chiama(e, 'GET', '/iscritti', null, { Authorization: 'Bearer ' })).status, 401);
-  assert.equal((await chiama(e, 'GET', '/')).status, 200);
+  const r = await chiama(e, 'GET', '/iscritti', null, { Authorization: 'Bearer ' });
+  assert.equal(r.status, 503);
+  assert.match((await r.json()).errore, /GETTONE/);
+  const stato = await (await chiama(e, 'GET', '/')).json();
+  assert.deepEqual(stato, { ok: false, servizio: 'cassa-assistenza-push', spazio_iscrizioni: true, gettone: false, origine: 'https://esempio.github.io' });
   assert.equal((await chiama(e, 'GET', '/altro')).status, 404);
+});
+
+test('stato del servizio e diagnosi dei collegamenti mancanti', async () => {
+  const pieno = await (await chiama(env(), 'GET', '/')).json();
+  assert.equal(pieno.ok, true);
+  assert.ok(!JSON.stringify(pieno).includes('segreto-di-prova-123'));      // il valore del gettone non esce mai
+  const senzaSpazio = { GETTONE: 'segreto-di-prova-123', ORIGINE: 'https://esempio.github.io' };
+  assert.equal((await (await chiama(senzaSpazio, 'GET', '/')).json()).spazio_iscrizioni, false);
+  const r = await chiama(senzaSpazio, 'POST', '/iscrivi', { iscrizione: iscrizione(1) });
+  assert.equal(r.status, 503);
+  assert.match((await r.json()).errore, /ISCRIZIONI/);
+  const sbagliato = await chiama(env(), 'GET', '/iscritti', null, { Authorization: 'Bearer altro-gettone-qualsiasi' });
+  assert.equal(sbagliato.status, 401);
+  assert.match((await sbagliato.json()).errore, /diverso/);
+  const spazi = { ...env(), GETTONE: '  segreto-di-prova-123\n' };          // spazi copiati per sbaglio
+  assert.equal((await chiama(spazi, 'GET', '/iscritti', null, { Authorization: 'Bearer segreto-di-prova-123' })).status, 200);
 });

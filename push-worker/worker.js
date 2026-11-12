@@ -1,10 +1,11 @@
-/* Servizio delle iscrizioni alle notifiche di Nuova Cassa, per Cloudflare Workers (piano gratuito).
+/* Servizio delle iscrizioni alle notifiche della guida Cassa Assistenza, per Cloudflare Workers (piano gratuito).
    Custodisce solo l'indirizzo tecnico a cui spedire le notifiche e due preferenze: niente nomi, niente numeri.
 
    Collegamenti richiesti nelle impostazioni del Worker:
      ISCRIZIONI  spazio KV dove si salvano le iscrizioni
      GETTONE     segreto: lo stesso valore del segreto PUSH_TOKEN su GitHub
-     ORIGINE     (facoltativo) l'indirizzo del sito, es. https://tuonome.github.io : accetta iscrizioni solo da lì */
+     ORIGINE     (facoltativo) l'indirizzo del sito, es. https://tuonome.github.io : accetta iscrizioni solo da lì
+   Va pubblicato da solo, senza i file dell'app: aprendo il suo indirizzo nel browser deve comparire lo stato del servizio. */
 
 const SERVIZI_PUSH = [/^fcm\.googleapis\.com$/, /(^|\.)push\.apple\.com$/, /(^|\.)push\.services\.mozilla\.com$/, /(^|\.)notify\.windows\.com$/];
 
@@ -32,9 +33,10 @@ function uguali(a, b) { // confronto a tempo costante
   for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
   return d === 0;
 }
+const gettone = (env) => String(env.GETTONE || '').trim(); // uno spazio copiato per sbaglio non deve contare
 function autorizzato(req, env) {
   const m = (req.headers.get('Authorization') || '').match(/^Bearer (.+)$/);
-  return !!env.GETTONE && !!m && uguali(m[1], env.GETTONE);
+  return !!gettone(env) && !!m && uguali(m[1].trim(), gettone(env));
 }
 function iscrizioneValida(i) {
   if (!i || typeof i.endpoint !== 'string' || i.endpoint.length > 1000 || !i.keys) return false;
@@ -55,7 +57,11 @@ export default {
     const url = new URL(req.url), via = url.pathname.replace(/\/+$/, '') || '/';
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: intestazioni(req, env) });
     try {
-      if (req.method === 'GET' && via === '/') return rispondi(req, env, { ok: true, servizio: 'nuova-cassa-push' });
+      // Stato del servizio: dice se è tutto collegato, senza mostrare alcun valore.
+      if (req.method === 'GET' && via === '/') {
+        return rispondi(req, env, { ok: !!env.ISCRIZIONI && !!gettone(env), servizio: 'cassa-assistenza-push', spazio_iscrizioni: !!env.ISCRIZIONI, gettone: !!gettone(env), origine: env.ORIGINE || null });
+      }
+      if (!env.ISCRIZIONI) return rispondi(req, env, { errore: 'spazio ISCRIZIONI non collegato al servizio' }, 503);
 
       if (req.method === 'POST' && via === '/iscrivi') {
         const origine = req.headers.get('Origin');
@@ -80,7 +86,8 @@ export default {
       }
 
       if (via === '/iscritti' || via === '/pulisci') {
-        if (!autorizzato(req, env)) return rispondi(req, env, { errore: 'non autorizzato' }, 401);
+        if (!gettone(env)) return rispondi(req, env, { errore: 'segreto GETTONE non impostato nel servizio' }, 503);
+        if (!autorizzato(req, env)) return rispondi(req, env, { errore: 'gettone diverso da quello del servizio' }, 401);
         if (req.method === 'GET' && via === '/iscritti') {
           const iscritti = [];
           let cursore;

@@ -14,7 +14,7 @@ await mkdir(join(radice, 'data'));
 // Le prove partono da dati propri: quelli pubblicati cambiano a ogni giro del monitor.
 await copyFile(join(PROVE, 'news-iniziali.json'), join(radice, 'data/news.json'));
 await copyFile(join(PROVE, 'stato-iniziale.json'), join(radice, 'data/status.json'));
-await copyFile(join(QUI, '../../config.js'), join(radice, 'config.js'));
+await writeFile(join(radice, 'config.js'), "self.CASSA_CONFIG = { push: { chiavePubblica: '', servizio: '' } };\n");
 const copiaProve = await mkdtemp(join(tmpdir(), 'cassa-prove-'));
 for (const f of ['mappa.json', 'fisac.xml', 'fabi.xml', 'cma.html', 'fiam.html', 'robots-vieta.txt', 'robots-libero.txt']) await copyFile(join(PROVE, f), join(copiaProve, f));
 process.env.MONITOR_RADICE = radice;
@@ -201,4 +201,45 @@ test('web-push: con chiavi VAPID vere il messaggio viene cifrato e firmato', asy
   assert.match(d.headers.Authorization, /^vapid t=.+, k=.+/);
   assert.equal(d.headers['Content-Encoding'], 'aes128gcm');
   assert.ok(d.body.length > 50);
+});
+
+test('notifiche: la diagnosi dice che cosa manca, senza mostrare i segreti', async () => {
+  const { default: webpush } = await import('web-push');
+  const k = webpush.generateVAPIDKeys(), altre = webpush.generateVAPIDKeys();
+  assert.equal(M.pubblicaDaPrivata(k.privateKey), k.publicKey);
+  const servizio = (status, corpo) => async (url, o) => { assert.equal(url, 'https://s.workers.dev/iscritti'); assert.equal(o.headers.Authorization, 'Bearer g-123'); return new Response(JSON.stringify(corpo), { status }); };
+  const base = { pubblica: k.publicKey, privata: k.privateKey, servizio: 'https://s.workers.dev', gettone: 'g-123' };
+
+  const vuota = await M.verificaNotifiche({ pubblica: '', privata: '', servizio: '', gettone: '' }, () => { throw new Error('non deve chiamare'); });
+  assert.equal(vuota.stato, 'da completare');
+  assert.equal(vuota.problemi.length, 4);
+
+  const ok = await M.verificaNotifiche(base, servizio(200, { iscritti: [{ id: 'a' }] }));
+  assert.deepEqual([ok.stato, ok.problemi, ok.iscritti.length], ['attive', [], 1]);
+
+  const coppia = await M.verificaNotifiche({ ...base, privata: altre.privateKey }, servizio(200, { iscritti: [] }));
+  assert.equal(coppia.stato, 'non funzionanti');
+  assert.match(coppia.problemi[0], /compagna/);
+
+  const gettone = await M.verificaNotifiche(base, servizio(401, { errore: 'gettone diverso da quello del servizio' }));
+  assert.match(gettone.problemi[0], /PUSH_TOKEN su GitHub e GETTONE su Cloudflare/);
+
+  const spazio = await M.verificaNotifiche(base, servizio(503, { errore: 'spazio ISCRIZIONI non collegato al servizio' }));
+  assert.match(spazio.problemi[0], /ISCRIZIONI/);
+
+  const pagina = await M.verificaNotifiche(base, async () => new Response('<!DOCTYPE html>', { status: 200 }));
+  assert.match(pagina.problemi[0], /non risponde come previsto/);
+
+  const giu = await M.verificaNotifiche(base, async () => { throw new Error('getaddrinfo ENOTFOUND'); });
+  assert.match(giu.problemi[0], /non è raggiungibile/);
+
+  for (const r of [vuota, coppia, gettone, spazio]) assert.ok(!JSON.stringify(r).includes(k.privateKey) && !JSON.stringify(r).includes('g-123'));
+});
+
+test('notifiche: l’esito della diagnosi finisce in data/status.json', async () => {
+  const r = await M.esegui({ adesso: new Date('2026-11-13T09:00:00Z'), log: () => {} });
+  assert.equal(r.stato.notifiche.stato, 'da completare');
+  const salvato = JSON.parse(await readFile(join(radice, 'data/status.json'), 'utf8'));
+  assert.equal(salvato.notifiche.stato, 'da completare');
+  assert.ok(salvato.notifiche.problemi.some((p) => /VAPID_PRIVATE_KEY/.test(p)));
 });

@@ -5,7 +5,7 @@
    Gira da solo sei volte al giorno con GitHub Actions (.github/workflows/monitor.yml).
    A mano:  node monitor/monitor.mjs [--prova]     (--prova non scrive e non invia nulla) */
 import { readFile, writeFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
+import { createHash, createECDH } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -231,18 +231,46 @@ async function configurazionePush() {
   let cfg = '';
   try { cfg = await readFile(join(RADICE, 'config.js'), 'utf8'); } catch { /* senza config.js niente notifiche */ }
   const prendi = (nome) => (cfg.match(new RegExp(nome + ":\\s*'([^']*)'")) || [])[1] || '';
-  return { pubblica: process.env.VAPID_PUBLIC_KEY || prendi('chiavePubblica'), servizio: (process.env.PUSH_SERVIZIO || prendi('servizio')).replace(/\/$/, ''),
-    privata: process.env.VAPID_PRIVATE_KEY || '', gettone: process.env.PUSH_TOKEN || '' };
+  const pulito = (s) => String(s || '').trim(); // uno spazio o un a capo copiati per sbaglio non devono contare
+  return { pubblica: pulito(process.env.VAPID_PUBLIC_KEY || prendi('chiavePubblica')), servizio: pulito(process.env.PUSH_SERVIZIO || prendi('servizio')).replace(/\/+$/, ''),
+    privata: pulito(process.env.VAPID_PRIVATE_KEY), gettone: pulito(process.env.PUSH_TOKEN) };
 }
-async function inviaNotifiche(nuove, sito, log) {
-  const c = await configurazionePush();
-  if (!c.pubblica || !c.servizio || !c.privata || !c.gettone) { log('notifiche: non configurate, salto'); return { inviate: 0, configurate: false }; }
+/* La chiave pubblica che corrisponde a una chiave privata VAPID (P-256, base64url). */
+export function pubblicaDaPrivata(privata) {
+  const e = createECDH('prime256v1');
+  e.setPrivateKey(Buffer.from(privata, 'base64url'));
+  return e.getPublicKey('base64url');
+}
+/* Controlla ogni pezzo della catena delle notifiche e dice in italiano che cosa manca.
+   Non mostra mai i valori delle chiavi. Se tutto è a posto restituisce anche l'elenco degli iscritti. */
+export async function verificaNotifiche(c, chiedi = fetch) {
+  const problemi = [];
+  if (!c.pubblica) problemi.push('in config.js manca la chiave pubblica (chiavePubblica)');
+  if (!c.servizio) problemi.push('in config.js manca l’indirizzo del servizio (servizio)');
+  if (!c.privata) problemi.push('su GitHub manca il segreto VAPID_PRIVATE_KEY');
+  if (!c.gettone) problemi.push('su GitHub manca il segreto PUSH_TOKEN');
+  if (problemi.length) return { stato: 'da completare', problemi };
+  let coppia = false;
+  try { coppia = pubblicaDaPrivata(c.privata) === c.pubblica; } catch { /* chiave privata non leggibile */ }
+  if (!coppia) problemi.push('la chiave privata VAPID_PRIVATE_KEY su GitHub non è la compagna della chiave pubblica in config.js: vanno create insieme, nella stessa pagina strumenti/chiavi.html');
+  let iscritti = null;
+  try {
+    const r = await chiedi(c.servizio + '/iscritti', { headers: { Authorization: 'Bearer ' + c.gettone } });
+    let corpo = null;
+    try { corpo = await r.json(); } catch { /* risposta non JSON */ }
+    if (r.ok && corpo && Array.isArray(corpo.iscritti)) iscritti = corpo.iscritti;
+    else if (r.status === 401) problemi.push('il servizio rifiuta il gettone: PUSH_TOKEN su GitHub e GETTONE su Cloudflare devono avere lo stesso valore');
+    else if (corpo && corpo.errore) problemi.push('il servizio risponde: ' + String(corpo.errore).slice(0, 120));
+    else problemi.push('il servizio delle iscrizioni non risponde come previsto (HTTP ' + r.status + '): controlla l’indirizzo in config.js');
+  } catch (e) {
+    problemi.push('il servizio delle iscrizioni non è raggiungibile: ' + String(e.message || e).slice(0, 80));
+  }
+  return problemi.length ? { stato: 'non funzionanti', problemi } : { stato: 'attive', problemi, iscritti };
+}
+async function inviaNotifiche(nuove, sito, log, c, iscritti) {
   const { default: webpush } = await import('web-push');
   webpush.setVapidDetails(sito, c.pubblica, c.privata);
-  const r = await fetch(c.servizio + '/iscritti', { headers: { Authorization: 'Bearer ' + c.gettone } });
-  if (!r.ok) throw new Error('servizio iscrizioni: HTTP ' + r.status);
-  const iscritti = (await r.json()).iscritti || [];
-  let inviate = 0; const scaduti = [];
+  let inviate = 0; const scaduti = [], errori = [];
   for (const i of iscritti) {
     const scelte = perIscritto(nuove, i.preferenze);
     if (!scelte.length) continue;
@@ -251,12 +279,12 @@ async function inviaNotifiche(nuove, sito, log) {
       inviate++;
     } catch (e) {
       if (e.statusCode === 404 || e.statusCode === 410) scaduti.push(i.id); // l'app è stata disinstallata
-      else log(`notifiche: invio fallito (${e.statusCode || e.message})`);
+      else { errori.push(e.statusCode || e.message); log(`notifiche: invio fallito (${e.statusCode || e.message})`); }
     }
   }
   if (scaduti.length) await fetch(c.servizio + '/pulisci', { method: 'POST', headers: { Authorization: 'Bearer ' + c.gettone, 'Content-Type': 'application/json' }, body: JSON.stringify({ ids: scaduti }) }).catch(() => null);
   log(`notifiche: ${inviate} inviate su ${iscritti.length} iscritti, ${scaduti.length} iscrizioni scadute rimosse`);
-  return { inviate, configurate: true };
+  return { inviate, errori };
 }
 
 /* ---------- uscita ---------- */
@@ -322,12 +350,21 @@ export async function esegui({ prova = false, adesso = new Date(), log = console
   const stato = { ultimoControllo: adesso.toISOString(), fonti: statoFonti };
   let notifiche = { inviate: 0 };
   if (!prova) {
+    // A ogni giro si controlla la catena delle notifiche: l'esito finisce in data/status.json, senza valori segreti.
+    const c = await configurazionePush();
+    const verifica = await verificaNotifiche(c);
+    if (verifica.stato === 'attive' && nuove.length) {
+      try {
+        const esito = await inviaNotifiche(nuove, sito, log, c, verifica.iscritti);
+        notifiche = esito;
+        if (esito.errori.length) verifica.problemi.push('alcuni invii sono falliti (' + [...new Set(esito.errori)].join(', ') + ')');
+      } catch (e) { verifica.problemi.push('invio interrotto: ' + String(e.message || e).slice(0, 80)); }
+    }
+    stato.notifiche = { stato: verifica.problemi.length && verifica.stato === 'attive' ? 'attive, con errori' : verifica.stato, problemi: verifica.problemi, controllato: adesso.toISOString() };
+    log('notifiche: ' + stato.notifiche.stato + (verifica.problemi.length ? ' - ' + verifica.problemi.join('; ') : ''));
     await writeFile(join(RADICE, 'data/news.json'), JSON.stringify({ aggiornato: adesso.toISOString(), voci, giaViste }, null, 1) + '\n');
     await writeFile(join(RADICE, 'data/status.json'), JSON.stringify(stato, null, 1) + '\n');
     await writeFile(join(RADICE, 'data/feed.xml'), feedXml(voci, sito));
-    if (nuove.length) {
-      try { notifiche = await inviaNotifiche(nuove, sito, log); } catch (e) { log('notifiche: ' + e.message); }
-    }
   }
   log(`totale: ${voci.length} voci in archivio, ${nuove.length} da notificare, ${statoFonti.filter((f) => f.ok).length}/${statoFonti.length} fonti lette`);
   return { voci, nuove, stato, notifiche, giaViste };
