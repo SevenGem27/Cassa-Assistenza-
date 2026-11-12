@@ -1,5 +1,5 @@
 /* Service worker della guida non ufficiale alla Cassa Assistenza: uso senza rete, aggiornamenti e notifiche push. */
-const VERSIONE = '20261112-3d664b89';
+const VERSIONE = '20261112-9d5ec8ff';
 const CACHE = 'cassa-' + VERSIONE;
 const GUSCIO = [
   './', 'index.html', 'config.js', 'manifest.webmanifest',

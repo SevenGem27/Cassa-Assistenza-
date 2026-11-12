@@ -865,8 +865,18 @@
     }).join('') + '</dl>';
   }
   function vAltro() {
+    var chiaro = memoria.leggi('tema', 'scuro') === 'chiaro';
     return '<section class="blocco"><h1 class="solo-lettori">' + H('altro.titolo') + '</h1><ul class="righe">' +
-      T('altro.menu').map(function (m) { return voceMenu(m.id, m.t, m.d); }).join('') + '</ul></section>';
+      T('altro.menu').map(function (m) { return voceMenu(m.id, m.t, m.d); }).join('') + '</ul></section>' +
+      '<section class="blocco"><h2 class="t2">' + H('altro.tema') + '</h2><div class="filtri" role="group" aria-label="' + H('altro.tema') + '">' +
+      '<button class="filtro" data-az="tema" data-v="scuro" aria-pressed="' + !chiaro + '">' + H('altro.temaScuro') + '</button>' +
+      '<button class="filtro" data-az="tema" data-v="chiaro" aria-pressed="' + chiaro + '">' + H('altro.temaChiaro') + '</button></div></section>';
+  }
+  // Tema: blu notte di base, chiaro se scelto. La scelta resta sul telefono.
+  function applicaTema(tema) {
+    if (tema === 'chiaro') document.documentElement.setAttribute('data-tema', 'chiaro'); else document.documentElement.removeAttribute('data-tema');
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'chiaro' ? '#F1F3F6' : '#0E1424');
   }
 
   /* ---------- navigazione ---------- */
@@ -954,6 +964,7 @@
     else if (az === 'spegni-notifiche') { spegniNotifiche().catch(function () {}).then(function () { disegna(true); }); }
     else if (az === 'installa' && invito) { invito.prompt(); invito = null; disegna(true); }
     else if (az === 'ricarica') { location.reload(); }
+    else if (az === 'tema') { memoria.scrivi('tema', v); applicaTema(v); disegna(true); }
     else if (az === 'vai-notifiche') { e.preventDefault(); vaiA = 'notifiche'; if (location.hash === '#novita') disegna(true); else location.hash = 'novita'; }
     else if (az === 'vai-tappa') {
       e.preventDefault();
@@ -1036,6 +1047,7 @@
     sim = memoria.leggi('simulatore', { sit: 'servizio', base: 40000, prov: 'cma', familiari: [] });
     preparaViste();
     scritteFisse();
+    applicaTema(memoria.leggi('tema', 'scuro'));
     disegna(false);
     caricaNovita().then(function () { if (corrente === 'oggi' || corrente === 'novita') disegna(true); });
   }

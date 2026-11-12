@@ -12,7 +12,7 @@
 
   "nonUfficiale": {
     "titolo": "Guida non ufficiale",
-    "testo": "Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della Banca, della Cassa o delle Organizzazioni Sindacali, che non l’hanno realizzato né approvato. Sulla base del testo dell’Accordo sindacale del 10 novembre 2026, il progetto della nuova Cassa Assistenza viene qui illustrato nella sua interezza, permettendo all’utente di capire cosa sarà della sua posizione. Qualunque dato inserito dall’utente resta in locale, sullo smartphone di chi lo utilizza, senza entrare mai e in alcun modo nella disponibilità di soggetti terzi."
+    "testo": "Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della Banca, della Cassa o delle Organizzazioni Sindacali, che non l’hanno realizzato né approvato. Sulla base del testo dell’Accordo sindacale del 10 novembre 2026, il progetto della nuova Cassa Assistenza viene qui illustrato nella sua interezza, permettendo all’utente di capire cosa sarà della sua posizione. Qualunque dato inserito dall’utente resta in locale, sullo smartphone di chi lo utilizza, senza entrare mai e in alcun modo nella disponibilità di soggetti terzi, salvo l’indirizzo tecnico del device, necessario alle notifiche, solo per chi le attiva."
   },
 
   "schede": {
@@ -74,7 +74,7 @@
     "sezioni": [
       { "nome": "Tappe", "d": "tutte le scadenze, dalla firma alla Cassa a regime, con l’articolo che le fissa." },
       { "nome": "Accordo", "d": "il testo firmato articolo per articolo, con una sintesi, la ricerca e i PDF originali." },
-      { "nome": "Novità", "d": "quello che pubblicano sindacati, casse e fonti di legge, controllato sei volte al giorno." },
+      { "nome": "Novità", "d": "quello che pubblicano sindacati, casse e fonti di legge." },
       { "nome": "Altro", "d": "che cosa cambia per te, il calcolo dei contributi, le casse di oggi, la normativa e il glossario." }
     ],
     "aggiornato": "Resta aggiornato",
@@ -458,6 +458,9 @@
 
   "altro": {
     "titolo": "Altro",
+    "tema": "Tema dell’app",
+    "temaScuro": "Blu notte",
+    "temaChiaro": "Chiaro",
     "menu": [
       { "id": "per-me", "t": "Che cosa cambia per me?", "d": "Le regole per la tua situazione" },
       { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Per te e i tuoi familiari, dal 2028" },

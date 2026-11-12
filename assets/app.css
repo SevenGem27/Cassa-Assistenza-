@@ -19,6 +19,15 @@
   --barra: 62px;
   color-scheme: dark;
 }
+/* Tema chiaro, se scelto in Altro */
+:root[data-tema="chiaro"] {
+  --carta: #F1F3F6; --foglio: #FFFFFF; --inchiostro: #131C33; --inchiostro-2: #4A556E; --riga: #D3D9E3;
+  --timbro: #5A3E9E; --timbro-tenue: #ECE7F7; --segnale: #B3261E; --segnale-tenue: #FBEBE9;
+  color-scheme: light;
+}
+:root[data-tema="chiaro"] .pallino, :root[data-tema="chiaro"] .nuova .tit::after, :root[data-tema="chiaro"] .linea .oggi-segno span { color: #fff; }
+/* Su iPhone la barra di stato ha le scritte bianche: col tema chiaro le si mette dietro una striscia scura */
+:root[data-tema="chiaro"] body::before { content: ""; position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top); background: #131C33; z-index: 50; }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 72px; touch-action: manipulation; } /* niente zoom col doppio tocco */
