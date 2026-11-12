@@ -1,6 +1,21 @@
 {
- "aggiornato": "2026-11-12T13:40:12.903Z",
+ "aggiornato": "2026-11-12T21:24:25.973Z",
  "voci": [
+  {
+   "id": "da0d83955bd1",
+   "fonte": "first",
+   "nomeFonte": "FIRST CISL",
+   "categoria": "sindacati",
+   "titolo": "Nuova Cassa Assistenza del Gruppo BancoBPM: le prestazioni",
+   "url": "https://www.firstcisl.it/bancobpm/2026/11/12/nuova-cassa-assistenza-del-gruppo-bancobpm-le-prestazioni/",
+   "data": "2026-11-12T14:07:13.000Z",
+   "trovato": "2026-11-12T21:24:25.973Z",
+   "pertinente": true,
+   "temi": [
+    "cassa assistenza",
+    "nuova cassa"
+   ]
+  },
   {
    "id": "e6b24451849a",
    "fonte": "fisac",
