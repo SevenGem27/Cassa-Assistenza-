@@ -4,7 +4,6 @@
   "app": {
     "nome": "Guida non ufficiale alla Cassa Assistenza",
     "nomeTitolo": "Cassa Assistenza",
-    "sottotitoloHome": "Guida non ufficiale",
     "titoloHome": "Guida non ufficiale alla Cassa Assistenza",
     "titoloPagina": "{vista} - {nome}",
     "aggiornata": "È pronta una versione aggiornata.",
@@ -13,11 +12,11 @@
 
   "nonUfficiale": {
     "titolo": "Guida non ufficiale",
-    "testo": "Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della banca, della Cassa o dei sindacati, che non l’hanno realizzato né approvato. Fa fede solo il testo firmato dell’accordo."
+    "testo": "Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della Banca, della Cassa o delle Organizzazioni Sindacali, che non l’hanno realizzato né approvato. Sulla base del testo dell’Accordo sindacale del 10 novembre 2026, il progetto della nuova Cassa Assistenza viene qui illustrato nella sua interezza, permettendo all’utente di capire cosa sarà della sua posizione. Qualunque dato inserito dall’utente resta in locale, sullo smartphone di chi lo utilizza, senza entrare mai e in alcun modo nella disponibilità di soggetti terzi."
   },
 
   "schede": {
-    "oggi": "Oggi",
+    "oggi": "Home",
     "tappe": "Tappe",
     "accordo": "Accordo",
     "novita": "Novità",
@@ -32,7 +31,7 @@
 
   "viste": {
     "tappe": "Tappe",
-    "accordo": "Accordo",
+    "accordo": "Accordo del 10 novembre 2026",
     "premesse": "Premesse",
     "lettera": "Lettera d’impegno",
     "tabella-a": "Tabella A",
@@ -68,32 +67,40 @@
     "norma": "norma di legge"
   },
 
-  "oggi": {
-    "firmato": "Accordo firmato il {data}",
-    "prossima": "La prossima scadenza",
-    "articolo": ", articolo {n}",
-    "nessunaScadenza": "Non ci sono altre scadenze in calendario.",
-    "subitoDopo": "Subito dopo",
-    "tutteLeTappe": "Tutte le tappe",
-    "novita": "Novità",
-    "nessunaNovita": "Nessuna novità per ora.",
-    "caricoNovita": "Carico le novità.",
-    "tutteLeNovita": "Tutte le novità",
-    "cifre": "L’accordo in cifre",
-    "orientarti": "Per orientarti",
-    "menu": [
-      { "id": "per-me", "t": "Che cosa cambia per me", "d": "In base a dove lavori e a quale forma sei iscritto" },
-      { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Per te e per i tuoi familiari, dal 2028" },
-      { "id": "casse", "t": "Le casse di oggi e i loro statuti", "d": "CMA, FAS, FIAM, ex CASPOP" },
-      { "id": "norme", "t": "Normativa sulle casse di assistenza", "d": "E la riforma in discussione" }
-    ]
+  "home": {
+    "titolo": "Cassa Assistenza, guida non ufficiale",
+    "cosaFa": "Che cosa trovi",
+    "intro": "La guida illustra la nuova Cassa Assistenza a partire dal testo dell’accordo del 10 novembre 2026.",
+    "sezioni": [
+      { "nome": "Tappe", "d": "tutte le scadenze, dalla firma alla Cassa a regime, con l’articolo che le fissa." },
+      { "nome": "Accordo", "d": "il testo firmato articolo per articolo, con una sintesi, la ricerca e i PDF originali." },
+      { "nome": "Novità", "d": "quello che pubblicano sindacati, casse e fonti di legge, controllato sei volte al giorno." },
+      { "nome": "Altro", "d": "che cosa cambia per te, il calcolo dei contributi, le casse di oggi, la normativa e il glossario." }
+    ],
+    "aggiornato": "Resta aggiornato",
+    "aggiornatoTesto": "Installa la guida sul telefono e attiva le notifiche: ti avvisa quando sindacati, casse o fonti di legge pubblicano qualcosa sulla Cassa.",
+    "passoIphone": "Su iPhone: in Safari tocca **Condividi**, poi **Aggiungi alla schermata Home**, e apri la guida dall’icona.",
+    "passoAndroid": "Su Android: dal menu del browser scegli **Installa app** o **Aggiungi a schermata Home**.",
+    "passoNotifiche": "Poi, in **Novità**, tocca **Attiva le notifiche**.",
+    "passoNotificheInstallata": "In **Novità** tocca **Attiva le notifiche**.",
+    "installa": "Installa l’app",
+    "vaiNotifiche": "Attiva le notifiche",
+    "notificheAttive": "Su questo telefono le notifiche sono attive: ti avvisiamo noi quando c’è qualcosa di nuovo.",
+    "timeline": "Il percorso, tappa per tappa",
+    "oggi": "Oggi",
+    "oggiData": "Oggi, {data}",
+    "inCorso": "in corso",
+    "prossima": "prossima scadenza, {quando}",
+    "statoPassata": "tappa passata",
+    "statoFutura": "tappa futura",
+    "dettagli": "Tutti i dettagli in Tappe"
   },
 
   "controllo": {
     "anteprima": "Anteprima: elenco aggiornato al {data}. Il controllo automatico parte quando l’app è pubblicata.",
     "senzaRete": "Sei senza rete: vedi le ultime novità salvate.",
     "maiFatto": "Il primo controllo automatico delle fonti non è ancora avvenuto.",
-    "ultimo": "Ultimo controllo delle fonti: {quando}."
+    "ultimo": "Ultimo aggiornamento: {quando}."
   },
 
   "tappe": {
@@ -138,8 +145,7 @@
   },
 
   "accordo": {
-    "titolo": "L’accordo",
-    "intro": "26 articoli, una lettera d’impegno e due tabelle. Per ogni articolo trovi una sintesi e il testo firmato.",
+    "titolo": "Accordo del 10 novembre 2026",
     "cercaEtichetta": "Cerca nell’accordo",
     "cercaSegnaposto": "Cerca: recesso, ASA, familiari…",
     "nessunRisultato": "Nessun risultato per “{q}”. Prova con una parola sola, per esempio “recesso” o “ASA”.",
@@ -195,8 +201,8 @@
   },
 
   "perMe": {
-    "titolo": "Che cosa cambia per me",
-    "intro": "Scegli la tua situazione: ti mostriamo solo le regole che ti riguardano, con l’articolo da cui vengono.",
+    "titolo": "Che cosa cambia per me?",
+    "intro": "Qual è la tua situazione, quali regole si applicano e dove ritrovarle.",
     "oggi": "Oggi",
     "assistenza": "Assistenza sanitaria",
     "situazioni": [
@@ -300,7 +306,7 @@
 
   "simulatore": {
     "titolo": "Calcola i tuoi contributi",
-    "intro": "Le regole in vigore dal 1° gennaio 2028, applicate ai tuoi dati. I numeri restano sul tuo telefono.",
+    "intro": "Le regole in vigore dal 1° gennaio 2028, applicate ai tuoi dati.",
     "situazione": "La tua situazione nel 2028",
     "situazioni": [
       { "id": "servizio", "nome": "In servizio", "base": "Retribuzione annua imponibile INPS" },
@@ -376,7 +382,6 @@
 
   "novita": {
     "titolo": "Novità",
-    "intro": "Quello che FABI, FIRST CISL, FISAC CGIL e UILCA pubblicano sul Gruppo e sulla Cassa, le notizie delle casse di oggi e le novità di legge sulle casse di assistenza.",
     "filtri": "Filtra le novità",
     "categorie": [
       { "id": "tema", "nome": "Sulla Cassa" },
@@ -419,13 +424,6 @@
     "preferenzeNonSalvate": "Preferenze non salvate: riprova quando hai rete."
   },
 
-  "installa": {
-    "titolo": "Tienila sul telefono",
-    "testo": "Si apre come un’app, funziona anche senza rete e ti avvisa delle novità.",
-    "tasto": "Installa l’app",
-    "ios": "In Safari tocca **Condividi**, poi **Aggiungi alla schermata Home**. Da lì si apre come un’app e può mandarti le notifiche."
-  },
-
   "casse": {
     "titolo": "Le casse di oggi",
     "intro": "Le forme che confluiscono nella nuova Cassa, con i loro statuti e regolamenti sui siti ufficiali.",
@@ -446,7 +444,7 @@
 
   "normativa": {
     "titolo": "Normativa",
-    "intro": "Le leggi che l’accordo richiama, spiegate in breve, con il testo ufficiale a un tocco.",
+    "intro": "Le leggi che l’accordo richiama, spiegate in breve, con il testo ufficiale disponibile in un semplice click!",
     "nuova": "del 2026",
     "perche": "**Perché conta qui.**",
     "riforma": "La riforma in discussione",
@@ -461,8 +459,8 @@
   "altro": {
     "titolo": "Altro",
     "menu": [
-      { "id": "per-me", "t": "Che cosa cambia per me", "d": "Le regole per la tua situazione" },
-      { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Tu e i tuoi familiari, dal 2028" },
+      { "id": "per-me", "t": "Che cosa cambia per me?", "d": "Le regole per la tua situazione" },
+      { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Per te e i tuoi familiari, dal 2028" },
       { "id": "casse", "t": "Le casse di oggi e i loro statuti", "d": "CMA, FAS, FIAM, ex CASPOP" },
       { "id": "norme", "t": "Normativa", "d": "Fisco, Anagrafe, trasparenza, riforma" },
       { "id": "glossario", "t": "Glossario", "d": "ASA, Nomenclatore, risorse vincolate…" }

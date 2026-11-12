@@ -1,5 +1,5 @@
 {
-  "_nota": "Sintesi redazionali: l’indice dell’accordo per sezioni, il riassunto di premesse, articoli e lettera, le cifre della home.",
+  "_nota": "Sintesi redazionali: l’indice dell’accordo per sezioni e il riassunto di premesse, articoli e lettera.",
   "firmato": "2026-11-10",
   "aggiornato": "2026-11-12",
   "sezioni": [
@@ -313,37 +313,5 @@
       "Dal 1° gennaio 2028 la polizza Kasko oggi prevista per i lavoratori di provenienza ex BP viene estesa a tutti i lavoratori del Gruppo.",
       "Nel corso del 2028 condizioni di miglior favore, ad adesione volontaria e a carico dell’interessato, per la copertura caso morte del dipendente e per la LTC dei familiari."
     ]
-  },
-  "cifre": [
-    {
-      "v": "1.300 €",
-      "t": "l’anno dall’Azienda per ogni dipendente in servizio o in esodo",
-      "a": 15
-    },
-    {
-      "v": "1,40%",
-      "t": "della retribuzione, a carico del dipendente",
-      "a": 15
-    },
-    {
-      "v": "2,10%",
-      "t": "delle pensioni, per chi va in pensione dal 2028",
-      "a": 16
-    },
-    {
-      "v": "980 €",
-      "t": "la riserva per socio: 30 milioni in tutto",
-      "a": 17
-    },
-    {
-      "v": "17 su 29",
-      "t": "i consiglieri eletti dai soci nel Consiglio a regime",
-      "a": 21
-    },
-    {
-      "v": "3 familiari",
-      "t": "a carico al massimo pagano il contributo: dal quarto non è dovuto",
-      "a": 11
-    }
-  ]
+  }
 }

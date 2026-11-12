@@ -76,7 +76,6 @@ export function controlla(d, codice = {}) {
     }
     const usati = (S.sezioni || []).flatMap((s) => s.articoli || []).sort((x, y) => x - y);
     if (usati.join() !== A.articoli.map((a) => a.n).join()) err('sintesi.json: le "sezioni" devono contenere ogni articolo una volta sola');
-    for (const c of S.cifre || []) if (!numeri.has(c.a)) err(`sintesi.json: la cifra "${c.v}" rimanda all'articolo ${c.a}, che non esiste`);
   }
   if (d.documenti) {
     for (const doc of d.documenti.documenti || []) {
@@ -135,7 +134,7 @@ export function controlla(d, codice = {}) {
       for (const m of sorgente.matchAll(/\bTX\('(\w+)'/g)) if (typeof TX.calcolo?.[m[1]] !== 'string') err(`testi.json: manca "calcolo.${m[1]}", usato in ${file}`);
     }
     const viste = ['per-me', 'simulatore', 'casse', 'norme', 'glossario', 'tappe', 'accordo', 'novita'];
-    for (const m of [...(TX.oggi?.menu || []), ...(TX.altro?.menu || [])]) if (!viste.includes(m.id)) err(`testi.json: la voce di menu "${m.t}" punta a "${m.id}", che non è una pagina`);
+    for (const m of TX.altro?.menu || []) if (!viste.includes(m.id)) err(`testi.json: la voce di menu "${m.t}" punta a "${m.id}", che non è una pagina`);
   }
   return P;
 }

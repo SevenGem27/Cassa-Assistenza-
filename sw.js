@@ -1,5 +1,5 @@
 /* Service worker della guida non ufficiale alla Cassa Assistenza: uso senza rete, aggiornamenti e notifiche push. */
-const VERSIONE = '20261112-eb953850';
+const VERSIONE = '20261112-3d664b89';
 const CACHE = 'cassa-' + VERSIONE;
 const GUSCIO = [
   './', 'index.html', 'config.js', 'manifest.webmanifest',
@@ -69,7 +69,7 @@ self.addEventListener('push', (e) => {
   let d = {};
   try { d = e.data ? e.data.json() : {}; } catch (err) { d = { testo: e.data ? e.data.text() : '' }; }
   const lavori = [
-    self.registration.showNotification(d.titolo || 'Guida Cassa', {
+    self.registration.showNotification(d.titolo || 'CassaAssistenza', {
       body: d.testo || 'Ci sono novità sulla Cassa.',
       icon: 'icons/icon-192.png',
       badge: 'icons/badge-96.png',

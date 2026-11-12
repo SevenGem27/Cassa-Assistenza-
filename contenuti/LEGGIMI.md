@@ -5,11 +5,11 @@ Si possono modificare anche dal sito di GitHub: apri il file, tocca la matita, c
 
 | File | Che cosa contiene | Dove si vede |
 |---|---|---|
-| `testi.json` | Tutti i testi dell'interfaccia, divisi per sezione: titoli, spiegazioni, pulsanti, avvisi, le frasi di *Che cosa cambia per me* e del simulatore | ovunque |
+| `testi.json` | Tutti i testi dell'interfaccia, divisi per sezione: l'avviso e la presentazione della Home, titoli, spiegazioni, pulsanti, avvisi, le frasi di *Che cosa cambia per me?* e del simulatore | ovunque |
 | `accordo.json` | Il testo integrale firmato: premesse, 26 articoli, lettera d'impegno, allegati | *Accordo* |
-| `sintesi.json` | Data della firma e dell'ultimo aggiornamento, indice per sezioni, sintesi di premesse, articoli e lettera, cifre della home | *Accordo*, *Oggi* |
+| `sintesi.json` | Data della firma e dell'ultimo aggiornamento, indice per sezioni, sintesi di premesse, articoli e lettera | *Accordo* |
 | `documenti.json` | I quattro PDF firmati della cartella `documenti/` | *Accordo* |
-| `tappe.json` | Scadenze, categorie e appuntamenti ricorrenti | *Tappe*, *Oggi*, *Per me*, calendario |
+| `tappe.json` | Scadenze, categorie e appuntamenti ricorrenti | *Tappe*, linea del tempo della *Home*, *Per me*, calendario |
 | `casse.json` | Le schede di CMA, FAS, FIAM ed ex CASPOP e la tabella della riserva | *Casse di oggi* |
 | `normativa.json` | Le leggi richiamate e la riforma in discussione | *Normativa* |
 | `glossario.json` | Le parole dell'accordo | *Glossario* |

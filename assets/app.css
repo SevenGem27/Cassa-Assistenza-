@@ -2,31 +2,26 @@
 @font-face { font-family: "Atkinson Next"; src: url("fonts/atkinson-next.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "Literata"; src: url("fonts/literata.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
 
+/* Tema blu notte, sempre: non dipende dalle impostazioni del telefono. */
 :root {
-  --carta: #F1F3F6;
-  --foglio: #FFFFFF;
-  --inchiostro: #131C33;
-  --inchiostro-2: #4A556E;
-  --riga: #D3D9E3;
-  --timbro: #5A3E9E;
-  --timbro-tenue: #ECE7F7;
-  --segnale: #B3261E;
-  --segnale-tenue: #FBEBE9;
+  --carta: #0E1424;
+  --foglio: #161E33;
+  --inchiostro: #E9EDF5;
+  --inchiostro-2: #A8B2C7;
+  --riga: #2A3550;
+  --timbro: #B7A4F2;
+  --timbro-tenue: #251F45;
+  --segnale: #FF8A80;
+  --segnale-tenue: #3A1B1A;
   --sans: "Atkinson Next", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --serif: "Literata", Georgia, "Times New Roman", serif;
   --raggio: 6px;
   --barra: 62px;
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --carta: #0E1424; --foglio: #161E33; --inchiostro: #E9EDF5; --inchiostro-2: #A8B2C7;
-    --riga: #2A3550; --timbro: #B7A4F2; --timbro-tenue: #251F45; --segnale: #FF8A80; --segnale-tenue: #3A1B1A;
-  }
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 72px; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 72px; touch-action: manipulation; } /* niente zoom col doppio tocco */
 body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 17px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
 h1, h2, h3, p, ul, ol, dl, dd, figure, table { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
@@ -62,7 +57,7 @@ main p, main li, main dd, main .det, main .txt, main .cifre span, main td.note {
 }
 /* Titoli, etichette e pulsanti restano allineati a sinistra: su più righe la giustificazione li slabbra. */
 main h1, main h2, main h3, main .tit, main .cosa, main .quando, main .sigla, main .rifs, main .azioni, main .docs, main .lato, main .fonte, main label, main .spunta,
-main .btn, main .filtro, main .passi a, main .testata-titolo, main .nu-tit { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+main .btn, main .filtro, main .passi a, main .testata-titolo, main .nu-tit, main .linea li { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
 main .lato, main .passi a:last-child { text-align: right; }
 main .testo .centro, main .testo .firma, main .firma { text-align: center; }
 
@@ -75,7 +70,7 @@ main .testo .centro, main .testo .firma, main .firma { text-align: center; }
 .schede a[aria-current="page"] { color: var(--timbro); font-weight: 700; }
 .schede a[aria-current="page"]::before { content: ""; position: absolute; top: -1px; left: 22%; right: 22%; height: 3px; background: var(--timbro); border-radius: 0 0 3px 3px; }
 .pallino { position: absolute; top: 5px; left: calc(50% + 6px); min-width: 19px; height: 19px; padding: 0 5px; border-radius: 10px; background: var(--segnale); color: #fff; font-size: 12px; line-height: 19px; text-align: center; font-weight: 700; }
-@media (prefers-color-scheme: dark) { .pallino { color: #1A0B0A; } }
+.pallino { color: #1A0B0A; }
 
 /* Timbro datario: l'unico elemento vistoso dell'app */
 .timbro { flex: none; display: grid; justify-items: center; align-content: center; width: 76px; min-height: 76px; padding: 6px 4px; border: 2px solid currentColor; border-radius: var(--raggio);
@@ -146,6 +141,36 @@ a.rif { color: var(--timbro); border-color: currentColor; }
 .non-ufficiale { margin: 0 0 24px; padding: 12px 16px 14px; border: 2px solid var(--timbro); border-radius: var(--raggio); background: var(--timbro-tenue); }
 .non-ufficiale .nu-tit { margin: 0 0 4px; font-weight: 800; font-size: 16px; color: var(--timbro); }
 .non-ufficiale p + p { margin: 0; font-size: 15px; line-height: 1.45; color: var(--inchiostro); }
+/* Home: la linea del tempo */
+.panoramica { margin: 6px 0 28px; padding: 30px 6px 0; }
+.binario { position: relative; height: 6px; border-radius: 3px; background: var(--riga); }
+.binario .percorso { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: var(--timbro); }
+.binario .p-fatta, .binario .p-futura { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; }
+.binario .p-fatta { background: var(--timbro); box-shadow: 0 0 0 2px var(--carta); }
+.binario .p-futura { background: var(--carta); box-shadow: inset 0 0 0 2px var(--inchiostro-2); }
+.oggi-pin { position: absolute; top: -12px; bottom: -12px; width: 3px; margin-left: -1.5px; background: var(--segnale); border-radius: 2px; }
+.oggi-pin b { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 3px; font-size: 13px; color: var(--segnale); white-space: nowrap; }
+.anni { position: relative; height: 22px; margin-top: 14px; font-size: 12.5px; color: var(--inchiostro-2); }
+.anni span { position: absolute; top: 0; transform: translateX(-50%); }
+.anni span.primo { transform: none; }
+.anni span.ultimo { transform: translateX(-100%); }
+.linea { position: relative; margin-left: 4px; }
+.linea::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--riga); }
+.linea li { position: relative; }
+.linea .anno-l { padding: 14px 0 4px 30px; font-weight: 800; font-size: 15px; color: var(--inchiostro-2); }
+.linea .t a { display: grid; padding: 8px 0 8px 30px; text-decoration: none; min-height: 44px; }
+.linea .punto { position: absolute; left: 1px; top: 13px; width: 14px; height: 14px; border-radius: 50%; background: var(--carta); box-shadow: inset 0 0 0 2px var(--inchiostro-2); }
+.linea .passata .punto { background: var(--timbro); box-shadow: 0 0 0 3px var(--carta); }
+.linea .corso .punto { background: var(--carta); box-shadow: inset 0 0 0 4px var(--timbro); }
+.linea .vicina .punto { box-shadow: inset 0 0 0 4px var(--segnale); }
+.linea .q { font-size: 14px; color: var(--inchiostro-2); }
+.linea .q em { font-style: normal; font-weight: 700; color: var(--timbro); }
+.linea .vicina .q em { color: var(--segnale); }
+.linea .tt { font-weight: 700; line-height: 1.3; }
+.linea .passata .tt { font-weight: 400; color: var(--inchiostro-2); }
+.linea .oggi-segno { margin: 10px 0; padding-left: 30px; }
+.linea .oggi-segno::before { content: ""; position: absolute; left: -2px; right: 0; top: 50%; height: 2px; background: var(--segnale); }
+.linea .oggi-segno span { position: relative; display: inline-block; padding: 3px 10px; border-radius: 12px; background: var(--segnale); color: #1A0B0A; font-weight: 800; font-size: 14px; }
 .nota { padding: 14px 16px; background: var(--foglio); border: 1px solid var(--riga); border-left: 4px solid var(--timbro); border-radius: var(--raggio); }
 .nota.attenzione { border-left-color: var(--segnale); }
 .nota > * + * { margin-top: 8px; }
@@ -212,7 +237,7 @@ mark { background: #FFE58A; color: #131C33; padding: 0 2px; border-radius: 2px; 
 /* Novità */
 .fonte { flex: none; width: 5.6em; font-size: 12.5px; font-weight: 700; line-height: 1.25; color: var(--inchiostro-2); padding-top: 3px; overflow-wrap: break-word; hyphens: auto; }
 .nuova .tit::after { content: "nuova"; margin-left: 8px; padding: 0 6px; border-radius: 4px; background: var(--segnale); color: #fff; font-size: 12px; font-weight: 700; vertical-align: 2px; }
-@media (prefers-color-scheme: dark) { .nuova .tit::after { color: #1A0B0A; } }
+.nuova .tit::after { color: #1A0B0A; }
 .stato-fonti li { display: grid; gap: 1px; padding: 9px 0; border-bottom: 1px solid var(--riga); font-size: 15px; }
 .stato-fonti a { font-weight: 700; }
 .stato-fonti .ok, .stato-fonti .ko { font-size: 14px; }

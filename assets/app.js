@@ -90,7 +90,6 @@
       lettera: { breve: S.lettera.breve, punti: S.lettera.punti, blocchi: A.lettera },
       allegati: A.allegati,
       documenti: f.documenti.documenti,
-      cifre: S.cifre,
       tappe: f.tappe.tappe,
       ricorrenti: f.tappe.ricorrenti,
       categorieTappe: f.tappe.categorie,
@@ -229,40 +228,59 @@
 
   /* ---------- viste ---------- */
   function vOggi() {
-    var p = prossimaScadenza();
-    var fut = tappeFuture().filter(function (t) { return t !== p && t.tipo !== 'periodo'; }).slice(0, 4);
-    // Prima cosa che si vede: è una guida personale, indipendente e non ufficiale.
-    var h = '<aside class="non-ufficiale" aria-labelledby="nu-tit"><p class="nu-tit" id="nu-tit">' + H('nonUfficiale.titolo') + '</p><p>' + H('nonUfficiale.testo') + '</p></aside>' +
-      '<section class="blocco"><p class="piccolo">' + H('oggi.firmato', { data: dataLunga(D.meta.firmato) }) + '</p><h1 class="t1">' + H('oggi.prossima') + '</h1>';
-    if (p) {
-      h += '<a class="prossima" href="#tappe">' + timbro(p, { grande: true, prossimo: true, premi: true }) +
-        '<span><span class="quando">' + esc(traQuanto(p.d)) + '</span><span class="cosa">' + esc(p.titolo) + '</span>' +
-        '<span class="piccolo">' + esc(quando(p)) + (p.rif && typeof p.rif[0] === 'number' ? H('oggi.articolo', { n: p.rif[0] }) : '') + '</span></span></a>';
-    } else {
-      h += '<p class="nota">' + H('oggi.nessunaScadenza') + '</p>';
-    }
-    h += '</section>';
-
-    if (fut.length) {
-      h += '<section class="blocco"><h2 class="t2">' + H('oggi.subitoDopo') + '</h2><ul class="righe">' + fut.map(function (t) {
-        return '<li><a class="riga" href="#tappe"><span class="corpo"><span class="tit">' + esc(t.titolo) + '</span><span class="det">' + esc(quando(t)) + '</span></span><span class="lato">' + esc(traQuanto(t.d)) + '</span></a></li>';
-      }).join('') + '</ul><p><a class="btn chiaro" href="#tappe">' + H('oggi.tutteLeTappe') + '</a></p></section>';
-    }
-
-    var ultime = novita.voci.filter(function (v) { return v.pertinente; }).slice(0, 3);
-    h += '<section class="blocco"><h2 class="t2">' + H('oggi.novita') + '</h2>';
-    if (ultime.length) h += '<ul class="righe">' + ultime.map(function (v) { return rigaNovita(v, memoria.leggi('visto', null)); }).join('') + '</ul>';
-    else h += '<p class="piccolo">' + (novita.caricate ? H('oggi.nessunaNovita') : H('oggi.caricoNovita')) + '</p>';
-    h += '<p class="piccolo">' + esc(testoControllo()) + '</p><p><a class="btn chiaro" href="#novita">' + H('oggi.tutteLeNovita') + '</a></p></section>';
-
-    h += '<section class="blocco"><h2 class="t2">' + H('oggi.cifre') + '</h2><div class="cifre">' + D.cifre.map(function (c) {
-      return '<a href="#art-' + c.a + '"><b>' + esc(c.v) + '</b><span>' + esc(c.t) + '</span></a>';
-    }).join('') + '</div></section>';
-
-    h += '<section class="blocco"><h2 class="t2">' + H('oggi.orientarti') + '</h2><ul class="righe">' +
-      T('oggi.menu').map(function (m) { return voceMenu(m.id, m.t, m.d); }).join('') + '</ul></section>';
-    h += schedaInstalla();
+    // In cima: è una guida personale, indipendente e non ufficiale. Poi che cosa fa, come restare aggiornati e il percorso.
+    var h = '<h1 class="solo-lettori">' + H('home.titolo') + '</h1>' +
+      '<aside class="non-ufficiale" aria-labelledby="nu-tit"><p class="nu-tit" id="nu-tit">' + H('nonUfficiale.titolo') + '</p><p>' + H('nonUfficiale.testo') + '</p></aside>';
+    h += '<section class="blocco"><h2 class="t2">' + H('home.cosaFa') + '</h2><p>' + H('home.intro') + '</p><ul class="breve">' +
+      T('home.sezioni').map(function (x) { return '<li><b>' + esc(x.nome) + '</b>: ' + esc(x.d) + '</li>'; }).join('') + '</ul></section>';
+    h += '<section class="blocco nota"><h2 class="t3">' + H('home.aggiornato') + '</h2>' + restaAggiornato() + '</section>';
+    h += '<section class="blocco"><h2 class="t2">' + H('home.timeline') + '</h2>' + lineaDelTempo() +
+      '<p class="azioni"><a class="btn chiaro" href="#tappe">' + H('home.dettagli') + '</a></p></section>';
     return h;
+  }
+  function restaAggiornato() {
+    if (su.installata && statoPush === 'attive') return '<p>' + H('home.notificheAttive') + '</p>';
+    var h = su.installata ? '' : '<p>' + H('home.aggiornatoTesto') + '</p><p>' + H(su.ios ? 'home.passoIphone' : 'home.passoAndroid') + '</p>';
+    h += '<p>' + (su.installata ? H('home.passoNotificheInstallata') : H('home.passoNotifiche')) + '</p>';
+    if (ANTEPRIMA) return h;
+    return h + '<p class="azioni">' + (invito ? '<button class="btn" data-az="installa">' + H('home.installa') + '</button>' : '') +
+      '<a class="btn' + (invito ? ' chiaro' : '') + '" href="#novita" data-az="vai-notifiche">' + H('home.vaiNotifiche') + '</a></p>';
+  }
+  // La linea del tempo: tutte le tappe, passate e future, con il segno di oggi.
+  function isoDi(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function lineaDelTempo() {
+    var lista = D.tappe.slice().sort(function (a, b) { return a.d < b.d ? -1 : a.d > b.d ? 1 : 0; });
+    var oggiIso = isoDi(oggi()), p = prossimaScadenza();
+    var inizio = dataDa(lista[0].d), fine = dataDa(lista.reduce(function (m, t) { var f = t.fine || t.d; return f > m ? f : m; }, lista[0].d));
+    var dove = function (iso) { return Math.max(0, Math.min(100, (dataDa(iso) - inizio) / (fine - inizio) * 100)).toFixed(2); };
+    // panoramica in proporzione
+    var anni = '';
+    for (var y = inizio.getFullYear(); y <= fine.getFullYear(); y++) {
+      var iso = y === inizio.getFullYear() ? lista[0].d : y + '-01-01';
+      anni += '<span class="' + (y === inizio.getFullYear() ? 'primo' : y === fine.getFullYear() ? 'ultimo' : '') + '" style="left:' + dove(iso) + '%">' + y + '</span>';
+    }
+    var pallini = lista.map(function (t) { return '<span class="' + (t.d <= oggiIso ? 'p-fatta' : 'p-futura') + '" style="left:' + dove(t.d) + '%"></span>'; }).join('');
+    var h = '<div class="panoramica" aria-hidden="true"><div class="binario"><span class="percorso" style="width:' + dove(oggiIso) + '%"></span>' + pallini +
+      '<span class="oggi-pin" style="left:' + dove(oggiIso) + '%"><b>' + H('home.oggi') + '</b></span></div><div class="anni">' + anni + '</div></div>';
+    // elenco verticale
+    h += '<ol class="linea">';
+    var anno = null, segnato = false;
+    lista.forEach(function (t) {
+      if (!segnato && t.d > oggiIso) {
+        h += '<li class="oggi-segno"><span>' + H('home.oggiData', { data: esc(dataLunga(oggiIso)) }) + '</span></li>';
+        segnato = true;
+      }
+      var a = t.d.slice(0, 4);
+      if (a !== anno) { anno = a; h += '<li class="anno-l" aria-hidden="true">' + a + '</li>'; }
+      var st = statoTappa(t), passata = t.d <= oggiIso && st !== 'corso';
+      var cls = st === 'corso' ? 'corso' : passata ? 'passata' : t === p ? 'futura vicina' : 'futura';
+      var nota = st === 'corso' ? H('home.inCorso') : t === p ? H('home.prossima', { quando: esc(traQuanto(t.d)) }) : '';
+      h += '<li class="t ' + cls + '"><a href="#tappe" data-az="vai-tappa" data-v="' + esc(t.id) + '"><span class="punto" aria-hidden="true"></span>' +
+        '<span class="q">' + esc(quando(t)) + (nota ? ' <em>' + nota + '</em>' : '') + '</span><span class="tt">' + esc(t.titolo) + '</span>' +
+        '<span class="solo-lettori">, ' + (passata ? H('home.statoPassata') : H('home.statoFutura')) + '</span></a></li>';
+    });
+    if (!segnato) h += '<li class="oggi-segno"><span>' + H('home.oggiData', { data: esc(dataLunga(oggiIso)) }) + '</span></li>';
+    return h + '</ol>';
   }
   function voceMenu(id, tit, det) {
     return '<li><a class="riga" href="#' + id + '"><span class="corpo"><span class="tit">' + esc(tit) + '</span>' + (det ? '<span class="det">' + esc(det) + '</span>' : '') + '</span>' + FRECCIA + '</a></li>';
@@ -278,7 +296,7 @@
   var mostraStoria = false;
   function vTappe() {
     var cats = [{ id: 'tutte', nome: T('tappe.tutte') }].concat(D.categorieTappe);
-    var h = '<section class="blocco"><h1 class="t1">' + H('tappe.titolo') + '</h1><p class="sotto">' + H('tappe.intro') + '</p>' +
+    var h = '<section class="blocco"><h1 class="solo-lettori">' + H('tappe.titolo') + '</h1><p class="sotto">' + H('tappe.intro') + '</p>' +
       '<div class="filtri" role="group" aria-label="' + H('tappe.filtri') + '">' + cats.map(function (c) {
         return '<button class="filtro" data-az="filtro-tappe" data-v="' + c.id + '" aria-pressed="' + (filtroTappe === c.id) + '">' + esc(c.nome) + '</button>';
       }).join('') + '</div></section>';
@@ -374,7 +392,7 @@
       '<span class="corpo"><span class="tit">' + esc(tit) + '</span><span class="det">' + esc(det) + '</span></span>' + FRECCIA + '</a></li>';
   }
   function vAccordo() {
-    return '<section class="blocco"><h1 class="t1">' + H('accordo.titolo') + '</h1><p class="sotto">' + H('accordo.intro') + '</p>' +
+    return '<section class="blocco"><h1 class="solo-lettori">' + H('accordo.titolo') + '</h1>' +
       '<form class="cerca" role="search" data-az="cerca"><label class="solo-lettori" for="q">' + H('accordo.cercaEtichetta') + '</label>' +
       '<input id="q" type="search" inputmode="search" autocomplete="off" placeholder="' + H('accordo.cercaSegnaposto') + '" value="' + esc(domanda) + '"></form></section>' +
       '<section id="esiti">' + (domanda.trim().length >= 2 ? risultati(domanda) : indiceAccordo()) + '</section>' +
@@ -724,7 +742,7 @@
       var c = categoriaVoce(v);
       return filtroNovita === 'norme' ? (c === 'norme' || c === 'stampa') : c === filtroNovita;
     });
-    var h = '<section class="blocco"><h1 class="t1">' + H('novita.titolo') + '</h1><p class="sotto">' + H('novita.intro') + '</p>' +
+    var h = '<section class="blocco"><h1 class="solo-lettori">' + H('novita.titolo') + '</h1>' +
       '<p class="piccolo">' + esc(testoControllo()) + '</p>' +
       '<div class="filtri" role="group" aria-label="' + H('novita.filtri') + '">' + T('novita.categorie').map(function (f) {
         return '<button class="filtro" data-az="filtro-novita" data-v="' + f.id + '" aria-pressed="' + (filtroNovita === f.id) + '">' + esc(f.nome) + '</button>';
@@ -803,16 +821,10 @@
     }
     return h + '<p>' + H('notifiche.invito') + '</p><p class="azioni"><button class="btn" data-az="attiva-notifiche">' + H('notifiche.attiva') + '</button></p>';
   }
-  function schedaInstalla() {
-    if (ANTEPRIMA || su.installata) return '';
-    if (invito) return '<section class="blocco nota"><h2 class="t3">' + H('installa.titolo') + '</h2><p>' + H('installa.testo') + '</p><p class="azioni"><button class="btn" data-az="installa">' + H('installa.tasto') + '</button></p></section>';
-    if (su.ios) return '<section class="blocco nota"><h2 class="t3">' + H('installa.titolo') + '</h2><p>' + H('installa.ios') + '</p></section>';
-    return '';
-  }
 
   /* ----- casse, normativa, glossario, altro ----- */
   function vCasse() {
-    var h = '<section class="blocco"><h1 class="t1">' + H('casse.titolo') + '</h1><p class="sotto">' + H('casse.intro') + '</p></section>';
+    var h = '<section class="blocco"><h1 class="solo-lettori">' + H('casse.titolo') + '</h1><p class="sotto">' + H('casse.intro') + '</p></section>';
     h += '<section class="nota"><h2 class="t3">' + H('casse.statutoTitolo') + '</h2><p>' + H('casse.statutoTesto') + '</p>' + rifs(T('casse.statutoRif')) + '</section>';
     D.casse.forEach(function (c) {
       var doc = c.documenti.map(function (d) {
@@ -834,7 +846,7 @@
     return h;
   }
   function vNorme() {
-    var h = '<section class="blocco"><h1 class="t1">' + H('normativa.titolo') + '</h1><p class="sotto">' + H('normativa.intro') + '</p></section><section class="blocco">';
+    var h = '<section class="blocco"><h1 class="solo-lettori">' + H('normativa.titolo') + '</h1><p class="sotto">' + H('normativa.intro') + '</p></section><section class="blocco">';
     D.norme.forEach(function (n) {
       h += '<article class="cassa"><h2 class="t3">' + esc(n.titolo) + (n.nuova ? ' <span class="segno rosso">' + H('normativa.nuova') + '</span>' : '') + '</h2><p class="piccolo">' + esc(n.fonte) + '</p><p>' + esc(n.testo) + '</p>' +
         (n.perche ? '<p>' + H('normativa.perche') + ' ' + esc(n.perche) + '</p>' : '') +
@@ -848,12 +860,12 @@
     return h;
   }
   function vGlossario() {
-    return '<section class="blocco"><h1 class="t1">' + H('glossario.titolo') + '</h1><p class="sotto">' + H('glossario.intro') + '</p></section><dl class="voci">' + D.glossario.map(function (g) {
+    return '<section class="blocco"><h1 class="solo-lettori">' + H('glossario.titolo') + '</h1><p class="sotto">' + H('glossario.intro') + '</p></section><dl class="voci">' + D.glossario.map(function (g) {
       return '<dt>' + esc(g.t) + '</dt><dd>' + esc(g.d) + rifs(g.rif) + '</dd>';
     }).join('') + '</dl>';
   }
   function vAltro() {
-    return '<section class="blocco"><h1 class="t1">' + H('altro.titolo') + '</h1><ul class="righe">' +
+    return '<section class="blocco"><h1 class="solo-lettori">' + H('altro.titolo') + '</h1><ul class="righe">' +
       T('altro.menu').map(function (m) { return voceMenu(m.id, m.t, m.d); }).join('') + '</ul></section>';
   }
 
@@ -861,7 +873,7 @@
   var VISTE = null;
   function preparaViste() {
     VISTE = {
-      oggi: { t: T('app.nomeTitolo'), nota: T('app.sottotitoloHome'), s: 'oggi', f: vOggi },
+      oggi: { t: T('app.nomeTitolo'), s: 'oggi', f: vOggi },
       tappe: { t: T('viste.tappe'), s: 'tappe', f: vTappe },
       accordo: { t: T('viste.accordo'), s: 'accordo', f: vAccordo },
       premesse: { t: T('viste.premesse'), s: 'accordo', su: 'accordo', f: vPremesse },
@@ -877,7 +889,7 @@
       glossario: { t: T('viste.glossario'), s: 'altro', su: 'altro', f: vGlossario }
     };
   }
-  var corrente = null;
+  var corrente = null, vaiA = null;
   function rotta() {
     var h = (location.hash || '#oggi').slice(1), m = /^art-(\d{1,2})$/.exec(h);
     if (m && ART[+m[1]]) return { id: h, t: T('viste.articolo', { n: m[1] }), s: 'accordo', su: 'accordo', f: function () { return vArticolo(+m[1]); } };
@@ -904,6 +916,7 @@
     });
     document.title = r.id === 'oggi' ? T('app.titoloHome') : T('app.titoloPagina', { vista: r.t, nome: T('app.nome') });
     if (cambia && !tieniScroll) window.scrollTo(0, 0);
+    if (vaiA) { var meta = document.getElementById(vaiA); vaiA = null; if (meta) meta.scrollIntoView({ block: 'center' }); }
     if (r.id === 'novita') { memoria.scrivi('visto', new Date().toISOString()); aggiornaPallino(); }
   }
   window.addEventListener('hashchange', function () { disegna(false); });
@@ -941,6 +954,14 @@
     else if (az === 'spegni-notifiche') { spegniNotifiche().catch(function () {}).then(function () { disegna(true); }); }
     else if (az === 'installa' && invito) { invito.prompt(); invito = null; disegna(true); }
     else if (az === 'ricarica') { location.reload(); }
+    else if (az === 'vai-notifiche') { e.preventDefault(); vaiA = 'notifiche'; if (location.hash === '#novita') disegna(true); else location.hash = 'novita'; }
+    else if (az === 'vai-tappa') {
+      e.preventDefault();
+      var tp = D.tappe.filter(function (x) { return x.id === v; })[0];
+      filtroTappe = 'tutte'; memoria.scrivi('filtroTappe', 'tutte');
+      if (tp && tp.cat === 'storia') mostraStoria = true;
+      vaiA = 't-' + v; location.hash = 'tappe';
+    }
   });
   vista.addEventListener('submit', function (e) { e.preventDefault(); var q = document.getElementById('q'); if (q) q.blur(); });
   var timerCerca = null;
@@ -1022,6 +1043,10 @@
     vista.innerHTML = '<p class="nota attenzione">' + esc(vista.getAttribute('data-errore')) + '</p><p class="azioni"><button class="btn" data-az="ricarica">' + esc(vista.getAttribute('data-riprova')) + '</button></p>';
   }
 
+  // Niente zoom: Safari su iPhone ignora l'impostazione della pagina, quindi si fermano anche i gesti con due dita.
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (t) { document.addEventListener(t, function (e) { e.preventDefault(); }, { passive: false }); });
+  document.addEventListener('touchmove', function (e) { if (e.touches && e.touches.length > 1) e.preventDefault(); }, { passive: false });
+
   window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); invito = e; if (corrente === 'oggi') disegna(true); });
   window.addEventListener('appinstalled', function () { invito = null; su.installata = true; });
   document.addEventListener('visibilitychange', function () {
@@ -1035,7 +1060,7 @@
 
   if (su.sw) {
     navigator.serviceWorker.register('sw.js').then(function () { return leggiStatoPush(); }).then(function () {
-      if (corrente === 'novita') disegna(true);
+      if (corrente === 'novita' || corrente === 'oggi') disegna(true);
     }).catch(function () { /* senza service worker l'app funziona comunque in linea */ });
     var avevaControllo = !!navigator.serviceWorker.controller;
     navigator.serviceWorker.addEventListener('controllerchange', function () {
