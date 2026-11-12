@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CassaAssistenza: come installare la guida</title>
+<meta name="description" content="Istruzioni per installare sul telefono la guida non ufficiale alla nuova Cassa Assistenza di Gruppo.">
+<meta name="theme-color" content="#0E1424">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CassaAssistenza: Guida non ufficiale alla nuova Cassa Assistenza di Gruppo">
+<meta property="og:description" content="Istruzioni per installare sul telefono la guida non ufficiale alla nuova Cassa Assistenza di Gruppo.">
+<meta property="og:url" content="https://sevengem27.github.io/Cassa-Assistenza-/installa.html">
+<meta property="og:image" content="https://sevengem27.github.io/Cassa-Assistenza-/icons/icon-512.png">
+<meta name="apple-mobile-web-app-title" content="CassaAssistenza">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>
+  // Se qualcuno installa questa pagina al posto della guida, l'icona apre comunque la guida.
+  if ((window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone) location.replace('./');
+</script>
+<style>
+@font-face { font-family: "Atkinson Next"; src: url("assets/fonts/atkinson-next.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+:root { --carta: #0E1424; --foglio: #161E33; --inchiostro: #E9EDF5; --inchiostro-2: #A8B2C7; --riga: #2A3550; --timbro: #B7A4F2; --timbro-tenue: #251F45; --segnale: #FF8A80; color-scheme: dark; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 17px/1.55 "Atkinson Next", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, ol, ul { margin: 0; padding: 0; }
+a { color: inherit; }
+main { max-width: 34rem; margin: 0 auto; padding: calc(28px + env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
+p, li, dd { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+.testa { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+.testa img { width: 84px; height: 84px; border-radius: 19px; display: block; }
+.testa h1 { font-size: 30px; line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; }
+.testa p { margin-top: 6px; color: var(--inchiostro-2); font-size: 15.5px; line-height: 1.35; text-align: left; }
+.presenta { margin-top: 20px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 26px; border-radius: 8px; background: var(--inchiostro); color: var(--carta); font-weight: 800; font-size: 18px; text-decoration: none; }
+.apri { margin-top: 20px; }
+.apri .btn { width: 100%; }
+.avviso { margin-top: 24px; padding: 12px 16px 14px; border: 2px solid var(--timbro); border-radius: 8px; background: var(--timbro-tenue); }
+.avviso b { display: block; color: var(--timbro); margin-bottom: 4px; }
+.avviso p { font-size: 15px; line-height: 1.45; }
+h2 { margin-top: 40px; font-size: 24px; line-height: 1.2; font-weight: 800; }
+h3 { margin-top: 20px; font-size: 17px; font-weight: 800; color: var(--timbro); }
+.scelte { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.scelte a { padding: 8px 16px; border: 1px solid var(--riga); border-radius: 20px; background: var(--foglio); text-decoration: none; font-weight: 700; }
+.scelte a[aria-current] { background: var(--timbro); border-color: var(--timbro); color: var(--carta); }
+section.sistema { margin-top: 18px; padding: 18px; background: var(--foglio); border: 1px solid var(--riga); border-radius: 10px; }
+section.sistema > h2 { margin-top: 0; font-size: 21px; }
+.nota { margin-top: 12px; font-size: 15.5px; color: var(--inchiostro-2); }
+.passi { list-style: none; counter-reset: passo; margin-top: 12px; }
+.passi li { counter-increment: passo; position: relative; padding: 0 0 14px 44px; text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+.passi li:last-child { padding-bottom: 0; }
+.passi li::before { content: counter(passo); position: absolute; left: 0; top: -1px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--timbro-tenue); color: var(--timbro); font-weight: 800; font-size: 16px; box-shadow: inset 0 0 0 2px var(--timbro); }
+.passi li::after { content: ""; position: absolute; left: 14px; top: 32px; bottom: 2px; width: 2px; background: var(--riga); }
+.passi li:last-child::after { display: none; }
+.tasto { display: inline-grid; place-items: center; width: 30px; height: 26px; margin: 0 2px; vertical-align: -6px; border: 1px solid var(--riga); border-radius: 7px; background: var(--carta); }
+.tasto svg { width: 18px; height: 18px; fill: none; stroke: var(--inchiostro); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.tasto .pieno { fill: var(--inchiostro); stroke: none; }
+.qr { display: grid; grid-template-columns: 132px 1fr; gap: 16px; align-items: center; margin-top: 16px; }
+.qr img { width: 132px; height: 132px; padding: 8px; background: #fff; border-radius: 8px; }
+.qr p { text-align: left; font-size: 15.5px; color: var(--inchiostro-2); }
+details { border-top: 1px solid var(--riga); padding: 12px 0; }
+details:last-child { border-bottom: 1px solid var(--riga); }
+summary { cursor: pointer; font-weight: 700; }
+details p { margin-top: 8px; color: var(--inchiostro-2); }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--riga); font-size: 14px; color: var(--inchiostro-2); text-align: left; }
+:focus-visible { outline: 3px solid var(--timbro); outline-offset: 2px; }
+@media (min-width: 700px) { .testa h1 { font-size: 36px; } }
+</style>
+</head>
+<body>
+<main>
+  <header class="testa">
+    <img src="icons/icon-192.png" alt="" width="84" height="84">
+    <div><h1>CassaAssistenza</h1><p>Guida non ufficiale alla nuova Cassa Assistenza di Gruppo</p></div>
+  </header>
+  <p class="presenta">Tutto sull’accordo del 10 novembre 2026 in un’app per il telefono: il testo firmato con le sintesi, le tappe, che cosa cambia per te, il calcolo dei contributi, le casse di oggi e le novità dai sindacati, con le notifiche. Gratis, senza registrazione, senza passare dagli store.</p>
+  <p class="apri"><a class="btn" href="./">Apri la guida</a></p>
+  <aside class="avviso"><b>Guida non ufficiale</b><p>Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della Banca, della Cassa o delle Organizzazioni Sindacali, che non l’hanno realizzato né approvato. Sulla base del testo dell’Accordo sindacale del 10 novembre 2026, il progetto della nuova Cassa Assistenza viene qui illustrato nella sua interezza, permettendo all’utente di capire cosa sarà della sua posizione. Qualunque dato inserito dall’utente resta in locale, sullo smartphone di chi lo utilizza, senza entrare mai e in alcun modo nella disponibilità di soggetti terzi, salvo l’indirizzo tecnico del device, necessario alle notifiche, solo per chi le attiva.</p></aside>
+
+  <h2>Installala sul telefono in un minuto</h2>
+  <nav class="scelte" aria-label="Installala sul telefono in un minuto">
+    <a href="#iphone" data-s="ios">iPhone</a><a href="#android" data-s="android">Android</a><a href="#computer" data-s="computer">Computer</a>
+  </nav>
+
+  <section class="sistema" id="iphone">
+    <h2>Su iPhone</h2>
+    <p class="nota">Usa <b>Safari</b>. Se il collegamento si è aperto dentro WhatsApp, Mail o un’altra app, tocca il tasto per aprirlo in Safari: di solito la bussola, oppure <span class="tasto" role="img" aria-label="tre puntini"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.6" class="pieno"/><circle cx="12" cy="12" r="1.6" class="pieno"/><circle cx="18" cy="12" r="1.6" class="pieno"/></svg></span> e poi <b>Apri in Safari</b>.</p>
+    <h3>iOS 26 e successivi</h3>
+    <ol class="passi"><li>Tocca <b>Apri la guida</b> qui sopra: devi essere sulla pagina della guida, non su questa.</li><li>In basso, accanto all’indirizzo della pagina, tocca il tasto con le tre lineette <span class="tasto" role="img" aria-label="tre lineette"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></span>. Se non lo vedi, cerca il tasto con i tre puntini <span class="tasto" role="img" aria-label="tre puntini"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.6" class="pieno"/><circle cx="12" cy="12" r="1.6" class="pieno"/><circle cx="18" cy="12" r="1.6" class="pieno"/></svg></span>.</li><li>Nel menu che si apre tocca <b>Condividi</b> <span class="tasto" role="img" aria-label="condividi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8.5 10H6.5a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-8a1.5 1.5 0 0 0-1.5-1.5h-2"/></svg></span>.</li><li>Scorri l’elenco e tocca <b>Aggiungi alla schermata Home</b> <span class="tasto" role="img" aria-label="aggiungi"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></span>. Se non c’è, tocca prima <b>Altro</b> o <b>Mostra altro</b>.</li><li>Il nome è già <b>CassaAssistenza</b>. Lascia acceso <b>Apri come app web</b> e tocca <b>Aggiungi</b>.</li></ol>
+    <h3>iOS 18 e precedenti</h3>
+    <ol class="passi"><li>Tocca <b>Apri la guida</b> qui sopra.</li><li>Tocca il tasto <b>Condividi</b> <span class="tasto" role="img" aria-label="condividi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8.5 10H6.5a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-8a1.5 1.5 0 0 0-1.5-1.5h-2"/></svg></span>, in basso al centro (sull’iPad in alto a destra).</li><li>Scorri e tocca <b>Aggiungi alla schermata Home</b> <span class="tasto" role="img" aria-label="aggiungi"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></span>, poi <b>Aggiungi</b>.</li></ol>
+    <p class="nota">Per sapere quale iOS hai: <b>Impostazioni</b>, <b>Generali</b>, <b>Info</b>, voce <b>Versione iOS</b>.</p>
+  </section>
+
+  <section class="sistema" id="android">
+    <h2>Su Android</h2>
+    <ol class="passi"><li>Apri il collegamento con <b>Chrome</b> e tocca <b>Apri la guida</b> qui sopra.</li><li>Se in basso compare <b>Installa app</b>, toccalo. Altrimenti tocca il menu <span class="tasto" role="img" aria-label="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="1.6" class="pieno"/><circle cx="12" cy="12" r="1.6" class="pieno"/><circle cx="12" cy="18" r="1.6" class="pieno"/></svg></span> in alto a destra e scegli <b>Installa app</b> (in alcune versioni <b>Aggiungi a schermata Home</b>, poi <b>Installa</b>).</li><li>Conferma con <b>Installa</b>: l’icona di CassaAssistenza compare tra le app.</li></ol>
+    <p class="nota">Con <b>Samsung Internet</b>: tocca il menu <span class="tasto" role="img" aria-label="tre lineette"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></span> in basso, poi <b>Aggiungi pagina a</b> e <b>Schermata Home</b>.</p>
+  </section>
+
+  <section class="sistema" id="computer">
+    <h2>Sul computer</h2>
+    <ol class="passi"><li>Con <b>Chrome</b> o <b>Edge</b>: apri la guida e tocca l’icona di installazione nella barra dell’indirizzo, oppure dal menu scegli la voce per installarla come app.</li><li>Con <b>Safari</b> su Mac: apri la guida, poi menu <b>File</b> e <b>Aggiungi al Dock</b>.</li><li>In ogni caso puoi usarla anche dal browser, come un normale sito.</li></ol>
+    <div class="qr"><img src="icons/qr-installa.svg" alt="Codice QR di questa pagina"><p>Per installarla sul telefono, inquadra questo codice con la fotocamera.</p></div>
+  </section>
+
+  <h2>Attiva le notifiche</h2>
+  <ol class="passi"><li>Apri <b>CassaAssistenza</b> dall’icona sulla schermata Home (su iPhone le notifiche funzionano solo così, con iOS 16.4 o successivo).</li><li>Tocca <b>Novità</b>, poi <b>Attiva le notifiche</b> e infine <b>Consenti</b>.</li><li>Da quel momento ti avvisa quando sindacati, casse o fonti di legge pubblicano qualcosa sulla Cassa.</li></ol>
+
+  <h2>Gli aggiornamenti</h2>
+  <p class="presenta">La guida si aggiorna da sola, non devi reinstallarla. Quando compare <b>È pronta una versione aggiornata</b>, tocca <b>Aggiorna</b>. Funziona anche senza rete, con i contenuti dell’ultima apertura.</p>
+
+  <h2>Se qualcosa non va</h2>
+  <div class="presenta"><details><summary>Non trovo «Aggiungi alla schermata Home»</summary><p>Controlla di essere in Safari e non dentro un’altra app. Nel menu Condividi scorri fino in fondo o tocca <b>Altro</b>.</p></details><details><summary>L’icona apre questa pagina invece della guida</summary><p>Tienila premuta, eliminala e aggiungila di nuovo partendo da <b>Apri la guida</b>.</p></details><details><summary>Le notifiche non arrivano</summary><p>Apri la guida dall’icona, non dal browser. Poi controlla in <b>Impostazioni</b>, <b>Notifiche</b>, <b>CassaAssistenza</b> che siano consentite.</p></details></div>
+
+  <p class="apri"><a class="btn" href="./">Apri la guida</a></p>
+  <footer>CassaAssistenza. Progetto personale e indipendente, a solo scopo informativo.</footer>
+</main>
+<script>
+  // Mette in evidenza il sistema di chi legge.
+  (function () {
+    var ua = navigator.userAgent, ios = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var s = ios ? 'ios' : /android/i.test(ua) ? 'android' : 'computer';
+    var a = document.querySelector('.scelte a[data-s="' + s + '"]');
+    if (a) a.setAttribute('aria-current', 'true');
+  })();
+</script>
+</body>
+</html>

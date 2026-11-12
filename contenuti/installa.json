@@ -1,0 +1,77 @@
+{
+  "_nota": "Testi della pagina installa.html, da mandare ai colleghi. La pagina si rigenera da sola quando salvi. **testo** diventa grassetto. Tra graffe i disegni dei tasti: {lineette} tre lineette, {puntini} tre puntini, {condividi} quadrato con la freccia, {menu} tre puntini in verticale di Android, {aggiungi} quadrato con il più.",
+
+  "titoloPagina": "CassaAssistenza: come installare la guida",
+  "descrizione": "Istruzioni per installare sul telefono la guida non ufficiale alla nuova Cassa Assistenza di Gruppo.",
+  "nome": "CassaAssistenza",
+  "sottotitolo": "Guida non ufficiale alla nuova Cassa Assistenza di Gruppo",
+  "presentazione": "Tutto sull’accordo del 10 novembre 2026 in un’app per il telefono: il testo firmato con le sintesi, le tappe, che cosa cambia per te, il calcolo dei contributi, le casse di oggi e le novità dai sindacati, con le notifiche. Gratis, senza registrazione, senza passare dagli store.",
+  "apri": "Apri la guida",
+  "scegli": "Installala sul telefono in un minuto",
+  "schede": { "iphone": "iPhone", "android": "Android", "computer": "Computer" },
+
+  "iphone": {
+    "titolo": "Su iPhone",
+    "prima": "Usa **Safari**. Se il collegamento si è aperto dentro WhatsApp, Mail o un’altra app, tocca il tasto per aprirlo in Safari: di solito la bussola, oppure {puntini} e poi **Apri in Safari**.",
+    "nuovo": "iOS 26 e successivi",
+    "passiNuovo": [
+      "Tocca **Apri la guida** qui sopra: devi essere sulla pagina della guida, non su questa.",
+      "In basso, accanto all’indirizzo della pagina, tocca il tasto con le tre lineette {lineette}. Se non lo vedi, cerca il tasto con i tre puntini {puntini}.",
+      "Nel menu che si apre tocca **Condividi** {condividi}.",
+      "Scorri l’elenco e tocca **Aggiungi alla schermata Home** {aggiungi}. Se non c’è, tocca prima **Altro** o **Mostra altro**.",
+      "Il nome è già **CassaAssistenza**. Lascia acceso **Apri come app web** e tocca **Aggiungi**."
+    ],
+    "vecchio": "iOS 18 e precedenti",
+    "passiVecchio": [
+      "Tocca **Apri la guida** qui sopra.",
+      "Tocca il tasto **Condividi** {condividi}, in basso al centro (sull’iPad in alto a destra).",
+      "Scorri e tocca **Aggiungi alla schermata Home** {aggiungi}, poi **Aggiungi**."
+    ],
+    "versione": "Per sapere quale iOS hai: **Impostazioni**, **Generali**, **Info**, voce **Versione iOS**."
+  },
+
+  "android": {
+    "titolo": "Su Android",
+    "passi": [
+      "Apri il collegamento con **Chrome** e tocca **Apri la guida** qui sopra.",
+      "Se in basso compare **Installa app**, toccalo. Altrimenti tocca il menu {menu} in alto a destra e scegli **Installa app** (in alcune versioni **Aggiungi a schermata Home**, poi **Installa**).",
+      "Conferma con **Installa**: l’icona di CassaAssistenza compare tra le app."
+    ],
+    "samsung": "Con **Samsung Internet**: tocca il menu {lineette} in basso, poi **Aggiungi pagina a** e **Schermata Home**."
+  },
+
+  "computer": {
+    "titolo": "Sul computer",
+    "passi": [
+      "Con **Chrome** o **Edge**: apri la guida e tocca l’icona di installazione nella barra dell’indirizzo, oppure dal menu scegli la voce per installarla come app.",
+      "Con **Safari** su Mac: apri la guida, poi menu **File** e **Aggiungi al Dock**.",
+      "In ogni caso puoi usarla anche dal browser, come un normale sito."
+    ],
+    "qr": "Per installarla sul telefono, inquadra questo codice con la fotocamera."
+  },
+
+  "notifiche": {
+    "titolo": "Attiva le notifiche",
+    "passi": [
+      "Apri **CassaAssistenza** dall’icona sulla schermata Home (su iPhone le notifiche funzionano solo così, con iOS 16.4 o successivo).",
+      "Tocca **Novità**, poi **Attiva le notifiche** e infine **Consenti**.",
+      "Da quel momento ti avvisa quando sindacati, casse o fonti di legge pubblicano qualcosa sulla Cassa."
+    ]
+  },
+
+  "aggiornamenti": {
+    "titolo": "Gli aggiornamenti",
+    "testo": "La guida si aggiorna da sola, non devi reinstallarla. Quando compare **È pronta una versione aggiornata**, tocca **Aggiorna**. Funziona anche senza rete, con i contenuti dell’ultima apertura."
+  },
+
+  "problemi": {
+    "titolo": "Se qualcosa non va",
+    "voci": [
+      { "d": "Non trovo «Aggiungi alla schermata Home»", "r": "Controlla di essere in Safari e non dentro un’altra app. Nel menu Condividi scorri fino in fondo o tocca **Altro**." },
+      { "d": "L’icona apre questa pagina invece della guida", "r": "Tienila premuta, eliminala e aggiungila di nuovo partendo da **Apri la guida**." },
+      { "d": "Le notifiche non arrivano", "r": "Apri la guida dall’icona, non dal browser. Poi controlla in **Impostazioni**, **Notifiche**, **CassaAssistenza** che siano consentite." }
+    ]
+  },
+
+  "piede": "Progetto personale e indipendente, a solo scopo informativo."
+}

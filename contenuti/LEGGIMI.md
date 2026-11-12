@@ -13,6 +13,7 @@ Si possono modificare anche dal sito di GitHub: apri il file, tocca la matita, c
 | `casse.json` | Le schede di CMA, FAS, FIAM ed ex CASPOP e la tabella della riserva | *Casse di oggi* |
 | `normativa.json` | Le leggi richiamate e la riforma in discussione | *Normativa* |
 | `glossario.json` | Le parole dell'accordo | *Glossario* |
+| `installa.json` | I testi della pagina `installa.html`, da mandare ai colleghi con le istruzioni per installare la guida | `installa.html` |
 | `contributi.json` | Aliquote, tabelle A e B, riserva, sanatoria: i numeri usati dal simulatore | *Contributi*, *Tabelle* |
 
 Le fonti controllate per le *Novità* stanno in `monitor/fonti.json`.

@@ -42,6 +42,7 @@ test('un JSON scritto male viene segnalato con il file e la riga', () => {
   mkdirSync(join(base, 'contenuti')); mkdirSync(join(base, 'monitor'));
   for (const n of FILE_DATI) cpSync(join(RADICE, 'contenuti', n + '.json'), join(base, 'contenuti', n + '.json'));
   cpSync(join(RADICE, 'monitor/fonti.json'), join(base, 'monitor/fonti.json'));
+  cpSync(join(RADICE, 'contenuti/installa.json'), join(base, 'contenuti/installa.json'));
   const rotto = readFileSync(join(base, 'contenuti/glossario.json'), 'utf8').replace('"voci": [', '"voci": [,');
   writeFileSync(join(base, 'contenuti/glossario.json'), rotto);
   const { problemi } = leggiDati(base);

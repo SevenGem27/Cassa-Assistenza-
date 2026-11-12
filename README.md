@@ -23,6 +23,10 @@ Per cambiare un testo basta modificare il file giusto, anche dal sito di GitHub 
 
 In locale: `node redazione/costruisci.mjs`.
 
+## Mandarla ai colleghi
+
+La pagina `installa.html` (`https://NOMEUTENTE.github.io/NOME-REPOSITORY/installa.html`) spiega passo passo come installare la guida su iPhone (anche con iOS 26, dove *Condividi* è nel menu accanto all'indirizzo), Android e computer, e come attivare le notifiche. Ha un codice QR per passare dal computer al telefono (`icons/qr-installa.svg`, da rifare solo se cambia l'indirizzo del sito). I testi stanno in `contenuti/installa.json`; la pagina si rigenera da sola.
+
 ## Metterla in linea con GitHub Pages
 
 1. **Settings > Pages**: in *Build and deployment* scegli *Deploy from a branch*, ramo `main`, cartella `/ (root)`.

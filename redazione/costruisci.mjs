@@ -2,7 +2,7 @@
 /* Controlla i file dati della guida e rigenera ciò che ne deriva.
    Uso:  node redazione/costruisci.mjs [--semina] [--anteprima percorso.html]
    - controlla che i file in contenuti/ siano JSON validi e coerenti tra loro (articoli, tappe, testi usati dall'app);
-   - rigenera data/scadenze.ics dalle tappe e aggiorna la versione del service worker;
+   - rigenera data/scadenze.ics dalle tappe, la pagina installa.html e la versione del service worker;
    --semina     riscrive data/news.json e data/status.json con le novità iniziali
    --anteprima  crea anche una pagina unica, senza file esterni, per mostrarla fuori dal sito
    Se qualcosa non va, elenca i problemi in italiano ed esce con errore (su GitHub l'azione diventa rossa). */
@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { paginaInstalla, ICONE } from './pagina-installa.mjs';
 
 const qui = dirname(fileURLToPath(import.meta.url));
 const radice = join(qui, '..');
@@ -52,6 +53,7 @@ export function leggiDati(base = radice) {
   };
   for (const n of FILE_DATI) dati[n] = json(`contenuti/${n}.json`);
   dati.fonti = json('monitor/fonti.json');
+  dati.installa = json('contenuti/installa.json');
   return { dati, problemi };
 }
 
@@ -120,6 +122,14 @@ export function controlla(d, codice = {}) {
     scaglioni('tabellaA', K.tabellaA); scaglioni('tabellaB.eta', K.tabellaB?.eta); scaglioni('tabellaB.reddito', K.tabellaB?.reddito);
     const v = K.tabellaB?.valori;
     if (!Array.isArray(v) || v.length !== (K.tabellaB?.eta || []).length || v.some((r) => r.length !== K.tabellaB.reddito.length || r.some((c) => c.length !== 4 || c.some((x) => typeof x !== 'number')))) err('contributi.json: "tabellaB.valori" deve avere una riga per fascia d’età, una per fascia di reddito e 4 importi');
+  }
+  if (d.installa) {
+    const I = d.installa, dove = 'installa.json';
+    for (const k of ['titoloPagina', 'descrizione', 'nome', 'sottotitolo', 'presentazione', 'apri', 'scegli', 'piede']) if (typeof I[k] !== 'string' || !I[k]) err(`${dove}: manca "${k}"`);
+    for (const [k, v] of [['iphone.passiNuovo', I.iphone?.passiNuovo], ['iphone.passiVecchio', I.iphone?.passiVecchio], ['android.passi', I.android?.passi], ['computer.passi', I.computer?.passi], ['notifiche.passi', I.notifiche?.passi], ['problemi.voci', I.problemi?.voci]]) {
+      if (!Array.isArray(v) || !v.length) err(`${dove}: "${k}" deve essere un elenco tra parentesi quadre`);
+    }
+    for (const m of JSON.stringify(I).matchAll(/\{(\w+)\}/g)) if (!(m[1] in ICONE)) err(`${dove}: il disegno {${m[1]}} non esiste (si possono usare ${Object.keys(ICONE).map((x) => '{' + x + '}').join(', ')})`);
   }
   if (TX) {
     const cerca = (k) => k.split('.').reduce((o, p) => (o == null ? o : o[p]), TX);
@@ -195,6 +205,11 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   }
 
   scrivi('data/scadenze.ics', calendario(dati));
+
+  // La pagina da mandare ai colleghi, con le istruzioni per installare la guida.
+  const repo = process.env.GITHUB_REPOSITORY || 'SevenGem27/Cassa-Assistenza-';
+  const sito = (process.env.SITE_URL || `https://${repo.split('/')[0].toLowerCase()}.github.io/${repo.split('/')[1]}/`).replace(/\/?$/, '/');
+  scrivi('installa.html', paginaInstalla(dati.installa, dati.testi.nonUfficiale, sito));
 
   // La versione del service worker cambia quando cambia qualunque file dell'app o dei contenuti.
   const guscio = ['index.html', 'config.js', 'assets/app.css', 'assets/app.js', 'assets/calcolo.js', 'manifest.webmanifest', 'monitor/fonti.json', ...FILE_DATI.map((n) => `contenuti/${n}.json`)];

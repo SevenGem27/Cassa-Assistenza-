@@ -38,6 +38,10 @@ self.addEventListener('fetch', (e) => {
   if (url.origin !== self.location.origin) return;
   const chiave = url.origin + url.pathname;
 
+  // Le altre pagine del sito (istruzioni per installare, strumenti) si aprono per quello che sono, non come l'app.
+  const base = new URL(self.registration.scope).pathname;
+  if (req.mode === 'navigate' && url.pathname !== base && url.pathname !== base + 'index.html') return;
+
   // Novità e stato delle fonti: prima la rete, la copia salvata solo se manca la rete.
   if (url.pathname.includes('/data/')) {
     e.respondWith(
