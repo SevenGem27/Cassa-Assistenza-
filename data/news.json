@@ -1,6 +1,18 @@
 {
- "aggiornato": "2026-11-11T23:15:46.299Z",
+ "aggiornato": "2026-11-12T07:44:12.260Z",
  "voci": [
+  {
+   "id": "6fedeacbc5a5",
+   "fonte": "avviso",
+   "nomeFonte": "Avviso",
+   "categoria": "avvisi",
+   "titolo": "Prova delle notifiche: se leggi questo messaggio, funzionano",
+   "url": "https://sevengem27.github.io/Cassa-Assistenza-/#novita",
+   "data": "2026-11-12T07:44:12.260Z",
+   "trovato": "2026-11-12T07:44:12.260Z",
+   "pertinente": true,
+   "temi": []
+  },
   {
    "id": "e6b24451849a",
    "fonte": "fisac",
