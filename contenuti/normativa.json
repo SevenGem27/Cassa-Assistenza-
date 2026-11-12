@@ -1,0 +1,185 @@
+{
+  "_nota": "Le norme richiamate dall’accordo e la riforma in discussione. nuova: true mostra il segno “del 2026”.",
+  "norme": [
+    {
+      "id": "tuir51",
+      "titolo": "Perché i contributi non sono tassati",
+      "fonte": "TUIR, articolo 51, comma 2, lettera a)",
+      "testo": "I contributi di assistenza sanitaria versati dal datore di lavoro o dal lavoratore a enti o casse con fine esclusivamente assistenziale non concorrono al reddito di lavoro dipendente fino a 3.615,20 € l’anno. Dal 2025 l’ente deve essere iscritto all’Anagrafe dei fondi sanitari e operare secondo mutualità e solidarietà tra gli iscritti.",
+      "perche": "È la norma su cui è costruita la Cassa (articolo 2) e la ragione per cui l’ASA va ripensata (articolo 19).",
+      "link": [
+        {
+          "t": "Testo su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917~art51"
+        }
+      ],
+      "rif": [
+        2,
+        19,
+        24
+      ]
+    },
+    {
+      "id": "dlgs192",
+      "titolo": "Il requisito di mutualità e solidarietà",
+      "fonte": "Decreto legislativo 13 dicembre 2024, n. 192, articolo 3",
+      "testo": "Ha riscritto le regole fiscali sui contributi sanitari: sia per i fondi integrativi (articolo 10 del TUIR) sia per enti e casse (articolo 51) servono l’iscrizione all’Anagrafe e l’operatività secondo il principio di mutualità e solidarietà tra gli iscritti. L’Agenzia delle Entrate lo ha commentato nella circolare 4/E del 2025.",
+      "perche": "Le posizioni individuali come l’ASA mal si conciliano con questo principio: da qui il superamento previsto dall’accordo.",
+      "link": [
+        {
+          "t": "Testo su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-12-13;192~art3"
+        },
+        {
+          "t": "Un commento (Fisco e Tasse)",
+          "u": "https://www.fiscoetasse.com/new-rassegna-stampa/2253-deducibilita-fondi-sanitari-integrativi-2025.html"
+        }
+      ],
+      "rif": [
+        19
+      ]
+    },
+    {
+      "id": "tuir10",
+      "titolo": "La deducibilità per i fondi integrativi",
+      "fonte": "TUIR, articolo 10, comma 1, lettera e-ter)",
+      "testo": "Riguarda i fondi integrativi del Servizio sanitario nazionale: i contributi sono deducibili entro lo stesso tetto di 3.615,20 €, nel quale si contano anche quelli versati a enti e casse.",
+      "link": [
+        {
+          "t": "Testo su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917~art10"
+        }
+      ],
+      "rif": [
+        24
+      ]
+    },
+    {
+      "id": "dm2008",
+      "titolo": "L’Anagrafe dei fondi sanitari",
+      "fonte": "Decreto del Ministro della Salute 31 marzo 2008 (Gazzetta Ufficiale n. 141 del 18 giugno 2008)",
+      "testo": "Definisce gli ambiti di intervento di fondi, enti e casse e istituisce presso il Ministero della Salute l’Anagrafe a cui iscriversi.",
+      "link": [
+        {
+          "t": "Gazzetta Ufficiale n. 141 del 2008 (PDF dell’intero numero)",
+          "u": "https://www.gazzettaufficiale.it/eli/gu/2008/06/18/141/sg/pdf"
+        }
+      ],
+      "rif": [
+        2,
+        24
+      ]
+    },
+    {
+      "id": "dm2009",
+      "titolo": "La soglia delle risorse vincolate e il termine del 31 luglio",
+      "fonte": "Decreto 27 ottobre 2009",
+      "testo": "Enti e casse devono destinare almeno il 20% delle risorse per le prestazioni ad assistenza odontoiatrica, assistenza socio-sanitaria ai non autosufficienti e recupero della salute di chi è temporaneamente inabilitato da malattia o infortunio. La domanda di iscrizione o rinnovo all’Anagrafe si presenta ogni anno entro il 31 luglio, con i documenti dell’anno precedente.",
+      "perche": "Spiega perché nel 2027 la Cassa eroga già prestazioni di questo tipo (articolo 6) e perché l’iscrizione autonoma ha la finestra 1° gennaio - 31 luglio 2028 (articolo 24).",
+      "link": [
+        {
+          "t": "Testo del decreto (copia su mefop.it)",
+          "u": "https://www.mefop.it/cms/doc/12015/dm-27-10-09.pdf"
+        }
+      ],
+      "rif": [
+        2,
+        6,
+        24
+      ]
+    },
+    {
+      "id": "dlgs502",
+      "titolo": "I fondi integrativi del Servizio sanitario",
+      "fonte": "Decreto legislativo 30 dicembre 1992, n. 502, articolo 9",
+      "testo": "È la norma di base sulla sanità integrativa: prevede i fondi che erogano prestazioni aggiuntive rispetto ai livelli essenziali di assistenza.",
+      "link": [
+        {
+          "t": "Testo su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502~art9"
+        }
+      ],
+      "rif": [
+        13
+      ]
+    },
+    {
+      "id": "l50",
+      "titolo": "Nuovi obblighi di trasparenza sui bilanci",
+      "fonte": "Decreto-legge 19 febbraio 2026, n. 19, articolo 29, convertito dalla legge 20 aprile 2026, n. 50",
+      "nuova": true,
+      "testo": "In attesa di una riforma organica, fondi, enti, casse e società di mutuo soccorso devono redigere bilancio e relazioni entro tre mesi dalla chiusura dell’esercizio, pubblicarli sul proprio sito e trasmetterli alle amministrazioni competenti. Il bilancio deve indicare iscritti e beneficiari, contributi, prestazioni e costi di gestione. Il rispetto di questi obblighi è condizione per l’iscrizione all’Anagrafe e per le agevolazioni fiscali. Vale dai bilanci 2026: primo termine il 31 marzo 2027. La vigilanza della COVIP, prevista dal decreto, è stata tolta in sede di conversione.",
+      "perche": "Riguarda subito FAS, CMA e FIAM e poi la nuova Cassa, il cui primo bilancio è quello del 2027.",
+      "link": [
+        {
+          "t": "Testo su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2026-02-19;19~art29"
+        },
+        {
+          "t": "La sintesi di Mefop",
+          "u": "https://www.mefop.it/news/normativa/legge-conversione-dl-pnrr"
+        }
+      ],
+      "rif": [
+        24,
+        26
+      ]
+    },
+    {
+      "id": "cc",
+      "titolo": "Associazioni non riconosciute e fusioni",
+      "fonte": "Codice civile, articoli 36, 37, 38 e 42-bis",
+      "testo": "Gli articoli 36-38 regolano le associazioni non riconosciute, come sarà la Cassa. L’articolo 42-bis consente trasformazione, fusione e scissione tra enti del Libro I: è la base giuridica della confluenza di FAS, CMA e FIAM.",
+      "link": [
+        {
+          "t": "Articolo 42-bis su Normattiva",
+          "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art42bis"
+        }
+      ],
+      "rif": [
+        2,
+        7
+      ]
+    }
+  ],
+  "riforma": {
+    "al": "2026-11-11",
+    "intro": "L’accordo stesso richiama “i processi di riforma della disciplina dei fondi sanitari integrativi in corso” (articolo 26). Ecco a che punto sono, per quanto risulta dalle fonti consultate.",
+    "voci": [
+      {
+        "titolo": "Senato: due proposte di risoluzione sulla riforma",
+        "testo": "Dopo un’indagine conoscitiva, in 10ª Commissione sono state presentate le proposte di risoluzione 7-00040 (Zaffini) e 7-00041 (Zampa e altri) sulla riforma della sanità integrativa. Esaminate insieme il 4 e 5 agosto 2026, sono state rinviate. Sono atti di indirizzo al Governo, non leggi.",
+        "link": [
+          {
+            "t": "Ordine del giorno del Senato",
+            "u": "https://www.senato.it/CLS/pub/odg/view/0/148/plenaria"
+          },
+          {
+            "t": "Quotidiano Sanità sulle due proposte",
+            "u": "https://www.quotidianosanita.it/?p=152956"
+          }
+        ]
+      },
+      {
+        "titolo": "Disegno di legge delega sul Servizio sanitario",
+        "testo": "Al Senato è all’esame la delega al Governo sulla riorganizzazione dell’assistenza territoriale e ospedaliera (atto Senato 1825). In audizione l’ANIA ha chiesto di aggiungere un criterio di delega per riordinare le forme integrative.",
+        "link": [
+          {
+            "t": "L’audizione ANIA (Intermedia Channel)",
+            "u": "https://www.intermediachannel.it/2026/04/30/sanita-integrativa-lania-al-senato-fondi-e-assicurazioni-a-sostegno-del-ssn/"
+          }
+        ]
+      },
+      {
+        "titolo": "Legge di bilancio 2027",
+        "testo": "Il disegno di legge, approvato dal Consiglio dei ministri il 28 ottobre 2026, è all’esame del Parlamento e va approvato entro il 31 dicembre. Nelle sintesi consultate non risultano misure specifiche su fondi e casse sanitarie; gli emendamenti possono cambiare il quadro.",
+        "link": [
+          {
+            "t": "Le misure per la sanità (Quotidiano Sanità)",
+            "u": "https://www.quotidianosanita.it/governo-e-parlamento/manovra-dal-voucher-per-gli-over-75-alle-risorse-per-farmaci-e-dispositivi-medici-e-poi-fondi-per-le-indennit-per-chi-lavora-al-pronto-soccorso-per-le-liste-d-attesa-e-per-l-alzheimer-ecco-il-testo-bo/"
+          }
+        ]
+      }
+    ]
+  }
+}

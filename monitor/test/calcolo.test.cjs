@@ -1,7 +1,8 @@
 // node --test monitor/test/calcolo.test.cjs
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const C = require('../../assets/calcolo.js');
+// I parametri e le frasi arrivano dai file dati, come nell'app.
+const C = require('../../assets/calcolo.js').con(require('../../contenuti/contributi.json'), require('../../contenuti/testi.json').calcolo);
 
 test('socio: aliquote dell’articolo 15 e 16', () => {
   assert.equal(C.contributoSocio('servizio', 40000).importo, 560);

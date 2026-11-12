@@ -1,0 +1,514 @@
+{
+  "_nota": "d = data (AAAA-MM-GG). tipo: entro | dal | data | periodo (con fine). cat: storia | costituzione | fusione | persone | contributi | norme. chi: a chi interessa nella pagina \"Che cosa cambia per me\" (tutti, forme, polizza, nessuna, cma, asa). rif: articoli o \"premesse\", \"lettera\", \"tabella-a\", \"tabella-b\".",
+  "categorie": [
+    {
+      "id": "costituzione",
+      "nome": "Costituzione"
+    },
+    {
+      "id": "fusione",
+      "nome": "Fusione"
+    },
+    {
+      "id": "persone",
+      "nome": "Scadenze per le persone"
+    },
+    {
+      "id": "contributi",
+      "nome": "Contributi e prestazioni"
+    },
+    {
+      "id": "norme",
+      "nome": "Obblighi di legge"
+    }
+  ],
+  "tappe": [
+    {
+      "id": "acc-2024-02",
+      "d": "2024-02-29",
+      "tipo": "data",
+      "cat": "storia",
+      "fatto": true,
+      "titolo": "Accordo di percorso welfare",
+      "testo": "Le Parti fissano l’obiettivo di una normativa e di un trattamento economico omogenei per il welfare di Gruppo.",
+      "rif": [
+        "premesse"
+      ]
+    },
+    {
+      "id": "acc-2024-12",
+      "d": "2024-12-19",
+      "tipo": "data",
+      "cat": "storia",
+      "fatto": true,
+      "titolo": "Accordo percorso welfare, evoluzioni",
+      "testo": "L’obiettivo viene confermato, in un’ottica di sostenibilità per il Gruppo, per i lavoratori e per le forme di welfare.",
+      "rif": [
+        "premesse"
+      ]
+    },
+    {
+      "id": "acc-2025-07",
+      "d": "2025-07-30",
+      "tipo": "data",
+      "cat": "storia",
+      "fatto": true,
+      "titolo": "Accordo sull’armonizzazione dell’assistenza sanitaria",
+      "testo": "Scioglimento della CASPOP, avvio dell’armonizzazione del FIAM, superamento delle polizze ex Profamily, Akros e Oaklins, rafforzamento di FAS e CMA. L’Azienda si dichiara disponibile a un’intesa entro il 31 dicembre 2027.",
+      "rif": [
+        "premesse"
+      ]
+    },
+    {
+      "id": "caspop-fas",
+      "d": "2026-01-01",
+      "tipo": "dal",
+      "cat": "storia",
+      "fatto": true,
+      "titolo": "Gli iscritti CASPOP passano al FAS",
+      "testo": "Effetto dell’accordo del 30 luglio 2025.",
+      "rif": [
+        "premesse"
+      ]
+    },
+    {
+      "id": "firma",
+      "d": "2026-11-10",
+      "tipo": "data",
+      "cat": "storia",
+      "fatto": true,
+      "titolo": "Firmato l’accordo che istituisce la Cassa",
+      "testo": "Insieme all’accordo, la lettera d’impegno del Gruppo e le due tabelle dei contributi per i familiari non a carico.",
+      "rif": [
+        2,
+        "lettera"
+      ]
+    },
+    {
+      "id": "nomenclatore-rif",
+      "d": "2026-12-31",
+      "tipo": "data",
+      "cat": "contributi",
+      "titolo": "Nomenclatore: conta quello CMA in vigore a fine 2026",
+      "testo": "Il Nomenclatore della nuova Cassa sarà in sostanziale continuità con quello della CMA vigente a questa data.",
+      "rif": [
+        14
+      ]
+    },
+    {
+      "id": "asa-stop",
+      "d": "2027-01-01",
+      "tipo": "dal",
+      "cat": "contributi",
+      "chi": [
+        "asa"
+      ],
+      "titolo": "ASA: stop ai versamenti volontari",
+      "testo": "Fino al 30 novembre 2027 si può versare a titolo di ASA alle forme attuali solo dal portale welfare.",
+      "rif": [
+        19
+      ]
+    },
+    {
+      "id": "polizze-2027",
+      "d": "2027-01-01",
+      "tipo": "dal",
+      "cat": "persone",
+      "chi": [
+        "polizza"
+      ],
+      "titolo": "Polizze ex Profamily, Akros, Oaklins: nel 2027 resta tutto com’è",
+      "testo": "Niente ingresso in CMA dal 1° gennaio 2027. Le coperture in vigore proseguono per tutto l’anno, con i costi ripartiti come oggi.",
+      "rif": [
+        8
+      ]
+    },
+    {
+      "id": "sanatoria-2027",
+      "d": "2027-01-01",
+      "fine": "2027-12-31",
+      "tipo": "periodo",
+      "etichetta": "nel corso del 2027",
+      "cat": "persone",
+      "chi": [
+        "nessuna"
+      ],
+      "titolo": "Sanatoria per chi non è iscritto a nessuna forma",
+      "testo": "Ci si può iscrivere alla forma di riferimento (CMA, FAS o FIAM) versando 1.500 € più 250 € per ogni anno di mancata iscrizione; i 250 € non si applicano ai non iscritti a ex CASPOP. Rate fino a 4 anni.",
+      "rif": [
+        12
+      ]
+    },
+    {
+      "id": "team-esperti",
+      "d": "2027-01-09",
+      "tipo": "entro",
+      "cat": "contributi",
+      "calcolata": "60 giorni dalla firma del 10 novembre 2026",
+      "titolo": "Incarico al team di esperti sul Nomenclatore",
+      "testo": "Esperti sanitari, assicurativi e attuariali valutano aggiornamenti di prestazioni, massimali e franchigie e la continuità dei massimali pluriennali. Entro 30 giorni dall’avvio dei lavori l’Azienda informa la Delegazione sindacale.",
+      "rif": [
+        14
+      ]
+    },
+    {
+      "id": "statuto",
+      "d": "2027-01-31",
+      "tipo": "entro",
+      "mese": true,
+      "cat": "costituzione",
+      "titolo": "Statuto condiviso tra le Parti",
+      "testo": "Lo Statuto della Cassa, coerente con l’accordo, va condiviso prima della costituzione.",
+      "rif": [
+        4
+      ]
+    },
+    {
+      "id": "nomi-cda",
+      "d": "2027-01-31",
+      "tipo": "entro",
+      "mese": true,
+      "cat": "costituzione",
+      "titolo": "I nomi del Consiglio transitorio",
+      "testo": "Un verbale condiviso indica i 38 consiglieri: 16 dell’Azienda, 16 del personale in servizio, 6 dei pensionati.",
+      "rif": [
+        6
+      ]
+    },
+    {
+      "id": "costituzione",
+      "d": "2027-02-28",
+      "tipo": "entro",
+      "mese": true,
+      "cat": "costituzione",
+      "chiave": true,
+      "titolo": "Nasce la Cassa: atto notarile e organi transitori",
+      "testo": "Atto costitutivo con lo Statuto allegato e insediamento degli organi transitori. Sede legale a Milano.",
+      "rif": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "transitoria",
+      "d": "2027-02-28",
+      "fine": "2027-12-31",
+      "tipo": "periodo",
+      "etichetta": "dalla costituzione al 31 dicembre 2027",
+      "cat": "costituzione",
+      "titolo": "Fase transitoria",
+      "testo": "Prestazioni minime a una platea limitata, con un Piano Sanitario provvisorio. L’Azienda versa 30.000 € di dotazione e 30 € per socio; restano i contributi attuali alle forme di provenienza.",
+      "rif": [
+        6
+      ]
+    },
+    {
+      "id": "bilanci-2026",
+      "d": "2027-03-31",
+      "tipo": "entro",
+      "cat": "norme",
+      "titolo": "Bilanci 2026 di FAS, CMA e FIAM: tre mesi per pubblicarli",
+      "testo": "È il primo termine dei nuovi obblighi di trasparenza per fondi e casse sanitarie: bilancio e relazioni vanno pubblicati sul sito e trasmessi alle amministrazioni competenti entro tre mesi dalla chiusura dell’esercizio. Chi non adempie rischia iscrizione all’Anagrafe e agevolazioni fiscali.",
+      "norma": "l50"
+    },
+    {
+      "id": "attuariale",
+      "d": "2027-03-31",
+      "tipo": "entro",
+      "etichetta": "nei primi mesi del 2027",
+      "indicativa": true,
+      "cat": "fusione",
+      "titolo": "Aggiornamento delle valutazioni attuariali",
+      "testo": "Negli incontri di verifica viene presentato l’aggiornamento sui dati 2026, dopo la chiusura dei bilanci.",
+      "rif": [
+        25
+      ]
+    },
+    {
+      "id": "progetti-fusione",
+      "d": "2027-06-30",
+      "tipo": "entro",
+      "cat": "fusione",
+      "chiave": true,
+      "titolo": "Progetti di fusione approvati dai Consigli",
+      "testo": "Li approvano il Consiglio della nuova Cassa e quelli di FAS, CMA e FIAM; partono deposito e pubblicità previsti dalla legge.",
+      "rif": [
+        5
+      ]
+    },
+    {
+      "id": "commissione",
+      "d": "2027-06-30",
+      "tipo": "entro",
+      "cat": "contributi",
+      "titolo": "Nomenclatore: la Commissione chiude i lavori",
+      "testo": "Gli esiti saranno valutati insieme dalle Parti.",
+      "rif": [
+        14
+      ]
+    },
+    {
+      "id": "anagrafe-2027",
+      "d": "2027-07-31",
+      "tipo": "entro",
+      "cat": "norme",
+      "titolo": "Anagrafe: rinnovo annuale per FAS, CMA e FIAM",
+      "testo": "La domanda di iscrizione o rinnovo va presentata ogni anno entro il 31 luglio. Conta anche per la nuova Cassa, che dal 2028 subentra nelle iscrizioni delle forme incorporate.",
+      "norma": "dm2009",
+      "rif": [
+        24
+      ]
+    },
+    {
+      "id": "assemblee",
+      "d": "2027-10-31",
+      "tipo": "entro",
+      "cat": "fusione",
+      "chiave": true,
+      "titolo": "Assemblee di fusione, atti notarili e Regolamenti",
+      "testo": "Votano le assemblee di FAS, CMA, FIAM e della nuova Cassa. Seguono gli atti notarili e l’approvazione dei Regolamenti.",
+      "rif": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "adesioni-polizze",
+      "d": "2027-11-30",
+      "tipo": "entro",
+      "cat": "persone",
+      "chi": [
+        "polizza"
+      ],
+      "chiave": true,
+      "titolo": "Polizze ex Profamily, Akros, Oaklins: ultimo giorno per aderire",
+      "testo": "L’adesione alla Cassa è individuale ed espressa, sul modulo che sarà reso disponibile, e vale dal 1° gennaio 2028. Chi non aderisce perde il contributo aziendale. Presuppone l’esito positivo di tutte le assemblee.",
+      "rif": [
+        12,
+        7
+      ]
+    },
+    {
+      "id": "asa-ultimo",
+      "d": "2027-11-30",
+      "tipo": "entro",
+      "cat": "contributi",
+      "chi": [
+        "asa"
+      ],
+      "titolo": "ASA: ultimo giorno per versare alle forme attuali",
+      "testo": "Coincide con la chiusura del piano welfare.",
+      "rif": [
+        19
+      ]
+    },
+    {
+      "id": "intesa-sociale",
+      "d": "2027-12-31",
+      "tipo": "entro",
+      "cat": "persone",
+      "chi": [
+        "cma"
+      ],
+      "titolo": "Intesa sull’Assistenza Sociale CMA",
+      "testo": "Le tutele oggi date dal comparto Assistenza Sociale della CMA saranno garantite direttamente dall’Azienda dal 2028: serve un’apposita intesa.",
+      "rif": [
+        22
+      ]
+    },
+    {
+      "id": "fine-transitoria",
+      "d": "2027-12-31",
+      "tipo": "data",
+      "cat": "costituzione",
+      "titolo": "Fine della fase transitoria e primo bilancio",
+      "testo": "Si chiude il primo esercizio della Cassa. È anche la data che fotografa soci e beneficiari delle forme attuali e l’ultimo giorno della sanatoria 2027.",
+      "rif": [
+        5,
+        6,
+        11
+      ]
+    },
+    {
+      "id": "operativa",
+      "d": "2028-01-01",
+      "tipo": "dal",
+      "cat": "fusione",
+      "chiave": true,
+      "chi": [
+        "tutti"
+      ],
+      "titolo": "La Cassa è pienamente operativa",
+      "testo": "Fusioni efficaci, prestazioni a regime, contributi versati alla Cassa: 1.300 € dall’Azienda, 1,40% dai dipendenti. I soci di CMA, FAS e FIAM sono iscritti in automatico. Da qui l’assistenza sanitaria aziendale passa solo dalla Cassa.",
+      "rif": [
+        5,
+        12,
+        15
+      ]
+    },
+    {
+      "id": "impegni-2028",
+      "d": "2028-01-01",
+      "tipo": "dal",
+      "cat": "contributi",
+      "titolo": "Partono gli impegni del Gruppo",
+      "testo": "Polizza “excess of loss” a beneficio della Cassa, polizza Kasko estesa a tutti i lavoratori, copertura collettiva caso morte per i dipendenti con CCNL Credito.",
+      "rif": [
+        "lettera",
+        22
+      ]
+    },
+    {
+      "id": "sanatoria-2028",
+      "d": "2028-01-01",
+      "fine": "2028-02-29",
+      "tipo": "periodo",
+      "etichetta": "dal 1° gennaio al 29 febbraio 2028",
+      "cat": "persone",
+      "chi": [
+        "nessuna"
+      ],
+      "titolo": "Sanatoria per iscriversi alla nuova Cassa",
+      "testo": "Per chi non era iscritto a nessuna forma: 1.500 €, più il contributo di costituzione della riserva, più 250 € per anno di mancata iscrizione. Stessa finestra per i loro familiari.",
+      "rif": [
+        12,
+        11
+      ]
+    },
+    {
+      "id": "recesso",
+      "d": "2028-01-31",
+      "tipo": "entro",
+      "cat": "persone",
+      "chi": [
+        "forme"
+      ],
+      "calcolata": "30 giorni dal 1° gennaio 2028",
+      "titolo": "Recesso dalla Cassa",
+      "testo": "Chi è stato iscritto in automatico può recedere entro 30 giorni dall’efficacia della fusione. Recedere significa perdere il contributo aziendale per l’assistenza sanitaria.",
+      "rif": [
+        12,
+        11
+      ]
+    },
+    {
+      "id": "familiari-60",
+      "d": "2028-03-01",
+      "tipo": "entro",
+      "cat": "persone",
+      "chi": [
+        "forme",
+        "polizza"
+      ],
+      "calcolata": "60 giorni dal 1° gennaio 2028",
+      "titolo": "Familiari: iscrizione in sanatoria",
+      "testo": "Entro 60 giorni dall’efficacia della fusione si possono iscrivere, con effetto dal 1° gennaio 2028: gratis i familiari prima non iscrivibili e quelli a carico che potevano essere iscritti senza contributo; con 2.000 €, anche in 4 anni, gli altri che potevano essere iscritti e non lo erano.",
+      "rif": [
+        11
+      ]
+    },
+    {
+      "id": "tardive",
+      "d": "2028-03-01",
+      "tipo": "dal",
+      "cat": "persone",
+      "chi": [
+        "tutti"
+      ],
+      "titolo": "Da qui le iscrizioni sono “tardive”",
+      "testo": "Chi si iscrive in ritardo paga i contributi arretrati e ha le prestazioni solo per le spese successive all’adesione.",
+      "rif": [
+        12,
+        11
+      ]
+    },
+    {
+      "id": "bilancio-cassa",
+      "d": "2028-03-31",
+      "tipo": "entro",
+      "cat": "norme",
+      "indicativa": true,
+      "titolo": "Primo bilancio della Cassa da pubblicare",
+      "testo": "Per la regola dei tre mesi, il bilancio 2027 della Cassa dovrebbe essere pubblicato e trasmesso entro questa data. È una nostra lettura della norma: l’accordo non lo dice.",
+      "norma": "l50"
+    },
+    {
+      "id": "anagrafe-autonoma",
+      "d": "2028-07-31",
+      "tipo": "entro",
+      "cat": "fusione",
+      "titolo": "Domanda di iscrizione autonoma all’Anagrafe",
+      "testo": "Sul bilancio chiuso al 31 dicembre 2027, con la certificazione della soglia delle risorse vincolate. Si affianca al subentro nelle iscrizioni di FAS, CMA e FIAM.",
+      "rif": [
+        24,
+        5
+      ]
+    },
+    {
+      "id": "favore-2028",
+      "d": "2028-01-01",
+      "fine": "2028-12-31",
+      "tipo": "periodo",
+      "etichetta": "nel corso del 2028",
+      "cat": "contributi",
+      "titolo": "Coperture caso morte e LTC a condizioni di favore",
+      "testo": "Offerte ai dipendenti, ad adesione volontaria e a proprie spese: caso morte del dipendente e LTC per i familiari.",
+      "rif": [
+        "lettera"
+      ]
+    },
+    {
+      "id": "asa-residui",
+      "d": "2028-12-31",
+      "tipo": "entro",
+      "cat": "contributi",
+      "chi": [
+        "asa"
+      ],
+      "titolo": "Residui ASA: termine per usarli",
+      "testo": "Dopo questa data le Parti si incontrano per decidere come smaltire gli importi rimasti.",
+      "rif": [
+        19
+      ]
+    },
+    {
+      "id": "organi-2029",
+      "d": "2029-12-31",
+      "tipo": "data",
+      "cat": "costituzione",
+      "titolo": "Organi transitori: il termine indicato dall’accordo",
+      "testo": "L’assetto transitorio vale fino a questa data e comunque fino all’approvazione del bilancio 2029.",
+      "rif": [
+        6,
+        21
+      ]
+    },
+    {
+      "id": "istat",
+      "d": "2030-01-01",
+      "tipo": "dal",
+      "cat": "contributi",
+      "titolo": "Prima rivalutazione del contributo aziendale",
+      "testo": "Ogni due anni i 1.300 € vengono rivalutati con l’indice ISTAT dei prezzi al consumo per le famiglie di operai e impiegati.",
+      "rif": [
+        15
+      ]
+    }
+  ],
+  "ricorrenti": [
+    {
+      "titolo": "Incontri di verifica almeno ogni tre mesi",
+      "testo": "Le Parti controllano l’avanzamento: costituzione, fase transitoria, assemblee, Anagrafe. Dopo la fase transitoria diventano semestrali.",
+      "rif": [
+        25
+      ]
+    },
+    {
+      "titolo": "Se cambia la legge, si riapre il confronto",
+      "testo": "La clausola di salvaguardia consente di ridefinire le decorrenze, anche di singole previsioni.",
+      "rif": [
+        26
+      ]
+    }
+  ]
+}

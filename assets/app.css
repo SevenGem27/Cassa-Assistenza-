@@ -1,4 +1,4 @@
-/* Nuova Cassa. Un libretto del socio: carta da registro, inchiostro blu, timbri viola. */
+/* Guida non ufficiale alla Cassa Assistenza. Un libretto del socio: carta da registro, inchiostro blu, timbri viola. */
 @font-face { font-family: "Atkinson Next"; src: url("fonts/atkinson-next.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "Literata"; src: url("fonts/literata.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
 
@@ -62,7 +62,7 @@ main p, main li, main dd, main .det, main .txt, main .cifre span, main td.note {
 }
 /* Titoli, etichette e pulsanti restano allineati a sinistra: su più righe la giustificazione li slabbra. */
 main h1, main h2, main h3, main .tit, main .cosa, main .quando, main .sigla, main .rifs, main .azioni, main .docs, main .lato, main .fonte, main label, main .spunta,
-main .btn, main .filtro, main .passi a, main .testata-titolo { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+main .btn, main .filtro, main .passi a, main .testata-titolo, main .nu-tit { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
 main .lato, main .passi a:last-child { text-align: right; }
 main .testo .centro, main .testo .firma, main .firma { text-align: center; }
 
@@ -142,6 +142,10 @@ a.rif { color: var(--timbro); border-color: currentColor; }
 .azioni { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* Note e riquadri */
+/* Avviso di guida non ufficiale, in cima alla home */
+.non-ufficiale { margin: 0 0 24px; padding: 12px 16px 14px; border: 2px solid var(--timbro); border-radius: var(--raggio); background: var(--timbro-tenue); }
+.non-ufficiale .nu-tit { margin: 0 0 4px; font-weight: 800; font-size: 16px; color: var(--timbro); }
+.non-ufficiale p + p { margin: 0; font-size: 15px; line-height: 1.45; color: var(--inchiostro); }
 .nota { padding: 14px 16px; background: var(--foglio); border: 1px solid var(--riga); border-left: 4px solid var(--timbro); border-radius: var(--raggio); }
 .nota.attenzione { border-left-color: var(--segnale); }
 .nota > * + * { margin-top: 8px; }

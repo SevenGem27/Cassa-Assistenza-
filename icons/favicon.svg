@@ -1,8 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#131C33"/>
-  <g transform="translate(256 256) rotate(-6) scale(1) translate(-256 -256)">
-    <rect x="96" y="96" width="320" height="320" rx="30" fill="none" stroke="#B7A4F2" stroke-width="16"/>
-    <rect x="124" y="124" width="264" height="264" rx="14" fill="none" stroke="#B7A4F2" stroke-width="5"/>
-    <text x="256" y="252" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-weight="700" font-size="150" fill="#F1F3F6">1</text>
-    <text x="256" y="312" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-weight="700" font-size="50" letter-spacing="8" fill="#F1F3F6">GEN</text>
-    <text x="256" y="364" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-weight="400" font-size="44" letter-spacing="3" fill="#B7A4F2">2028</text>
-  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="fondo" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6A4DB4"/>
+      <stop offset="0.55" stop-color="#5A3E9E"/>
+      <stop offset="1" stop-color="#2A2357"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#fondo)"/>
+  <g transform="translate(256 256) scale(1.18) translate(-256 -256)">
+    <defs>
+      <mask id="taglio" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+        <rect width="512" height="512" fill="#fff"/>
+        <path d="M 184 300 L 228 254 L 254 280 L 318 214" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 292 206 L 334 198 L 326 240 Z" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <path d="M 102 348
+    C 160 344 222 350 272 356
+    C 302 352 334 330 358 312
+    C 376 299 400 308 392 328
+    C 384 344 362 356 338 366
+    C 364 366 392 364 414 361
+    C 436 359 440 386 416 391
+    C 370 401 320 416 262 420
+    C 202 424 150 420 102 414
+    C 94 392 94 370 102 348 Z" fill="#000" stroke="#000" stroke-width="18" stroke-linejoin="round"/>
+        <text x="310" y="320" font-family="Atkinson Next" font-weight="800" font-size="38" text-anchor="middle" fill="#000" stroke="#000" stroke-width="14" stroke-linejoin="round">€</text>
+      </mask>
+      <mask id="anello" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+        <rect width="512" height="512" fill="#fff"/>
+        <path d="M 102 348
+    C 160 344 222 350 272 356
+    C 302 352 334 330 358 312
+    C 376 299 400 308 392 328
+    C 384 344 362 356 338 366
+    C 364 366 392 364 414 361
+    C 436 359 440 386 416 391
+    C 370 401 320 416 262 420
+    C 202 424 150 420 102 414
+    C 94 392 94 370 102 348 Z" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+      </mask>
+    </defs>
+    <path d="M 437.73 329.42 A 196 196 0 0 1 74.27 329.42" fill="none" stroke="#B7A4F2" stroke-width="6" stroke-linecap="round" stroke-dasharray="15 13" mask="url(#anello)"/>
+    
+    <path d="M 232 170 H 268 Q 280 170 280 182 V 216 H 314 Q 326 216 326 228 V 264 Q 326 276 314 276 H 280 V 310 Q 280 322 268 322 H 232 Q 220 322 220 310 V 276 H 186 Q 174 276 174 264 V 228 Q 174 216 186 216 H 220 V 182 Q 220 170 232 170 Z" fill="none" stroke="#F1F3F6" stroke-width="15" stroke-linejoin="round" mask="url(#taglio)"/>
+    <path d="M 184 300 L 228 254 L 254 280 L 318 214" fill="none" stroke="#F1F3F6" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 292 206 L 334 198 L 326 240 Z" fill="#F1F3F6" stroke="#F1F3F6" stroke-width="6" stroke-linejoin="round"/>
+    <text x="310" y="320" font-family="Atkinson Next" font-weight="800" font-size="38" fill="#F1F3F6" text-anchor="middle">€</text>
+    <path d="M 102 348
+    C 160 344 222 350 272 356
+    C 302 352 334 330 358 312
+    C 376 299 400 308 392 328
+    C 384 344 362 356 338 366
+    C 364 366 392 364 414 361
+    C 436 359 440 386 416 391
+    C 370 401 320 416 262 420
+    C 202 424 150 420 102 414
+    C 94 392 94 370 102 348 Z" fill="#F1F3F6"/></g>
+</svg>

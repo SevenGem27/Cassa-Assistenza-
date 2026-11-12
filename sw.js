@@ -1,9 +1,11 @@
-/* Service worker di Nuova Cassa: uso senza rete, aggiornamenti e notifiche push. */
-const VERSIONE = '20261111-672a073b';
+/* Service worker della guida non ufficiale alla Cassa Assistenza: uso senza rete, aggiornamenti e notifiche push. */
+const VERSIONE = '20261112-eb953850';
 const CACHE = 'cassa-' + VERSIONE;
 const GUSCIO = [
   './', 'index.html', 'config.js', 'manifest.webmanifest',
-  'assets/app.css', 'assets/app.js', 'assets/contenuti.js', 'assets/calcolo.js',
+  'assets/app.css', 'assets/app.js', 'assets/calcolo.js',
+  'contenuti/testi.json', 'contenuti/accordo.json', 'contenuti/sintesi.json', 'contenuti/documenti.json', 'contenuti/tappe.json',
+  'contenuti/casse.json', 'contenuti/normativa.json', 'contenuti/glossario.json', 'contenuti/contributi.json', 'monitor/fonti.json',
   'assets/fonts/atkinson-next.woff2', 'assets/fonts/literata.woff2',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'icons/favicon.svg', 'icons/badge-96.png',
   'data/news.json', 'data/status.json',
@@ -67,7 +69,7 @@ self.addEventListener('push', (e) => {
   let d = {};
   try { d = e.data ? e.data.json() : {}; } catch (err) { d = { testo: e.data ? e.data.text() : '' }; }
   const lavori = [
-    self.registration.showNotification(d.titolo || 'Nuova Cassa', {
+    self.registration.showNotification(d.titolo || 'Guida Cassa', {
       body: d.testo || 'Ci sono novità sulla Cassa.',
       icon: 'icons/icon-192.png',
       badge: 'icons/badge-96.png',

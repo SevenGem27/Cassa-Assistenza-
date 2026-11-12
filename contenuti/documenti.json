@@ -1,0 +1,37 @@
+{
+  "_nota": "I PDF firmati, nella cartella documenti/. id deve iniziare con doc- e non va cambiato.",
+  "documenti": [
+    {
+      "id": "doc-accordo",
+      "t": "Accordo (PDF)",
+      "breve": "Accordo",
+      "nome": "Accordo per la costituzione della Cassa Assistenza del Gruppo Banco BPM",
+      "file": "accordo-costituzione-cassa.pdf",
+      "u": "documenti/accordo-costituzione-cassa.pdf"
+    },
+    {
+      "id": "doc-lettera",
+      "t": "Lettera d’impegno (PDF)",
+      "breve": "Lettera d’impegno",
+      "nome": "Lettera d’impegno del Gruppo",
+      "file": "lettera-impegno.pdf",
+      "u": "documenti/lettera-impegno.pdf"
+    },
+    {
+      "id": "doc-tabella-a",
+      "t": "Tabella A (PDF)",
+      "breve": "Tabella A",
+      "nome": "Allegato 1, Tabella A",
+      "file": "allegato-1-tabella-a.pdf",
+      "u": "documenti/allegato-1-tabella-a.pdf"
+    },
+    {
+      "id": "doc-tabella-b",
+      "t": "Tabella B (PDF)",
+      "breve": "Tabella B",
+      "nome": "Allegato 2, Tabella B",
+      "file": "allegato-2-tabella-b.pdf",
+      "u": "documenti/allegato-2-tabella-b.pdf"
+    }
+  ]
+}

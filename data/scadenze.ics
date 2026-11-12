@@ -1,40 +1,41 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Nuova Cassa//Tappe dell'accordo//IT
+PRODID:-//Guida non ufficiale alla Cassa Assistenza//Tappe dell'accordo//IT
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Nuova Cassa Banco BPM
+X-WR-CALNAME:Cassa Assistenza\, le tappe (guida non ufficiale)
 X-WR-CALDESC:Le tappe dell'accordo del 10 novembre 2026
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:nomenclatore-rif@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-SUMMARY:Cassa BPM\, 31 dicembre 2026: Nomenclatore: conta quello CMA in vig
- ore a fine 2026
+SUMMARY:Cassa Assistenza\, 31 dicembre 2026: Nomenclatore: conta quello CMA
+  in vigore a fine 2026
 DESCRIPTION:Il Nomenclatore della nuova Cassa sarà in sostanziale continui
  tà con quello della CMA vigente a questa data.\nAccordo: art. 14
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:asa-stop@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-SUMMARY:Cassa BPM\, dal 1° gennaio 2027: ASA: stop ai versamenti volontari
+SUMMARY:Cassa Assistenza\, dal 1° gennaio 2027: ASA: stop ai versamenti vo
+ lontari
 DESCRIPTION:Fino al 30 novembre 2027 si può versare a titolo di ASA alle f
  orme attuali solo dal portale welfare.\nAccordo: art. 19
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:polizze-2027@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-SUMMARY:Cassa BPM\, dal 1° gennaio 2027: Polizze ex Profamily\, Akros\, Oa
- klins: nel 2027 resta tutto com’è
+SUMMARY:Cassa Assistenza\, dal 1° gennaio 2027: Polizze ex Profamily\, Akr
+ os\, Oaklins: nel 2027 resta tutto com’è
 DESCRIPTION:Niente ingresso in CMA dal 1° gennaio 2027. Le coperture in vi
  gore proseguono per tutto l’anno\, con i costi ripartiti come oggi.\nAcc
  ordo: art. 8
@@ -42,11 +43,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:sanatoria-2027@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20280101
-SUMMARY:Cassa BPM\, nel corso del 2027: Sanatoria per chi non è iscritto a
-  nessuna forma
+SUMMARY:Cassa Assistenza\, nel corso del 2027: Sanatoria per chi non è isc
+ ritto a nessuna forma
 DESCRIPTION:Ci si può iscrivere alla forma di riferimento (CMA\, FAS o FIA
  M) versando 1.500 € più 250 € per ogni anno di mancata iscrizione\; i
   250 € non si applicano ai non iscritti a ex CASPOP. Rate fino a 4 anni.
@@ -55,11 +56,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:team-esperti@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
-SUMMARY:Cassa BPM\, entro il 9 gennaio 2027: Incarico al team di esperti su
- l Nomenclatore
+SUMMARY:Cassa Assistenza\, entro il 9 gennaio 2027: Incarico al team di esp
+ erti sul Nomenclatore
 DESCRIPTION:Esperti sanitari\, assicurativi e attuariali valutano aggiornam
  enti di prestazioni\, massimali e franchigie e la continuità dei massimal
  i pluriennali. Entro 30 giorni dall’avvio dei lavori l’Azienda informa
@@ -74,10 +75,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:statuto@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
-SUMMARY:Cassa BPM\, entro gennaio 2027: Statuto condiviso tra le Parti
+SUMMARY:Cassa Assistenza\, entro gennaio 2027: Statuto condiviso tra le Par
+ ti
 DESCRIPTION:Lo Statuto della Cassa\, coerente con l’accordo\, va condivis
  o prima della costituzione.\nAccordo: art. 4
 TRANSP:TRANSPARENT
@@ -89,10 +91,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nomi-cda@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
-SUMMARY:Cassa BPM\, entro gennaio 2027: I nomi del Consiglio transitorio
+SUMMARY:Cassa Assistenza\, entro gennaio 2027: I nomi del Consiglio transit
+ orio
 DESCRIPTION:Un verbale condiviso indica i 38 consiglieri: 16 dell’Azienda
  \, 16 del personale in servizio\, 6 dei pensionati.\nAccordo: art. 6
 TRANSP:TRANSPARENT
@@ -104,11 +107,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:costituzione@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
-SUMMARY:Cassa BPM\, entro febbraio 2027: Nasce la Cassa: atto notarile e or
- gani transitori
+SUMMARY:Cassa Assistenza\, entro febbraio 2027: Nasce la Cassa: atto notari
+ le e organi transitori
 DESCRIPTION:Atto costitutivo con lo Statuto allegato e insediamento degli o
  rgani transitori. Sede legale a Milano.\nAccordo: art. 2\, art. 5
 TRANSP:TRANSPARENT
@@ -121,11 +124,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:transitoria@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20280101
-SUMMARY:Cassa BPM\, dalla costituzione al 31 dicembre 2027: Fase transitori
- a
+SUMMARY:Cassa Assistenza\, dalla costituzione al 31 dicembre 2027: Fase tra
+ nsitoria
 DESCRIPTION:Prestazioni minime a una platea limitata\, con un Piano Sanitar
  io provvisorio. L’Azienda versa 30.000 € di dotazione e 30 € per soc
  io\; restano i contributi attuali alle forme di provenienza.\nAccordo: art
@@ -134,11 +137,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bilanci-2026@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-SUMMARY:Cassa BPM\, entro il 31 marzo 2027: Bilanci 2026 di FAS\, CMA e FIA
- M: tre mesi per pubblicarli
+SUMMARY:Cassa Assistenza\, entro il 31 marzo 2027: Bilanci 2026 di FAS\, CM
+ A e FIAM: tre mesi per pubblicarli
 DESCRIPTION:È il primo termine dei nuovi obblighi di trasparenza per fondi
   e casse sanitarie: bilancio e relazioni vanno pubblicati sul sito e trasm
  essi alle amministrazioni competenti entro tre mesi dalla chiusura dell’
@@ -154,11 +157,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:attuariale@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-SUMMARY:Cassa BPM\, nei primi mesi del 2027: Aggiornamento delle valutazion
- i attuariali
+SUMMARY:Cassa Assistenza\, nei primi mesi del 2027: Aggiornamento delle val
+ utazioni attuariali
 DESCRIPTION:Negli incontri di verifica viene presentato l’aggiornamento s
  ui dati 2026\, dopo la chiusura dei bilanci.\nAccordo: art. 25\nData indic
  ativa
@@ -171,11 +174,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:progetti-fusione@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-SUMMARY:Cassa BPM\, entro il 30 giugno 2027: Progetti di fusione approvati 
- dai Consigli
+SUMMARY:Cassa Assistenza\, entro il 30 giugno 2027: Progetti di fusione app
+ rovati dai Consigli
 DESCRIPTION:Li approvano il Consiglio della nuova Cassa e quelli di FAS\, C
  MA e FIAM\; partono deposito e pubblicità previsti dalla legge.\nAccordo:
   art. 5
@@ -188,11 +191,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:commissione@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-SUMMARY:Cassa BPM\, entro il 30 giugno 2027: Nomenclatore: la Commissione c
- hiude i lavori
+SUMMARY:Cassa Assistenza\, entro il 30 giugno 2027: Nomenclatore: la Commis
+ sione chiude i lavori
 DESCRIPTION:Gli esiti saranno valutati insieme dalle Parti.\nAccordo: art. 
  14
 TRANSP:TRANSPARENT
@@ -204,11 +207,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:anagrafe-2027@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20270731
 DTEND;VALUE=DATE:20270801
-SUMMARY:Cassa BPM\, entro il 31 luglio 2027: Anagrafe: rinnovo annuale per 
- FAS\, CMA e FIAM
+SUMMARY:Cassa Assistenza\, entro il 31 luglio 2027: Anagrafe: rinnovo annua
+ le per FAS\, CMA e FIAM
 DESCRIPTION:La domanda di iscrizione o rinnovo va presentata ogni anno entr
  o il 31 luglio. Conta anche per la nuova Cassa\, che dal 2028 subentra nel
  le iscrizioni delle forme incorporate.\nAccordo: art. 24\nObbligo di legge
@@ -223,11 +226,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:assemblee@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20271031
 DTEND;VALUE=DATE:20271101
-SUMMARY:Cassa BPM\, entro il 31 ottobre 2027: Assemblee di fusione\, atti n
- otarili e Regolamenti
+SUMMARY:Cassa Assistenza\, entro il 31 ottobre 2027: Assemblee di fusione\,
+  atti notarili e Regolamenti
 DESCRIPTION:Votano le assemblee di FAS\, CMA\, FIAM e della nuova Cassa. Se
  guono gli atti notarili e l’approvazione dei Regolamenti.\nAccordo: art.
   5\, art. 7
@@ -241,11 +244,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:adesioni-polizze@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20271130
 DTEND;VALUE=DATE:20271201
-SUMMARY:Cassa BPM\, entro il 30 novembre 2027: Polizze ex Profamily\, Akros
- \, Oaklins: ultimo giorno per aderire
+SUMMARY:Cassa Assistenza\, entro il 30 novembre 2027: Polizze ex Profamily\
+ , Akros\, Oaklins: ultimo giorno per aderire
 DESCRIPTION:L’adesione alla Cassa è individuale ed espressa\, sul modulo
   che sarà reso disponibile\, e vale dal 1° gennaio 2028. Chi non aderisc
  e perde il contributo aziendale. Presuppone l’esito positivo di tutte le
@@ -260,11 +263,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:asa-ultimo@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20271130
 DTEND;VALUE=DATE:20271201
-SUMMARY:Cassa BPM\, entro il 30 novembre 2027: ASA: ultimo giorno per versa
- re alle forme attuali
+SUMMARY:Cassa Assistenza\, entro il 30 novembre 2027: ASA: ultimo giorno pe
+ r versare alle forme attuali
 DESCRIPTION:Coincide con la chiusura del piano welfare.\nAccordo: art. 19
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -276,14 +279,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:intesa-sociale@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-SUMMARY:Cassa BPM\, entro il 31 dicembre 2027: Intesa sull’Assistenza Soc
- iale CMA
+SUMMARY:Cassa Assistenza\, entro il 31 dicembre 2027: Intesa sull’Assiste
+ nza Sociale CMA
 DESCRIPTION:Le tutele oggi date dal comparto Assistenza Sociale della CMA s
- aranno garantite direttamente da Banco BPM dal 2028: serve un’apposita i
- ntesa.\nAccordo: art. 22
+ aranno garantite direttamente dall’Azienda dal 2028: serve un’apposita
+  intesa.\nAccordo: art. 22
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -293,11 +296,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fine-transitoria@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-SUMMARY:Cassa BPM\, 31 dicembre 2027: Fine della fase transitoria e primo b
- ilancio
+SUMMARY:Cassa Assistenza\, 31 dicembre 2027: Fine della fase transitoria e 
+ primo bilancio
 DESCRIPTION:Si chiude il primo esercizio della Cassa. È anche la data che 
  fotografa soci e beneficiari delle forme attuali e l’ultimo giorno della
   sanatoria 2027.\nAccordo: art. 5\, art. 6\, art. 11
@@ -305,10 +308,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:operativa@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
-SUMMARY:Cassa BPM\, dal 1° gennaio 2028: La Cassa è pienamente operativa
+SUMMARY:Cassa Assistenza\, dal 1° gennaio 2028: La Cassa è pienamente ope
+ rativa
 DESCRIPTION:Fusioni efficaci\, prestazioni a regime\, contributi versati al
  la Cassa: 1.300 € dall’Azienda\, 1\,40% dai dipendenti. I soci di CMA\
  , FAS e FIAM sono iscritti in automatico. Da qui l’assistenza sanitaria 
@@ -317,10 +321,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:impegni-2028@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280102
-SUMMARY:Cassa BPM\, dal 1° gennaio 2028: Partono gli impegni del Gruppo
+SUMMARY:Cassa Assistenza\, dal 1° gennaio 2028: Partono gli impegni del Gr
+ uppo
 DESCRIPTION:Polizza “excess of loss” a beneficio della Cassa\, polizza 
  Kasko estesa a tutti i lavoratori\, copertura collettiva caso morte per i 
  dipendenti con CCNL Credito.\nAccordo: lettera\, art. 22
@@ -328,11 +333,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:sanatoria-2028@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20280301
-SUMMARY:Cassa BPM\, dal 1° gennaio al 29 febbraio 2028: Sanatoria per iscr
- iversi alla nuova Cassa
+SUMMARY:Cassa Assistenza\, dal 1° gennaio al 29 febbraio 2028: Sanatoria p
+ er iscriversi alla nuova Cassa
 DESCRIPTION:Per chi non era iscritto a nessuna forma: 1.500 €\, più il c
  ontributo di costituzione della riserva\, più 250 € per anno di mancata
   iscrizione. Stessa finestra per i loro familiari.\nAccordo: art. 12\, art
@@ -341,10 +346,10 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:recesso@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280201
-SUMMARY:Cassa BPM\, entro il 31 gennaio 2028: Recesso dalla Cassa
+SUMMARY:Cassa Assistenza\, entro il 31 gennaio 2028: Recesso dalla Cassa
 DESCRIPTION:Chi è stato iscritto in automatico può recedere entro 30 gior
  ni dall’efficacia della fusione. Recedere significa perdere il contribut
  o aziendale per l’assistenza sanitaria.\nAccordo: art. 12\, art. 11\nDat
@@ -358,11 +363,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:familiari-60@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280301
 DTEND;VALUE=DATE:20280302
-SUMMARY:Cassa BPM\, entro il 1° marzo 2028: Familiari: iscrizione in sanat
- oria
+SUMMARY:Cassa Assistenza\, entro il 1° marzo 2028: Familiari: iscrizione i
+ n sanatoria
 DESCRIPTION:Entro 60 giorni dall’efficacia della fusione si possono iscri
  vere\, con effetto dal 1° gennaio 2028: gratis i familiari prima non iscr
  ivibili e quelli a carico che potevano essere iscritti senza contributo\; 
@@ -378,11 +383,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:tardive@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280301
 DTEND;VALUE=DATE:20280302
-SUMMARY:Cassa BPM\, dal 1° marzo 2028: Da qui le iscrizioni sono “tardiv
- e”
+SUMMARY:Cassa Assistenza\, dal 1° marzo 2028: Da qui le iscrizioni sono 
+ “tardive”
 DESCRIPTION:Chi si iscrive in ritardo paga i contributi arretrati e ha le p
  restazioni solo per le spese successive all’adesione.\nAccordo: art. 12\
  , art. 11
@@ -390,11 +395,11 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bilancio-cassa@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
-SUMMARY:Cassa BPM\, entro il 31 marzo 2028: Primo bilancio della Cassa da p
- ubblicare
+SUMMARY:Cassa Assistenza\, entro il 31 marzo 2028: Primo bilancio della Cas
+ sa da pubblicare
 DESCRIPTION:Per la regola dei tre mesi\, il bilancio 2027 della Cassa dovre
  bbe essere pubblicato e trasmesso entro questa data. È una nostra lettura
   della norma: l’accordo non lo dice.\nData indicativa\nObbligo di legge\
@@ -408,11 +413,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:anagrafe-autonoma@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280731
 DTEND;VALUE=DATE:20280801
-SUMMARY:Cassa BPM\, entro il 31 luglio 2028: Domanda di iscrizione autonoma
-  all’Anagrafe
+SUMMARY:Cassa Assistenza\, entro il 31 luglio 2028: Domanda di iscrizione a
+ utonoma all’Anagrafe
 DESCRIPTION:Sul bilancio chiuso al 31 dicembre 2027\, con la certificazione
   della soglia delle risorse vincolate. Si affianca al subentro nelle iscri
  zioni di FAS\, CMA e FIAM.\nAccordo: art. 24\, art. 5
@@ -426,22 +431,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:favore-2028@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20280101
 DTEND;VALUE=DATE:20290101
-SUMMARY:Cassa BPM\, nel corso del 2028: Coperture caso morte e LTC a condiz
- ioni di favore
+SUMMARY:Cassa Assistenza\, nel corso del 2028: Coperture caso morte e LTC a
+  condizioni di favore
 DESCRIPTION:Offerte ai dipendenti\, ad adesione volontaria e a proprie spes
  e: caso morte del dipendente e LTC per i familiari.\nAccordo: lettera
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:asa-residui@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20281231
 DTEND;VALUE=DATE:20290101
-SUMMARY:Cassa BPM\, entro il 31 dicembre 2028: Residui ASA: termine per usa
- rli
+SUMMARY:Cassa Assistenza\, entro il 31 dicembre 2028: Residui ASA: termine 
+ per usarli
 DESCRIPTION:Dopo questa data le Parti si incontrano per decidere come smalt
  ire gli importi rimasti.\nAccordo: art. 19
 TRANSP:TRANSPARENT
@@ -453,22 +458,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:organi-2029@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20291231
 DTEND;VALUE=DATE:20300101
-SUMMARY:Cassa BPM\, 31 dicembre 2029: Organi transitori: il termine indicat
- o dall’accordo
+SUMMARY:Cassa Assistenza\, 31 dicembre 2029: Organi transitori: il termine 
+ indicato dall’accordo
 DESCRIPTION:L’assetto transitorio vale fino a questa data e comunque fino
   all’approvazione del bilancio 2029.\nAccordo: art. 6\, art. 21
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:istat@nuova-cassa
-DTSTAMP:20261111T120000Z
+DTSTAMP:20261112T120000Z
 DTSTART;VALUE=DATE:20300101
 DTEND;VALUE=DATE:20300102
-SUMMARY:Cassa BPM\, dal 1° gennaio 2030: Prima rivalutazione del contribut
- o aziendale
+SUMMARY:Cassa Assistenza\, dal 1° gennaio 2030: Prima rivalutazione del co
+ ntributo aziendale
 DESCRIPTION:Ogni due anni i 1.300 € vengono rivalutati con l’indice IST
  AT dei prezzi al consumo per le famiglie di operai e impiegati.\nAccordo: 
  art. 15

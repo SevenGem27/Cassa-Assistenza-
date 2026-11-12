@@ -1,0 +1,239 @@
+{
+  "_nota": "Parametri dei contributi dell’accordo (articoli 11, 12, 15, 16, 17 e allegati 1 e 2). Percentuali in forma decimale: 0.014 = 1,40%. fino: null = senza limite.",
+  "aliquoteSocio": {
+    "servizio": 0.014,
+    "esodo": 0.014,
+    "superstite": 0.014,
+    "pensione2028": 0.021,
+    "invalidita": 0.014
+  },
+  "aziendaAnnuo": 1300,
+  "familiariACarico": {
+    "coniuge": 0.003,
+    "figlio": 0.0025,
+    "massimoPaganti": 3,
+    "genitoreAnnuo": 500
+  },
+  "limitiEta": {
+    "figlio": 50,
+    "genitore": 70
+  },
+  "tabellaA": [
+    {
+      "fino": 10000,
+      "annuo": null,
+      "etichetta": "fino a 10.000 €"
+    },
+    {
+      "fino": 15000,
+      "annuo": 300,
+      "etichetta": "10.001 - 15.000 €"
+    },
+    {
+      "fino": 30000,
+      "annuo": 420,
+      "etichetta": "15.001 - 30.000 €"
+    },
+    {
+      "fino": 40000,
+      "annuo": 600,
+      "etichetta": "30.001 - 40.000 €"
+    },
+    {
+      "fino": 50000,
+      "annuo": 840,
+      "etichetta": "40.001 - 50.000 €"
+    },
+    {
+      "fino": 60000,
+      "annuo": 1080,
+      "etichetta": "50.001 - 60.000 €"
+    },
+    {
+      "fino": null,
+      "annuo": 1440,
+      "etichetta": "oltre 60.000 €"
+    }
+  ],
+  "coniugeInTabellaB": [
+    {
+      "etaSotto": 35,
+      "redditoOltre": 40000
+    },
+    {
+      "etaSotto": 51,
+      "redditoOltre": 60000
+    }
+  ],
+  "tabellaB": {
+    "eta": [
+      {
+        "fino": 35,
+        "etichetta": "fino a 35 anni"
+      },
+      {
+        "fino": 50,
+        "etichetta": "36 - 50 anni"
+      },
+      {
+        "fino": 65,
+        "etichetta": "51 - 65 anni"
+      },
+      {
+        "fino": null,
+        "etichetta": "66 anni e oltre"
+      }
+    ],
+    "reddito": [
+      {
+        "fino": 20000,
+        "etichetta": "fino a 20.000 €"
+      },
+      {
+        "fino": 40000,
+        "etichetta": "20.000 - 40.000 €"
+      },
+      {
+        "fino": 60000,
+        "etichetta": "40.000 - 60.000 €"
+      },
+      {
+        "fino": null,
+        "etichetta": "oltre 60.000 €"
+      }
+    ],
+    "valori": [
+      [
+        [
+          500,
+          455,
+          430,
+          400
+        ],
+        [
+          605,
+          555,
+          515,
+          470
+        ],
+        [
+          705,
+          655,
+          615,
+          570
+        ],
+        [
+          805,
+          775,
+          715,
+          670
+        ]
+      ],
+      [
+        [
+          840,
+          765,
+          700,
+          630
+        ],
+        [
+          965,
+          885,
+          820,
+          755
+        ],
+        [
+          1085,
+          1010,
+          940,
+          875
+        ],
+        [
+          1210,
+          1130,
+          1065,
+          995
+        ]
+      ],
+      [
+        [
+          1085,
+          1055,
+          1020,
+          985
+        ],
+        [
+          1445,
+          1330,
+          1230,
+          1130
+        ],
+        [
+          1775,
+          1660,
+          1560,
+          1460
+        ],
+        [
+          2105,
+          1995,
+          1895,
+          1795
+        ]
+      ],
+      [
+        [
+          1155,
+          1100,
+          1050,
+          1000
+        ],
+        [
+          1600,
+          1470,
+          1360,
+          1250
+        ],
+        [
+          1950,
+          1840,
+          1725,
+          1615
+        ],
+        [
+          2315,
+          2205,
+          2095,
+          1985
+        ]
+      ]
+    ]
+  },
+  "riserva": {
+    "proCapite": 980,
+    "perProvenienza": {
+      "cma": 0,
+      "fas": 600,
+      "caspop": 360,
+      "fiam": 460,
+      "polizza": 980,
+      "assunto2627": 0
+    },
+    "rateMassime": 3,
+    "conguaglio": [
+      "cma",
+      "fas",
+      "caspop",
+      "fiam"
+    ]
+  },
+  "sanatoria": {
+    "base": 1500,
+    "perAnno": 250,
+    "familiare": 2000,
+    "rate": 4,
+    "senzaQuotaAnnuaPer": [
+      "caspop"
+    ]
+  }
+}

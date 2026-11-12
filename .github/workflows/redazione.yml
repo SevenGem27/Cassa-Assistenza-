@@ -1,11 +1,15 @@
 name: Prove e ricostruzione
 
-# Quando cambiano i contenuti o il codice: esegue le prove e rigenera i file dell'app.
+# Quando cambiano i contenuti o il codice: controlla i file dati, esegue le prove e rigenera calendario e versione dell'app.
+# Se qualcosa non va l'azione diventa rossa e GitHub ti avvisa: il messaggio dice quale file e quale riga correggere.
 on:
   push:
     branches: [main]
     paths:
+      - 'contenuti/**'
+      - 'documenti/**'
       - 'redazione/**'
+      - 'manifest.webmanifest'
       - 'assets/app.js'
       - 'assets/app.css'
       - 'assets/calcolo.js'
@@ -38,11 +42,11 @@ jobs:
       - name: Installa il necessario
         run: npm ci --prefix monitor
 
+      - name: Controlla i file dati
+        run: node redazione/costruisci.mjs
+
       - name: Prove
         run: npm test --prefix monitor
-
-      - name: Rigenera contenuti, calendario e versione
-        run: node redazione/costruisci.mjs
 
       - name: Salva i file rigenerati
         env:
@@ -51,7 +55,7 @@ jobs:
         run: |
           git config user.name "$PROPRIETARIO"
           git config user.email "${PROPRIETARIO_ID}+${PROPRIETARIO}@users.noreply.github.com"
-          git add assets/contenuti.js data/scadenze.ics sw.js
+          git add data/scadenze.ics sw.js
           if git diff --cached --quiet; then
             echo "Niente da rigenerare"
           else

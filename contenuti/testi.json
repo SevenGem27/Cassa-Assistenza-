@@ -1,0 +1,471 @@
+{
+  "_nota": "Testi dell'interfaccia, divisi per sezione. Le parole tra graffe, come {data}, vengono sostituite dall'app e vanno lasciate così. **testo** diventa grassetto. Le voci con \"t\" e \"rif\" sono frasi con i riferimenti all'accordo: rif elenca articoli o \"premesse\", \"lettera\", \"tabella-a\", \"tabella-b\".",
+
+  "app": {
+    "nome": "Guida non ufficiale alla Cassa Assistenza",
+    "nomeTitolo": "Cassa Assistenza",
+    "sottotitoloHome": "Guida non ufficiale",
+    "titoloHome": "Guida non ufficiale alla Cassa Assistenza",
+    "titoloPagina": "{vista} - {nome}",
+    "aggiornata": "È pronta una versione aggiornata.",
+    "aggiorna": "Aggiorna"
+  },
+
+  "nonUfficiale": {
+    "titolo": "Guida non ufficiale",
+    "testo": "Progetto personale e indipendente, realizzato a solo scopo informativo. Non è uno strumento della banca, della Cassa o dei sindacati, che non l’hanno realizzato né approvato. Fa fede solo il testo firmato dell’accordo."
+  },
+
+  "schede": {
+    "oggi": "Oggi",
+    "tappe": "Tappe",
+    "accordo": "Accordo",
+    "novita": "Novità",
+    "altro": "Altro"
+  },
+
+  "accessibilita": {
+    "salta": "Vai al contenuto",
+    "indietro": "Indietro",
+    "sezioni": "Sezioni dell'app"
+  },
+
+  "viste": {
+    "tappe": "Tappe",
+    "accordo": "Accordo",
+    "premesse": "Premesse",
+    "lettera": "Lettera d’impegno",
+    "tabella-a": "Tabella A",
+    "tabella-b": "Tabella B",
+    "novita": "Novità",
+    "altro": "Altro",
+    "per-me": "Per me",
+    "simulatore": "Contributi",
+    "casse": "Casse di oggi",
+    "norme": "Normativa",
+    "glossario": "Glossario",
+    "articolo": "Articolo {n}"
+  },
+
+  "tempo": {
+    "oggi": "oggi",
+    "domani": "domani",
+    "ieri": "ieri",
+    "giorniFa": "{n} giorni fa",
+    "traGiorni": "tra {n} giorni",
+    "traMesi": "tra circa {n} mesi",
+    "traAnni": "tra circa {n} anni",
+    "oggiAlle": "oggi alle {ora}",
+    "giornoAlle": "{data} alle {ora}"
+  },
+
+  "riferimenti": {
+    "articolo": "art. {n}",
+    "premesse": "premesse",
+    "lettera": "lettera d’impegno",
+    "tabella-a": "Tabella A",
+    "tabella-b": "Tabella B",
+    "norma": "norma di legge"
+  },
+
+  "oggi": {
+    "firmato": "Accordo firmato il {data}",
+    "prossima": "La prossima scadenza",
+    "articolo": ", articolo {n}",
+    "nessunaScadenza": "Non ci sono altre scadenze in calendario.",
+    "subitoDopo": "Subito dopo",
+    "tutteLeTappe": "Tutte le tappe",
+    "novita": "Novità",
+    "nessunaNovita": "Nessuna novità per ora.",
+    "caricoNovita": "Carico le novità.",
+    "tutteLeNovita": "Tutte le novità",
+    "cifre": "L’accordo in cifre",
+    "orientarti": "Per orientarti",
+    "menu": [
+      { "id": "per-me", "t": "Che cosa cambia per me", "d": "In base a dove lavori e a quale forma sei iscritto" },
+      { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Per te e per i tuoi familiari, dal 2028" },
+      { "id": "casse", "t": "Le casse di oggi e i loro statuti", "d": "CMA, FAS, FIAM, ex CASPOP" },
+      { "id": "norme", "t": "Normativa sulle casse di assistenza", "d": "E la riforma in discussione" }
+    ]
+  },
+
+  "controllo": {
+    "anteprima": "Anteprima: elenco aggiornato al {data}. Il controllo automatico parte quando l’app è pubblicata.",
+    "senzaRete": "Sei senza rete: vedi le ultime novità salvate.",
+    "maiFatto": "Il primo controllo automatico delle fonti non è ancora avvenuto.",
+    "ultimo": "Ultimo controllo delle fonti: {quando}."
+  },
+
+  "tappe": {
+    "titolo": "Le tappe",
+    "intro": "Dalla firma alla Cassa a regime. Ogni data rimanda all’articolo che la fissa.",
+    "filtri": "Filtra le tappe",
+    "tutte": "Tutte",
+    "mostraStoria": "Mostra il percorso fino alla firma",
+    "nascondiStoria": "Nascondi il percorso fino alla firma",
+    "fatto": "fatto",
+    "vigore": "in vigore",
+    "corso": "in corso",
+    "passata": "data passata: verifica nelle novità",
+    "calcolata": "data calcolata: {come}",
+    "indicativa": "data indicativa",
+    "obbligoLegge": "obbligo di legge, non dell’accordo",
+    "nessuna": "Nessuna tappa in questa categoria.",
+    "ricorrenti": "Sempre, lungo il percorso",
+    "calendario": "Le scadenze nel tuo calendario",
+    "calendarioAnteprima": "Nell’app pubblicata qui trovi il file da aggiungere al calendario del telefono, con un promemoria una settimana prima di ogni scadenza.",
+    "calendarioTesto": "Aggiungi tutte le scadenze al calendario del telefono, con un promemoria una settimana prima.",
+    "calendarioTasto": "Aggiungi al calendario",
+    "timbroEntro": "entro",
+    "timbroDal": "dal",
+    "timbroDa": "da",
+    "quandoEntroMese": "entro {mese} {anno}",
+    "quandoEntro": "entro il {data}",
+    "quandoDal": "dal {data}"
+  },
+
+  "calendario": {
+    "prodotto": "-//Guida non ufficiale alla Cassa Assistenza//Tappe dell'accordo//IT",
+    "nome": "Cassa Assistenza, le tappe (guida non ufficiale)",
+    "descrizione": "Le tappe dell'accordo del 10 novembre 2026",
+    "uid": "nuova-cassa",
+    "evento": "Cassa Assistenza, {quando}: {titolo}",
+    "promemoria": "Tra una settimana: {titolo}",
+    "accordo": "Accordo: {rif}",
+    "calcolata": "Data calcolata: {come}",
+    "indicativa": "Data indicativa",
+    "obbligoLegge": "Obbligo di legge, non dell'accordo"
+  },
+
+  "accordo": {
+    "titolo": "L’accordo",
+    "intro": "26 articoli, una lettera d’impegno e due tabelle. Per ogni articolo trovi una sintesi e il testo firmato.",
+    "cercaEtichetta": "Cerca nell’accordo",
+    "cercaSegnaposto": "Cerca: recesso, ASA, familiari…",
+    "nessunRisultato": "Nessun risultato per “{q}”. Prova con una parola sola, per esempio “recesso” o “ASA”.",
+    "risultato": "{n} risultato",
+    "risultati": "{n} risultati",
+    "cercaPremesse": "Premesse",
+    "cercaArticolo": "Articolo {n}, {titolo}",
+    "cercaLettera": "Lettera d’impegno",
+    "cercaTappa": "Tappa: {titolo}",
+    "cercaGlossario": "Glossario: {t}",
+    "cercaNorma": "Norma: {titolo}",
+    "cercaCassa": "Cassa: {sigla}",
+    "premesse": "Premesse",
+    "letteraAllegati": "Lettera e allegati",
+    "letteraIndice": "Lettera d’impegno del Gruppo",
+    "tabellaAIndice": "Coniuge e assimilati non a carico",
+    "tabellaBIndice": "Altri familiari non a carico",
+    "firmati": "I documenti firmati",
+    "firmatiTesto": "Le sintesi sono nostre. Fa fede solo il testo firmato il 10 novembre 2026: i quattro documenti originali sono qui dentro, in PDF.",
+    "firmatiAnteprima": "In questa anteprima i PDF non sono inclusi: si aprono nell’app pubblicata.",
+    "articolo": "Articolo {n}",
+    "inBreve": "In breve",
+    "dateCollegate": "Date collegate",
+    "testoFirmato": "Il testo firmato",
+    "tastoSimulatore": "Calcola i tuoi contributi",
+    "tastoCasse": "Le casse di oggi",
+    "tastoNormativa": "La normativa richiamata",
+    "passiNav": "Articolo precedente e successivo",
+    "prima": "Prima",
+    "poi": "Poi",
+    "indice": "Indice",
+    "premessoChe": "PREMESSO CHE",
+    "siConviene": "SI CONVIENE QUANTO SEGUE",
+    "letteraDa": "Dall’Azienda alla Delegazione sindacale, 10 novembre 2026",
+    "inCalce": "In calce all’accordo: {firme}",
+    "allegato1": "Allegato 1",
+    "allegato2": "Allegato 2",
+    "allegato1All": "Allegato 1 all’accordo",
+    "allegato2All": "Allegato 2 all’accordo",
+    "comeACarico": "come a carico*",
+    "colonneB": ["Età", "Reddito", "1 familiare", "2 familiari", "3 familiari", "4 o più familiari"],
+    "calcolaFamiglia": "Calcola per la tua famiglia",
+    "apriPdf": "Apri il PDF firmato"
+  },
+
+  "documento": {
+    "firmato": "Documento firmato il {data}",
+    "apro": "Apro il documento.",
+    "nonRiesco": "Non riesco a mostrare il documento qui dentro.",
+    "apriFile": "Apri il file PDF",
+    "salva": "Salva il PDF sul telefono",
+    "pagina": "Pagina {n} di {tot}"
+  },
+
+  "perMe": {
+    "titolo": "Che cosa cambia per me",
+    "intro": "Scegli la tua situazione: ti mostriamo solo le regole che ti riguardano, con l’articolo da cui vengono.",
+    "oggi": "Oggi",
+    "assistenza": "Assistenza sanitaria",
+    "situazioni": [
+      { "id": "servizio", "nome": "Lavoro nel Gruppo" },
+      { "id": "esodo", "nome": "Sono in esodo (Fondo di Solidarietà)" },
+      { "id": "pensione", "nome": "Sono in pensione" },
+      { "id": "superstite", "nome": "Sono un familiare superstite" }
+    ],
+    "provenienze": [
+      { "id": "cma", "nome": "CMA" },
+      { "id": "fas", "nome": "FAS" },
+      { "id": "caspop", "nome": "Ex CASPOP, oggi nel FAS" },
+      { "id": "fiam", "nome": "FIAM" },
+      { "id": "polizza", "nome": "Polizza ex Profamily, Akros o Oaklins" },
+      { "id": "nessuna", "nome": "Nessuna: non sono iscritto" },
+      { "id": "assunto2627", "nome": "Sono stato assunto nel 2026 o lo sarò nel 2027" },
+      { "id": "nuovo2028", "nome": "Sarò assunto dal 2028" }
+    ],
+    "sezioni": {
+      "entri": "Come entri nella Cassa",
+      "versi": "Quanto versi ogni anno, dal 2028",
+      "familiari": "I tuoi familiari",
+      "riserva": "Il contributo una tantum per la riserva",
+      "asa": "La tua ASA",
+      "asaServizio": "ASA",
+      "prestazioni": "Le prestazioni",
+      "piu": "In più",
+      "date": "Le tue date"
+    },
+    "entri": {
+      "automatico": { "t": "Dal 1° gennaio 2028 passi alla nuova Cassa in automatico, senza fare nulla: la tua posizione viene trasferita con la fusione.", "rif": [11, 12] },
+      "recesso": { "t": "Se non vuoi, puoi recedere entro 30 giorni dall’efficacia della fusione.", "rif": [12] },
+      "recessoAttivo": "Attenzione: chi recede perde il contributo aziendale per l’assistenza sanitaria.",
+      "assunto2627": { "t": "Vale se sei iscritto a una delle forme attuali. Se non lo sei, guarda il profilo “Nessuna: non sono iscritto”.", "rif": [12] },
+      "polizzaCopertura": { "t": "Per tutto il 2027 resti con la copertura di oggi, con i costi ripartiti come adesso. Dal 1° gennaio 2027 non puoi più entrare in CMA.", "rif": [8] },
+      "polizzaAdesione": { "t": "Per entrare nella Cassa devi aderire tu, con il modulo che sarà reso disponibile, entro il 30 novembre 2027. L’adesione vale dal 1° gennaio 2028.", "rif": [12] },
+      "polizzaPerdi": { "t": "Se non aderisci perdi il contributo aziendale per l’assistenza sanitaria.", "rif": [12] },
+      "polizzaFusioni": { "t": "L’adesione presuppone che le fusioni vadano in porto: in caso contrario non sarà possibile iscriversi.", "rif": [7] },
+      "nessuna2027": { "t": "Nel 2027 puoi iscriverti in sanatoria alla forma di riferimento (CMA, FAS o FIAM): 1.500 € più 250 € per ogni anno di mancata iscrizione. I 250 € non valgono per chi non era iscritto alla ex CASPOP.", "rif": [12] },
+      "nessuna2028": { "t": "Oppure, dal 1° gennaio al 29 febbraio 2028, puoi iscriverti direttamente alla nuova Cassa: 1.500 €, più il contributo di costituzione della riserva della forma a cui avresti potuto aderire, più 250 € per anno.", "rif": [12, 17] },
+      "nessunaRate": { "t": "In entrambi i casi puoi pagare a rate, fino a 4 annualità.", "rif": [12] },
+      "nessunaRiserva": { "t": "Se entri in una forma nel 2027 ne diventi socio: con la fusione, a nostra lettura, vale anche per te il contributo di costituzione della riserva previsto per i soci di quella forma.", "rif": [17] },
+      "nessunaTardiva": { "t": "Dal 1° marzo 2028 l’iscrizione è tardiva: paghi i contributi dalla data di assunzione e hai le prestazioni solo per le spese successive all’adesione.", "rif": [12] },
+      "nuovoDestinatari": { "t": "Dal 1° gennaio 2028 tutti i neoassunti del Gruppo sono destinatari della Cassa.", "rif": [25] },
+      "nuovo90": { "t": "Puoi aderire entro 90 giorni dall’assunzione; l’adesione vale dalla data in cui la fai.", "rif": [12] },
+      "nuovoOltre": { "t": "Oltre i 90 giorni paghi i contributi dalla data di assunzione e hai le prestazioni solo per le spese successive all’adesione.", "rif": [12] }
+    },
+    "versi": {
+      "servizioTu": { "t": "Tu: 1,40% della retribuzione imponibile INPS. Con part-time o retribuzione ridotta il calcolo si fa sulla retribuzione a tempo pieno del pari grado.", "rif": [15] },
+      "servizioAzienda": { "t": "L’Azienda: 1.300 € l’anno, più tutte le spese di funzionamento della Cassa.", "rif": [15, 23] },
+      "servizioPensione": { "t": "Quando andrai in pensione (dal 2028): 2,10% sulla somma delle pensioni, se hai almeno 10 anni di servizio effettivo, 5 in caso di inabilità.", "rif": [16, 11] },
+      "esodoTu": { "t": "Tu: 1,40% dell’imponibile usato per i contributi INPS del periodo di esodo, riparametrato a tempo pieno.", "rif": [15] },
+      "esodoAzienda": { "t": "L’Azienda: 1.300 € l’anno anche per chi è nel Fondo di Solidarietà.", "rif": [15] },
+      "esodoPensione": { "t": "Resti socio per tutta la durata dell’assegno e poi da pensionato. Se la pensione decorre dal 2028: 2,10% sulla somma delle pensioni.", "rif": [11, 16] },
+      "pensionePolizza": { "t": "2,10% sulla somma di tutte le pensioni: è la regola per chi è già pensionato al 31 dicembre 2027 di provenienza Akros, Oaklins ed ex Profamily.", "rif": [16] },
+      "pensioneContinuita": { "t": "Contributi in sostanziale continuità con quelli che versi oggi alla tua forma, e comunque non meno di quanto versato al 31 dicembre 2027.", "rif": [16] },
+      "pensioneAdeguamenti": { "t": "Eventuali adeguamenti futuri spettano al Consiglio di Amministrazione della Cassa, nei limiti dello Statuto.", "rif": [16] },
+      "pensioneNoAzienda": { "t": "Per i pensionati non c’è contributo aziendale: è previsto solo per chi è in servizio o in esodo.", "rif": [15] },
+      "superstiteBase": { "t": "1,40% della somma di redditi di lavoro, pensioni e pensione di reversibilità.", "rif": [15] },
+      "superstiteChi": { "t": "Per i decessi dal 1° gennaio 2028 è superstite il coniuge non separato (o unito civilmente, o convivente di fatto registrato); in sua assenza il figlio fino a 50 anni, senza limite se invalido al 100%.", "rif": [11] }
+    },
+    "familiari": {
+      "conferma": { "t": "I familiari che oggi sono coperti dalla tua forma devono confermare l’iscrizione alla Cassa, o l’adesione alla polizza facoltativa, nei termini che saranno comunicati.", "rif": [11] },
+      "altri60": { "t": "Entro 60 giorni dall’efficacia della fusione puoi iscrivere altri familiari con effetto dal 1° gennaio 2028: gratis quelli che prima non erano iscrivibili e quelli a carico che potevano esserlo senza contributo; con 2.000 €, anche in 4 anni, gli altri che potevano essere iscritti e non lo erano.", "rif": [11] },
+      "sanatoria": { "t": "Se aderisci a una delle due sanatorie, i tuoi familiari si iscrivono dal 1° gennaio ed entro il 29 febbraio 2028: gratis quelli che prima non erano iscrivibili e quelli a carico che potevano esserlo senza contributo; con 2.000 €, anche in 4 anni, gli altri.", "rif": [11] },
+      "aggiorna": { "t": "Dal 1° gennaio 2028 puoi aggiornare l’elenco dei tuoi familiari, inserendoli o confermandoli. Chi viene iscritto in ritardo paga i contributi arretrati e ha le prestazioni solo per le spese successive.", "rif": [12, 11] },
+      "regole": { "t": "A carico: 0,25% per ogni figlio e 0,30% per il coniuge, al massimo per tre familiari; 500 € l’anno per i genitori. Non a carico: Tabella A per il coniuge, Tabella B per gli altri, con massimali condivisi con te.", "rif": [11, "tabella-a", "tabella-b"] }
+    },
+    "riserva": {
+      "zero": { "t": "Non devi versare nulla per la riserva.", "rif": [17] },
+      "importo": { "t": "Versi una sola volta {importo}: è la differenza tra i {proCapite} di riserva per socio e la riserva pro capite della tua forma di provenienza.", "rif": [17] },
+      "rate": { "t": "Puoi pagare a rate, fino a {rate} annualità (in parti uguali sarebbero {rata} l’anno), e usare le somme della tua posizione ASA.", "rif": [17, 19] },
+      "conguaglio": { "t": "L’importo sarà conguagliato quando si conosceranno le riserve effettivamente trasferite.", "rif": [17] },
+      "nessuna": { "t": "Dipende dalla finestra di sanatoria che scegli: nella seconda (gennaio-febbraio 2028) si aggiunge il contributo di costituzione della riserva della forma a cui avresti potuto aderire.", "rif": [12, 17] },
+      "nuovi": { "t": "Per chi viene assunto dal 2028 l’accordo non prevede un contributo di costituzione della riserva.", "rif": [17] }
+    },
+    "asa": {
+      "stop": { "t": "Dal 1° gennaio 2027 non puoi più fare versamenti volontari. Fino al 30 novembre 2027 puoi versare solo dal portale welfare.", "rif": [19] },
+      "passa": { "t": "Quello che resta sulla tua posizione passa alla Cassa, sempre a tuo nome.", "rif": [19] },
+      "uso": { "t": "Dal 2028 lo usi, entro il 31 dicembre 2028, in quest’ordine: contributi ordinari, contributo di costituzione della riserva, rimborso di prestazioni.", "rif": [19] },
+      "servizio": { "t": "Dal 1° gennaio 2028 tutti i soci in servizio potranno versare a titolo di ASA, solo dal portale welfare, con un nuovo regolamento.", "rif": [19] }
+    },
+    "prestazioni": {
+      "nomenclatore": { "t": "Il Nomenclatore sarà in sostanziale continuità con quello della CMA in vigore al 31 dicembre 2026.", "rif": [14] },
+      "nomenclatoreCma": "Per te, quindi, il punto di partenza è quello che conosci.",
+      "team": { "t": "Un team di esperti valuta aggiornamenti e la continuità dei massimali pluriennali, compreso quanto hai già fruito nella tua forma: lavori chiusi entro il 30 giugno 2027.", "rif": [14] },
+      "checkup": { "t": "Il Gruppo si è impegnato a pagare un check-up per i soci in servizio, tramite la Cassa.", "rif": ["lettera"] }
+    },
+    "piu": {
+      "caspopCoperture": { "t": "Per il 2027 il FAS deve garantirti, senza interruzioni, le coperture assicurative dedicate.", "rif": [9] },
+      "caspopSezione": { "t": "Nella nuova Cassa non ci sarà una sezione ex CASPOP: la riserva ex CASPOP è il motivo per cui il tuo contributo una tantum è più basso.", "rif": [18] },
+      "cmaSociale": { "t": "L’Assistenza Sociale della CMA non confluisce: dal 2028 le tutele equivalenti saranno garantite direttamente dall’Azienda, con un’intesa entro il 31 dicembre 2027.", "rif": [22] },
+      "cmaSuperstiti": { "t": "L’Assistenza Superstiti resta solo per chi la percepisce al 31 dicembre 2027.", "rif": [22] },
+      "fiamPercorso": { "t": "Il percorso di armonizzazione del FIAM previsto nel 2025 è aggiornato da questo accordo.", "rif": [10] },
+      "servizioMorte": { "t": "Dal 1° gennaio 2028: copertura assicurativa collettiva caso morte per i dipendenti con CCNL Credito e polizza Kasko estesa a tutti i lavoratori del Gruppo.", "rif": [22, "lettera"] },
+      "servizioLtc": { "t": "Nel corso del 2028: condizioni di favore, a tue spese e su base volontaria, per la copertura caso morte e per la LTC dei familiari.", "rif": ["lettera"] }
+    },
+    "calcola": "Calcola i tuoi contributi",
+    "avvertenza": "È una lettura dell’accordo, non una consulenza. Statuto e Regolamenti della Cassa, quando ci saranno, potranno precisare questi punti."
+  },
+
+  "simulatore": {
+    "titolo": "Calcola i tuoi contributi",
+    "intro": "Le regole in vigore dal 1° gennaio 2028, applicate ai tuoi dati. I numeri restano sul tuo telefono.",
+    "situazione": "La tua situazione nel 2028",
+    "situazioni": [
+      { "id": "servizio", "nome": "In servizio", "base": "Retribuzione annua imponibile INPS" },
+      { "id": "esodo", "nome": "In esodo", "base": "Imponibile annuo usato per i contributi INPS dell’esodo" },
+      { "id": "pensione2028", "nome": "In pensione dal 2028, o da polizza ex Profamily, Akros, Oaklins", "base": "Somma annua di tutte le pensioni" },
+      { "id": "pensioneAnte", "nome": "Già in pensione al 31 dicembre 2027 da CMA, FAS, ex CASPOP o FIAM", "base": "Somma annua di tutte le pensioni" },
+      { "id": "superstite", "nome": "Superstite", "base": "Redditi di lavoro, pensioni e reversibilità in un anno" },
+      { "id": "invalidita", "nome": "Cessato per superamento del comporto, con assegno di invalidità", "base": "Somma annua di tutte le pensioni" }
+    ],
+    "aiutoBase": "In euro, lordi. Con part-time indica la retribuzione a tempo pieno.",
+    "provenienza": "Da dove vieni",
+    "altraProvenienza": "Nessuna di queste",
+    "aiutoProvenienza": "Serve per il contributo una tantum alla riserva.",
+    "familiariTitolo": "Familiari da iscrivere",
+    "tipiFamiliari": [
+      { "id": "coniuge", "nome": "Coniuge, unito civilmente o convivente registrato", "breve": "Coniuge" },
+      { "id": "figlio", "nome": "Figlio", "breve": "Figlio" },
+      { "id": "figlioInabile", "nome": "Figlio con inabilità accertata", "breve": "Figlio inabile" },
+      { "id": "genitore", "nome": "Genitore o altro ascendente", "breve": "Genitore" }
+    ],
+    "togli": "Togli",
+    "chiE": "Chi è",
+    "aCarico": "Fiscalmente a carico",
+    "eta": "Età nel 2028",
+    "reddito": "Reddito annuo lordo",
+    "convivente": "Convive con me",
+    "aggiungi": "Aggiungi {tipo}",
+    "risultato": "Il risultato",
+    "ogniAnno": "Ogni anno, dal 2028",
+    "soloFamiliari": "solo i familiari: il tuo contributo resta in continuità",
+    "alMese": "Circa {importo} al mese.",
+    "colonne": ["Per chi", "Ogni anno", "Regola applicata"],
+    "tu": "Tu",
+    "comeOggi": "come oggi",
+    "percentualeBase": "{aliquota}% della base di calcolo",
+    "nonIscrivibile": "non iscrivibile",
+    "riserva": "Una tantum per la riserva: {importo}",
+    "riservaRate": "Anche a rate, fino a {rate} annualità (in parti uguali {rata} l’anno), e pagabile con la posizione ASA.",
+    "riservaZero": "Per la tua provenienza non è dovuto nulla.",
+    "riservaConguaglio": "Soggetto a conguaglio.",
+    "azienda": "L’Azienda versa per te {importo} l’anno",
+    "aziendaSpese": "Più le spese di funzionamento della Cassa.",
+    "lettura": "Come abbiamo letto l’accordo",
+    "note": [
+      "Familiari a carico: il contributo è dovuto al massimo per tre tra coniuge e figli. Se sono di più contiamo i tre più costosi, perché l’accordo non dice quali.",
+      "Il coniuge non a carico con reddito fino a 10.000 € paga lo 0,30% come se fosse a carico, ma lo teniamo fuori dal tetto dei tre.",
+      "Genitori a carico: 500 € l’anno per ciascuno. L’accordo non precisa se l’importo è a persona.",
+      "Tabella B: la colonna dipende da quanti familiari non a carico iscrivi, escluso il coniuge, e l’importo è per ciascuno.",
+      "Per chi non è in servizio, le percentuali dei familiari a carico sono applicate alla stessa base usata per te.",
+      "Età: indica gli anni che il familiare compie nel 2028. I limiti dei 50 e dei 70 anni valgono fino al 31 dicembre dell’anno in cui si compiono; per le fasce d’età delle tabelle l’accordo non indica una data di riferimento.",
+      "Per i familiari non a carico i massimali saranno condivisi con il socio, come definirà la commissione dell’articolo 14."
+    ],
+    "stima": "È una stima sul testo dell’accordo: gli importi veri li fisseranno Statuto e Regolamenti della Cassa."
+  },
+
+  "calcolo": {
+    "pensioneAnte": "In sostanziale continuità con quanto versi oggi alla tua forma, e comunque non meno di quanto versato al 31 dicembre 2027.",
+    "figlioNonIscrivibile": "Non iscrivibile: figli fino a {eta} anni",
+    "genitoreNonIscrivibile": "Non iscrivibile: genitori fino a {eta} anni, senza limite solo se conviventi e a carico",
+    "polizzaFacoltativa": "Può aderire alla polizza facoltativa, a proprie spese (articolo 11, comma 9).",
+    "percentuale": "{aliquota}% della tua base di calcolo",
+    "oltreIlTetto": "Non dovuto: dal quarto familiare a carico non si paga",
+    "coniugeComeACarico": "Tabella A (reddito {fascia}): come a carico, {aliquota}% della tua base di calcolo",
+    "genitoreACarico": "{importo} l’anno (genitore o ascendente a carico)",
+    "coniugeTabellaB": "Tabella B, colonna 1 familiare ({eta}, reddito {reddito})",
+    "coniugeTabellaBNota": "Coniuge sotto i {eta} anni con reddito oltre {reddito}: si applica la Tabella B.",
+    "tabellaA": "Tabella A (reddito {fascia})",
+    "tabellaB": "Tabella B, colonna {colonna} ({eta}, reddito {reddito})",
+    "colonnaUno": "1 familiare",
+    "colonnaPiu": "{n} familiari",
+    "colonnaUltima": "{n} o più familiari"
+  },
+
+  "novita": {
+    "titolo": "Novità",
+    "intro": "Quello che FABI, FIRST CISL, FISAC CGIL e UILCA pubblicano sul Gruppo e sulla Cassa, le notizie delle casse di oggi e le novità di legge sulle casse di assistenza.",
+    "filtri": "Filtra le novità",
+    "categorie": [
+      { "id": "tema", "nome": "Sulla Cassa" },
+      { "id": "sindacati", "nome": "Sindacati" },
+      { "id": "casse", "nome": "Casse di oggi" },
+      { "id": "norme", "nome": "Norme e stampa" },
+      { "id": "tutte", "nome": "Tutte" }
+    ],
+    "altroArgomento": ", altro argomento",
+    "vuota": "Niente in questa categoria, per ora.",
+    "carico": "Carico le novità.",
+    "fonti": "Le fonti controllate",
+    "fontiIntro": "Sei controlli al giorno, tra le 6 e le 22. Per i siti nazionali teniamo solo le pubblicazioni che citano il Gruppo.",
+    "inAttesa": "in attesa del primo controllo",
+    "letta": "letta {quando}",
+    "nonLetta": "non letta: {errore}",
+    "errore": "errore",
+    "fas": "Il sito del FAS non consente la lettura automatica: aprilo dalla scheda del fondo."
+  },
+
+  "notifiche": {
+    "titolo": "Notifiche",
+    "anteprima": "Questa è un’anteprima: qui non si possono ricevere notifiche. Arrivano sul telefono quando l’app è pubblicata e installata.",
+    "iosHome": "Su iPhone le notifiche arrivano solo se aggiungi l’app alla schermata Home.",
+    "iosPassi": "In Safari tocca **Condividi**, poi **Aggiungi alla schermata Home**. Apri l’app dall’icona e torna qui.",
+    "nonSupportate": "Questo browser non supporta le notifiche. Le novità restano qui, aggiornate a ogni apertura.",
+    "nonConfigurate": "Su questa installazione le notifiche non sono ancora state configurate da chi la gestisce. Le novità restano qui, aggiornate a ogni apertura.",
+    "negate": "Hai bloccato le notifiche per questa app. Per riattivarle vai nelle impostazioni del telefono, alla voce Notifiche.",
+    "attive": "Ricevi una notifica quando esce qualcosa sulla Cassa. Per spedirtela è registrato solo l’indirizzo tecnico del telefono, senza nome né numero: si cancella disattivando le notifiche.",
+    "prefNorme": "Anche le novità di legge e di stampa sulle casse di assistenza",
+    "prefTutte": "Anche tutte le altre pubblicazioni dei quattro sindacati sul Gruppo",
+    "disattiva": "Disattiva le notifiche",
+    "invito": "Ti avvisiamo quando FABI, FIRST CISL, FISAC CGIL o UILCA pubblicano qualcosa sulla Cassa, e quando cambia una norma sulle casse di assistenza. Viene registrato solo l’indirizzo tecnico del telefono, senza nome né numero.",
+    "attiva": "Attiva le notifiche",
+    "attivate": "Notifiche attivate.",
+    "disattivate": "Notifiche disattivate.",
+    "permessoNegato": "Non hai dato il permesso alle notifiche.",
+    "nonRiuscito": "Non siamo riusciti ad attivare le notifiche. Riprova più tardi.",
+    "preferenzeSalvate": "Preferenze salvate.",
+    "preferenzeNonSalvate": "Preferenze non salvate: riprova quando hai rete."
+  },
+
+  "installa": {
+    "titolo": "Tienila sul telefono",
+    "testo": "Si apre come un’app, funziona anche senza rete e ti avvisa delle novità.",
+    "tasto": "Installa l’app",
+    "ios": "In Safari tocca **Condividi**, poi **Aggiungi alla schermata Home**. Da lì si apre come un’app e può mandarti le notifiche."
+  },
+
+  "casse": {
+    "titolo": "Le casse di oggi",
+    "intro": "Le forme che confluiscono nella nuova Cassa, con i loro statuti e regolamenti sui siti ufficiali.",
+    "statutoTitolo": "Lo Statuto della nuova Cassa",
+    "statutoTesto": "Non esiste ancora: le Parti devono condividerlo entro gennaio 2027, prima dell’atto notarile.",
+    "statutoRif": [4],
+    "sciolta": "sciolta",
+    "cheSuccede": "**Che cosa succede.**",
+    "nessunaRiserva": "nessuna",
+    "milioni": "{n} milioni",
+    "riservaPortata": "riserva che porta nella Cassa (stima 2026)",
+    "contributo": "contributo una tantum di ogni socio",
+    "sitoUfficiale": "Sito ufficiale",
+    "riservaTitolo": "Come si arriva a 30 milioni di riserva",
+    "riservaColonne": ["Da dove", "Milioni di euro"],
+    "riservaNota": "Stime dell’accordo sui dati 2026. L’ultima riga è la differenza tra 30 e 21,4 milioni."
+  },
+
+  "normativa": {
+    "titolo": "Normativa",
+    "intro": "Le leggi che l’accordo richiama, spiegate in breve, con il testo ufficiale a un tocco.",
+    "nuova": "del 2026",
+    "perche": "**Perché conta qui.**",
+    "riforma": "La riforma in discussione",
+    "situazione": "Situazione al {data}. Gli sviluppi arrivano nelle Novità."
+  },
+
+  "glossario": {
+    "titolo": "Glossario",
+    "intro": "Le parole dell’accordo, in chiaro."
+  },
+
+  "altro": {
+    "titolo": "Altro",
+    "menu": [
+      { "id": "per-me", "t": "Che cosa cambia per me", "d": "Le regole per la tua situazione" },
+      { "id": "simulatore", "t": "Calcola i tuoi contributi", "d": "Tu e i tuoi familiari, dal 2028" },
+      { "id": "casse", "t": "Le casse di oggi e i loro statuti", "d": "CMA, FAS, FIAM, ex CASPOP" },
+      { "id": "norme", "t": "Normativa", "d": "Fisco, Anagrafe, trasparenza, riforma" },
+      { "id": "glossario", "t": "Glossario", "d": "ASA, Nomenclatore, risorse vincolate…" }
+    ]
+  }
+}

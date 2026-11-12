@@ -17,19 +17,19 @@
   },
   "fonti": [
     {
-      "id": "fisac", "nome": "FISAC CGIL", "descrizione": "Pagina Banco BPM", "categoria": "sindacati",
+      "id": "fisac", "nome": "FISAC CGIL", "descrizione": "Pagina dedicata al Gruppo", "categoria": "sindacati",
       "pagina": "https://www.fisac-cgil.it/category/banche/banco-bpm",
       "ambito": "tutto", "tema": "cassa",
       "leggi": [{ "tipo": "rss", "url": "https://www.fisac-cgil.it/category/banche/banco-bpm/feed" }]
     },
     {
-      "id": "first", "nome": "FIRST CISL", "descrizione": "Sito del Gruppo Banco BPM", "categoria": "sindacati",
+      "id": "first", "nome": "FIRST CISL", "descrizione": "Sito sindacale del Gruppo", "categoria": "sindacati",
       "pagina": "https://www.firstcisl.it/bancobpm/",
       "ambito": "tutto", "tema": "cassa",
       "leggi": [{ "tipo": "rss", "url": "https://www.firstcisl.it/bancobpm/feed/" }]
     },
     {
-      "id": "fabi", "nome": "FABI", "descrizione": "Notizie nazionali che citano Banco BPM", "categoria": "sindacati",
+      "id": "fabi", "nome": "FABI", "descrizione": "Notizie nazionali che citano il Gruppo", "categoria": "sindacati",
       "pagina": "https://www.fabi.it/category/news/",
       "ambito": "bpm", "tema": "cassa",
       "leggi": [
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "id": "uilca", "nome": "UILCA", "descrizione": "Notizie nazionali che citano Banco BPM", "categoria": "sindacati",
+      "id": "uilca", "nome": "UILCA", "descrizione": "Notizie nazionali che citano il Gruppo", "categoria": "sindacati",
       "pagina": "https://www.uilca.it/credito/",
       "ambito": "bpm", "tema": "cassa",
       "leggi": [

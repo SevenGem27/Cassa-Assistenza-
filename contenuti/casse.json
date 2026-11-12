@@ -1,0 +1,161 @@
+{
+  "_nota": "Le forme che confluiscono nella nuova Cassa. riserva in milioni di euro (stima 2026), contributo una tantum in euro.",
+  "casse": [
+    {
+      "id": "cma",
+      "sigla": "CMA",
+      "nome": "Cassa Mutua di Assistenza",
+      "origine": "ex Banca Popolare di Milano",
+      "cosa": "Associazione volontaria senza fini di lucro tra il personale in servizio e in quiescenza dell’ex BPM. Ha tre comparti: Assistenza Sanitaria, Assistenza Sociale e Assistenza Superstiti.",
+      "destino": "Confluisce nella Cassa per fusione dal 1° gennaio 2028. Il suo Nomenclatore, nella versione in vigore al 31 dicembre 2026, è la base di quello nuovo. L’Assistenza Sociale non confluisce e sarà garantita dall’Azienda; l’Assistenza Superstiti resta come gestione a esaurimento.",
+      "riserva": 11,
+      "contributo": 0,
+      "rif": [
+        14,
+        17,
+        22
+      ],
+      "sito": "https://www.cassamutuadiassistenza.it/",
+      "documenti": [
+        {
+          "t": "Statuto",
+          "u": "https://www.cassamutuadiassistenza.it/pdf/cma_statuto.pdf",
+          "principale": true
+        },
+        {
+          "t": "Organi della CMA",
+          "u": "https://www.cassamutuadiassistenza.it/pdf/Organi_della_CMA.pdf"
+        },
+        {
+          "t": "Bilancio 2025",
+          "u": "https://www.cassamutuadiassistenza.it/pdf/cma_bilancio_2025.pdf"
+        },
+        {
+          "t": "Codice etico",
+          "u": "https://www.cassamutuadiassistenza.it/pdf/cma_codice_etico.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fas",
+      "sigla": "FAS",
+      "nome": "Fondo Assistenza fra il Personale del Gruppo Banco Popolare",
+      "origine": "ex Gruppo Banco Popolare",
+      "cosa": "Fondo mutualistico dell’ex Gruppo Banco Popolare. Dal 1° gennaio 2026 accoglie anche gli iscritti della CASPOP, con una gestione separata dedicata, e ha un nuovo Statuto.",
+      "destino": "Confluisce nella Cassa per fusione dal 1° gennaio 2028. Per il 2027 il suo Consiglio deve garantire agli ex CASPOP le coperture assicurative dedicate.",
+      "riserva": 2.4,
+      "contributo": 600,
+      "rif": [
+        9,
+        17
+      ],
+      "sito": "https://www.fondoassistenzagruppobp.it/",
+      "documenti": [
+        {
+          "t": "Statuto e regolamenti",
+          "u": "https://www.fondoassistenzagruppobp.it/site/chi-siamo/fondo",
+          "principale": true,
+          "nota": "Statuto in vigore dal 1° gennaio 2026, Regolamento FAS dal 1° luglio 2026, regolamenti delle gestioni separate ex CASPOP e ASA, regolamento elettorale."
+        }
+      ],
+      "avviso": "Il sito del FAS non consente la lettura automatica: l’app non può controllarlo da sola. Aprilo dal link."
+    },
+    {
+      "id": "fiam",
+      "sigla": "FIAM",
+      "nome": "Fondo Integrativo Assistenza Malattia",
+      "origine": "ex Credito Bergamasco",
+      "cosa": "Nato nel 1988 come associazione tra i dipendenti del Credito Bergamasco, integra le spese sanitarie e assistenziali degli iscritti e dei loro familiari.",
+      "destino": "Confluisce nella Cassa per fusione dal 1° gennaio 2028. Il percorso di armonizzazione previsto nel 2025 è aggiornato da questo accordo.",
+      "riserva": 1.2,
+      "contributo": 460,
+      "rif": [
+        10,
+        17
+      ],
+      "sito": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/fondo-malattia-creberg/",
+      "documenti": [
+        {
+          "t": "Statuto",
+          "u": "https://www.welfare.bancopopolare.it/download/statuto-2/",
+          "principale": true
+        },
+        {
+          "t": "Regolamento",
+          "u": "https://www.welfare.bancopopolare.it/download/regolamento-2023/"
+        },
+        {
+          "t": "Regolamento ASA",
+          "u": "https://www.welfare.bancopopolare.it/download/regolamento-asa-2/"
+        },
+        {
+          "t": "Organi sociali",
+          "u": "https://www.welfare.bancopopolare.it/download/organi-sociali-2/"
+        },
+        {
+          "t": "Circolari e documenti",
+          "u": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/fondo-malattia-creberg/circolari-e-documenti/"
+        }
+      ]
+    },
+    {
+      "id": "caspop",
+      "sigla": "CASPOP",
+      "nome": "Cassa di Assistenza del Gruppo Banco Popolare",
+      "origine": "ex Gruppo Banco Popolare",
+      "chiusa": true,
+      "cosa": "Sciolta con l’accordo del 30 luglio 2025. Dal 1° gennaio 2026 i suoi iscritti sono nel FAS.",
+      "destino": "Nella nuova Cassa non ci sarà una sezione ex CASPOP. La riserva ex CASPOP presso il FAS entra nella riserva unica e abbassa il contributo dei soci di questa provenienza.",
+      "riserva": 6.8,
+      "contributo": 360,
+      "rif": [
+        9,
+        17,
+        18
+      ],
+      "sito": "https://www.welfare.bancopopolare.it/assistenza-sanitaria/cassa-assistenza-gruppo-bp/",
+      "documenti": [
+        {
+          "t": "Statuto (storico)",
+          "u": "https://www.welfare.bancopopolare.it/download/statuto/",
+          "principale": true
+        },
+        {
+          "t": "Regolamento generale (storico)",
+          "u": "https://www.welfare.bancopopolare.it/download/regolamento-generale/"
+        }
+      ]
+    }
+  ],
+  "riservaUnica": {
+    "righe": [
+      {
+        "da": "CMA",
+        "milioni": "11,0"
+      },
+      {
+        "da": "Riserva ex CASPOP presso il FAS",
+        "milioni": "6,8"
+      },
+      {
+        "da": "FAS",
+        "milioni": "2,4"
+      },
+      {
+        "da": "FIAM",
+        "milioni": "1,2"
+      },
+      {
+        "da": "Contributi una tantum dei soci, residuo della dotazione aziendale, avanzi di gestione",
+        "milioni": "8,6"
+      }
+    ],
+    "totale": {
+      "da": "Riserva unica",
+      "milioni": "30,0"
+    },
+    "rif": [
+      17
+    ]
+  }
+}

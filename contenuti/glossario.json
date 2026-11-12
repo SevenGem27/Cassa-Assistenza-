@@ -1,0 +1,141 @@
+{
+  "voci": [
+    {
+      "t": "Anagrafe dei fondi sanitari",
+      "d": "Registro tenuto dal Ministero della Salute. Fondi e casse chiedono l’iscrizione o il rinnovo ogni anno entro il 31 luglio; l’attestato è la condizione delle agevolazioni fiscali sui contributi.",
+      "rif": [
+        24
+      ]
+    },
+    {
+      "t": "ASA, Assistenza Sanitaria Aggiuntiva",
+      "d": "Posizione individuale presente nelle forme dell’ex Gruppo Banco Popolare (FAS, compresa la ex CASPOP, e FIAM), alimentata dal portale welfare e, fino al 2026, anche con versamenti volontari. Serve a integrare i rimborsi.",
+      "rif": [
+        19
+      ]
+    },
+    {
+      "t": "Conguaglio",
+      "d": "Ricalcolo del contributo di costituzione della riserva quando si conosceranno le riserve effettivamente trasferite da ciascuna forma.",
+      "rif": [
+        17
+      ]
+    },
+    {
+      "t": "Contributo di costituzione della riserva",
+      "d": "Versamento una tantum del socio: la differenza tra i 980 € di riserva per socio e la riserva pro capite della forma da cui proviene.",
+      "rif": [
+        17
+      ]
+    },
+    {
+      "t": "Excess of loss",
+      "d": "Polizza che copre la Cassa quando la spesa per le prestazioni supera una soglia concordata: protegge i conti negli anni peggiori.",
+      "rif": [
+        "lettera"
+      ]
+    },
+    {
+      "t": "Familiare fiscalmente a carico",
+      "d": "Familiare con reddito sotto la soglia fissata dalla legge fiscale. L’accordo rinvia alla normativa in vigore tempo per tempo: la soglia può cambiare, verificala al momento dell’iscrizione.",
+      "rif": [
+        11
+      ]
+    },
+    {
+      "t": "Fase transitoria",
+      "d": "Il periodo tra la costituzione della Cassa e il 31 dicembre 2027: prestazioni minime, pochi soci, organi provvisori.",
+      "rif": [
+        6
+      ]
+    },
+    {
+      "t": "Fondo di Solidarietà",
+      "d": "Il fondo del settore del credito che accompagna alla pensione chi esce in anticipo (esodo). Chi vi aderisce resta socio della Cassa.",
+      "rif": [
+        11,
+        15
+      ]
+    },
+    {
+      "t": "Fonte istitutiva",
+      "d": "L’accordo tra Azienda e sindacati che fa nascere la Cassa e ne fissa le regole di fondo. Le “Fonti istitutive” sono le Parti che lo hanno firmato.",
+      "rif": [
+        "premesse",
+        4
+      ]
+    },
+    {
+      "t": "Fusione per incorporazione",
+      "d": "FAS, CMA e FIAM cessano di esistere come enti separati e la Cassa subentra in tutti i loro rapporti, patrimoni compresi.",
+      "rif": [
+        7
+      ]
+    },
+    {
+      "t": "Gestione a esaurimento",
+      "d": "Una gestione che non accoglie nuovi beneficiari e prosegue finché ci sono aventi diritto. L’accordo la chiama anche “ramo secco”.",
+      "rif": [
+        22
+      ]
+    },
+    {
+      "t": "LEA",
+      "d": "Livelli essenziali di assistenza: le prestazioni che il Servizio Sanitario Nazionale deve garantire a tutti.",
+      "rif": [
+        13
+      ]
+    },
+    {
+      "t": "LTC",
+      "d": "Long term care: copertura per la perdita dell’autosufficienza.",
+      "rif": [
+        "lettera"
+      ]
+    },
+    {
+      "t": "Mutualità e solidarietà",
+      "d": "Tutti contribuiscono secondo regole comuni e le prestazioni vanno a chi ne ha bisogno, senza conti individuali e senza legame tra quanto si versa e quanto si riceve.",
+      "rif": [
+        3,
+        20
+      ]
+    },
+    {
+      "t": "Nomenclatore",
+      "d": "L’elenco delle prestazioni rimborsabili, con tariffe, massimali e condizioni.",
+      "rif": [
+        14
+      ]
+    },
+    {
+      "t": "Platea limitata",
+      "d": "I soli firmatari dell’atto costitutivo, soci della Cassa durante la fase transitoria.",
+      "rif": [
+        6
+      ]
+    },
+    {
+      "t": "Risorse vincolate",
+      "d": "La quota, almeno il 20%, che una cassa deve spendere in odontoiatria, assistenza ai non autosufficienti e recupero della salute per restare iscritta all’Anagrafe.",
+      "rif": [
+        2,
+        24
+      ]
+    },
+    {
+      "t": "Sanatoria",
+      "d": "Finestra in cui chi non si era iscritto può farlo a condizioni definite, senza le penalità delle iscrizioni tardive.",
+      "rif": [
+        12
+      ]
+    },
+    {
+      "t": "Superstite",
+      "d": "Il coniuge (o unito civilmente, o convivente di fatto registrato) del socio deceduto; in sua assenza il figlio fino a 50 anni, senza limite se invalido al 100%.",
+      "rif": [
+        11
+      ]
+    }
+  ]
+}

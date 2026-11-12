@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Monitor di Nuova Cassa.
+/* Monitor della guida non ufficiale alla Cassa Assistenza.
    Legge le fonti elencate in fonti.json, aggiorna data/news.json, data/status.json e data/feed.xml
    e, se le notifiche sono configurate, avvisa chi ha installato l'app.
    Gira da solo sei volte al giorno con GitHub Actions (.github/workflows/monitor.yml).
@@ -292,7 +292,7 @@ export function feedXml(voci, sito) {
   const x = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const corpo = voci.filter((v) => v.pertinente).slice(0, 50).map((v) =>
     `<item><title>${x(v.nomeFonte + ': ' + v.titolo)}</title><link>${x(v.url)}</link><guid isPermaLink="false">${v.id}</guid><pubDate>${new Date(v.data || v.trovato).toUTCString()}</pubDate></item>`).join('\n');
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Nuova Cassa, novità</title><link>${x(sito)}</link><description>Novità sulla Cassa Assistenza del Gruppo Banco BPM</description><language>it</language>\n${corpo}\n</channel></rss>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Cassa Assistenza, novità (guida non ufficiale)</title><link>${x(sito)}</link><description>Novità sulla Cassa Assistenza del Gruppo Banco BPM</description><language>it</language>\n${corpo}\n</channel></rss>\n`;
 }
 async function leggiJson(p, predefinito) {
   try { return JSON.parse(await readFile(join(RADICE, p), 'utf8')); } catch { return predefinito; }

@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Controlla le fonti e invia le notifiche di Nuova Cassa",
+  "description": "Controlla le fonti e invia le notifiche della guida non ufficiale alla Cassa Assistenza",
   "scripts": {
     "controlla": "node monitor.mjs",
     "prova": "node monitor.mjs --prova",
-    "test": "node --test test/calcolo.test.cjs test/monitor.test.mjs test/servizio.test.mjs"
+    "test": "node --test test/calcolo.test.cjs test/monitor.test.mjs test/servizio.test.mjs test/contenuti.test.mjs"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "web-push": "^3.6.7"
   }
